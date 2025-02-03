@@ -1,0 +1,2 @@
+# arte-conf
+Artelamp configurator
