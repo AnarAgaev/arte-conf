@@ -26,11 +26,23 @@
 		"baseUrl": "./",
 		"paths": {
 			"@components": ["src/Components/"],
+			"@components/*": ["src/Components/*"],
+
 			"@helpers": ["src/Helpers/"],
+			"@helpers/*": ["src/Helpers/*"],
+
 			"@hooks": ["src/Hooks/"],
+			"@hooks/*": ["src/Hooks/*"],
+
 			"@store": ["src/Store/"],
+			"@store/*": ["src/Store/*"],
+
 			"@types": ["src/Types/"],
-			"@sass": ["src/Sass/"],
+			"@types/*": ["src/Types/*"],
+
+			"@sass/": ["src/Sass/"],
+			"@sass/*": ["src/Sass/*"],
+
 		}
 	},
 	"include": ["src"]

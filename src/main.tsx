@@ -1,12 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
 import { ErrorBoundary, App } from '@components'
+import store, { persistor } from '@store'
 
-createRoot(document.getElementById('arteConf')!)
-	.render(
-		<StrictMode>
-			<ErrorBoundary>
-				<App />
-			</ErrorBoundary>
-		</StrictMode>
-	)
+createRoot(document.getElementById('arteConf')!).render(
+	<StrictMode>
+		<ErrorBoundary>
+			<Provider store={store}>
+				<PersistGate loading={null} persistor={persistor}>
+					<App />
+				</PersistGate>
+			</Provider>
+		</ErrorBoundary>
+	</StrictMode>
+)
