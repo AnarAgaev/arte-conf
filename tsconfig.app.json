@@ -22,10 +22,14 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
 
-		/* Paths masks */
+		/* Paths aliases */
 		"baseUrl": "./",
 		"paths": {
-		"@components": ["src/Components/"]
+			"@components": ["src/Components/"],
+			"@helpers": ["src/Helpers/"],
+			"@hooks": ["src/Hooks/"],
+			"@store": ["src/Store/"],
+			"@types": ["src/Types/"],
 		}
 	},
 	"include": ["src"]
