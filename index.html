@@ -5,9 +5,22 @@
 		<link rel="icon" type="image/png" href="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Artelamp configurator</title>
+
+		<script>
+			window.arteConfAPIs = {
+				// Add API url links here...
+			}
+		</script>
+
+		<!-- Don't replace style section to the production.
+			It's need only for dev mode. -->
+		<style>
+			html, body { min-height: 100%; }
+			#arteConf { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+		</style>
 	</head>
 	<body>
-		<div id="arteconf"></div>
+		<div id="arteConf"></div>
 		<script type="module" src="/src/main.tsx"></script>
 	</body>
 </html>

@@ -1,9 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { App } from '@components'
+import { ErrorBoundary, App } from '@components'
 
-createRoot(document.getElementById('arteconf')!).render(
-	<StrictMode>
-		<App />
-	</StrictMode>,
-)
+createRoot(document.getElementById('arteConf')!)
+	.render(
+		<StrictMode>
+			<ErrorBoundary>
+				<App />
+			</ErrorBoundary>
+		</StrictMode>
+	)

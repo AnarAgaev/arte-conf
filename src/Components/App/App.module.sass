@@ -1,0 +1,35 @@
+@use '../../Sass/_variables' as vars
+@use '../../Sass/_mixins' as mixins
+
+.app
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    gap: 20px
+    position: relative
+    margin: 0
+    padding: 0
+    min-height: 300px
+    background: var(--clr-back)
+
+    @media (min-width: vars.$lg)
+        gap: 40px
+
+
+.pages
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    gap: 20px
+
+
+.body
+    display: flex
+    flex-direction: column
+    gap: 20px
+    width: 100%
+    height: auto
+    min-height: 300px
+
+    @media (min-width: vars.$lg)
+        flex-direction: row

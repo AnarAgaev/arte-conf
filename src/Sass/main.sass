@@ -1,150 +1,133 @@
-// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap')
+@use '_fonts' as fonts
+@use '_variables' as vars
+@use '_mixins' as mixins
 
-@import '_variables'
-@import '_mixins'
 
-#arteconf
+#arteConf
     z-index: 1
 
-// .se-app
-//     --base-transition: all .1s linear
-//     --synth-transition: all 1s cubic-bezier(0.16, 1, 0.3, 1)
-//     --synth-timing-func: cubic-bezier(0.16, 1, 0.3, 1)
 
-//     --font-prime: "Roboto", sans-serif
+.arte-conf-app
 
-//     --color-prime: #000
-//     --color-error: #ff0000
+    --base-transition: all .1s linear
+    --synth-transition: all 1s cubic-bezier(0.16, 1, 0.3, 1)
+    --synth-timing-func: cubic-bezier(0.16, 1, 0.3, 1)
 
-//     --color-border-prime: #999
+    --clr-font-light: #fff
+    --clr-font-mid: #b1b1b1
+    --clr-font-dark: #000
 
-//     --color-back-init: #fff
-//     --color-back-prime: #262626
-//     --color-back-secondary: #f5f5f5
-//     --color-back-lite: #f7f7f7
-//     --color-back-shetch: #fbfbfb
-//     --color-img-faild: #dfdfdf
+    --clr-accent: #e1a624
+    --clr-back: #464646
+    --clr-border: #c6c6c6
 
-//     --color-button-prime: #262626
-//     --color-button-sec: #fff
-//     --color-button-font-dark: #000
-//     --color-button-font-lite: #fff
-//     --color-button-font-disabled: #999
+    --clr-err: #ff0000
 
-//     --color-button-hover: #757575
-//     --color-button-disabled: #eee
+    --clr-img-faild: #dfdfdf
 
-//     --color-picker: #999
-//     --color-picker-active: #000
-
-//     --color-element-hover: #f7f7f7
-
-//     --color-scroll-track: #d6d6d6
-//     --color-scroll-thumb: #b1b1b1
-
-//     --color-nav: #f1f1f1
-
-//     --color-controllers-back: #fafafa
-//     --color-opacity-back: rgba(0, 0, 0, 0.4)
-//     --color-opacity-hover: rgba(0, 0, 0, 0.03)
-//     --color-opacity-loading: rgba(0, 0, 0, 0.04)
-
-//     --color-set-border-start: #f3f3f3
-//     --color-set-border-finish: #555
+    --font-prime: 'GothamPro', sans-serif
 
 
-//     *
-//         box-sizing: border-box
-//         font-family: var(--font-prime)
-//         font-style: normal
-//         outline: 0 !important
 
-//     *::before
-//         box-sizing: border-box
-//         font-family: var(--font-prime)
-//         font-style: normal
-
-//     *::after
-//         box-sizing: border-box
-//         font-family: var(--font-prime)
-//         font-style: normal
+    box-sizing: border-box
+    font-family: var(--font-prime)
+    font-size: medium
+    font-style: normal
+    font-weight: normal
+    color: var(--clr-font-light)
+    letter-spacing: normal
 
 
-//     ul, li
-//         list-style: none
+
+    *,
+    *::before,
+    *::after
+        box-sizing: border-box
+        outline: 0 !important
+        font-family: var(--font-prime)
+        font-size: medium
+        font-style: normal
+        font-weight: 400
+        color: var(--clr-font-light)
+        letter-spacing: normal
 
 
-//     img
-//         @include image
+    ul, li
+        list-style: none
+        margin: 0
+        padding: 0
 
 
-//     input[type="text"]
-//         &::-webkit-input-placeholder
-//             opacity: 1
-//             transition: opacity 0.2s ease
-//         &::-moz-placeholder
-//             opacity: 1
-//             transition: opacity 0.2s ease
-//         &:-moz-placeholder
-//             opacity: 1
-//             transition: opacity 0.2s ease
-//         &:-ms-input-placeholder
-//             opacity: 1
-//             transition: opacity 0.2s ease
-
-//         &:focus
-//             &::-webkit-input-placeholder
-//                 opacity: 0
-//                 transition: opacity 0.2s ease
-//             &::-moz-placeholder
-//                 opacity: 0
-//                 transition: opacity 0.2s ease
-//             &:-moz-placeholder
-//                 opacity: 0
-//                 transition: opacity 0.2s ease
-//             &:-ms-input-placeholder
-//                 opacity: 0
-//                 transition: opacity 0.2s ease
+    img
+        @include mixins.image
 
 
-//     .invisible
-//         position: absolute !important
-//         width: 1px !important
-//         height: 1px !important
-//         margin: -1px !important
-//         border: 0 !important
-//         padding: 0 !important
-//         white-space: nowrap !important
-//         clip-path: inset(100%) !important
-//         clip: rect(0 0 0 0) !important
-//         overflow: hidden !important
-//         z-index: -1 !important
+    input[type="text"]
+        &::-webkit-input-placeholder
+            opacity: 1
+            transition: opacity 0.2s ease
+        &::-moz-placeholder
+            opacity: 1
+            transition: opacity 0.2s ease
+        &:-moz-placeholder
+            opacity: 1
+            transition: opacity 0.2s ease
+        &:-ms-input-placeholder
+            opacity: 1
+            transition: opacity 0.2s ease
+
+        &:focus
+            &::-webkit-input-placeholder
+                opacity: 0
+                transition: opacity 0.2s ease
+            &::-moz-placeholder
+                opacity: 0
+                transition: opacity 0.2s ease
+            &:-moz-placeholder
+                opacity: 0
+                transition: opacity 0.2s ease
+            &:-ms-input-placeholder
+                opacity: 0
+                transition: opacity 0.2s ease
 
 
-//     .hide
-//         display: none !important
+    .invisible
+        position: absolute !important
+        width: 1px !important
+        height: 1px !important
+        margin: -1px !important
+        border: 0 !important
+        padding: 0 !important
+        white-space: nowrap !important
+        clip-path: inset(100%) !important
+        clip: rect(0 0 0 0) !important
+        overflow: hidden !important
+        z-index: -1 !important
 
 
-//     .collapse
-//         display: grid
-//         grid-template-rows: 0fr
-//         overflow: hidden
-//         transition: var(--base-transition)
+    .hide
+        display: none !important
 
-//         .inner
-//             position: relative
-//             top: 20px
-//             min-height: 0
-//             opacity: 0
-//             transition: var(--base-transition)
 
-//         &.open
-//             grid-template-rows: 0fr
+    .collapse
+        display: grid
+        grid-template-rows: 0fr
+        overflow: hidden
+        transition: var(--base-transition)
 
-//             .inner
-//                 opacity: 1
-//                 top: 0
+        .inner
+            position: relative
+            top: 20px
+            min-height: 0
+            opacity: 0
+            transition: var(--base-transition)
 
+        &.open
+            grid-template-rows: 0fr
+
+            .inner
+                opacity: 1
+                top: 0
 
 //     .button
 //         display: inline-flex
