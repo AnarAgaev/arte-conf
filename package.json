@@ -33,5 +33,10 @@
   },
   "engines": {
     "node": "20.18.2"
+  },
+  "overrides": {
+    "redux-persist": {
+      "@reduxjs/toolkit": "^2.5.1"
+    }
   }
 }

@@ -1,5 +1,8 @@
+import { useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from '@hooks'
 import { togglePage } from '@store/appSlice'
+import fetchInitData from '@store/appSlice/Funcs/fetchInitData'
+import { selectAppErrMsg, selectAppPage } from '@store/appSlice'
 import type { T_Page } from "@store/appSlice/types"
 import style from './App.module.sass'
 import '@sass/main.sass'
@@ -8,10 +11,28 @@ export const App = () => {
 
 	const dispatch = useAppDispatch()
 
-	const appError = useAppSelector(store => store.app.error)
-	const currentPage = useAppSelector(store => store.app.page)
+	const appError = useAppSelector(selectAppErrMsg)
+	const currentPage = useAppSelector(selectAppPage)
 
 	if (appError) throw new Error(appError)
+
+	useEffect(() => {
+		dispatch(fetchInitData())
+	}, [dispatch])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	const onClick = (page: T_Page) => {
 		dispatch(togglePage(page))
