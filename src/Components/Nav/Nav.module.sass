@@ -1,0 +1,105 @@
+@use '../../Sass/_variables' as vars
+
+.nav
+    width: 100%
+    height: auto
+    position: relative
+    padding-left: 10px
+    padding-right: 10px
+    user-select: none
+
+    overflow-x: auto
+    overflow-y: hidden
+    -ms-overflow-style: none
+    scrollbar-width: none
+
+    &::-webkit-scrollbar
+        width: 0
+        height: 0
+
+    @media (min-width: vars.$sm)
+        padding-left: 20px
+        padding-right: 20px
+
+
+.list
+    display: flex
+    flex-wrap: nowrap
+    align-items: center
+    gap: 15px
+    justify-content: space-between
+    position: relative
+    width: fit-content
+    min-width: 100%
+    height: auto
+
+    @media (min-width: vars.$sm)
+        justify-content: flex-end
+        gap: 30px
+
+    @media (min-width: vars.$md)
+        gap: 50px
+
+    @media (min-width: vars.$lg)
+        gap: 70px
+
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: 1px
+        left: -10px
+        width: calc( 100% + 20px )
+        height: 1px
+        background: var(--clr-font-light)
+
+        @media (min-width: vars.$sm)
+            left: -20px
+            width: calc( 100% + 40px )
+
+
+.item
+    flex-shrink: 0
+    cursor: pointer
+    white-space: nowrap
+    position: relative
+    z-index: 1
+    font-size: 16px
+    padding-top: 20px
+    padding-bottom: 20px
+    transition: var(--base-transition)
+    cursor: pointer
+    letter-spacing: 0.2px
+
+    @media (min-width: vars.$sm)
+        padding-top: 30px
+        padding-bottom: 30px
+
+    @media (min-width: vars.$lg)
+        font-size: 17px
+
+    @media (hover: hover) and (pointer: fine)
+        &:hover
+            color: var(--clr-font-mid)
+
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0px
+        left: 50%
+        transform: translateX(-50%)
+        width: 0
+        height: 3px
+        background: var(--clr-accent)
+        border-radius: 3px
+        transition: var(--base-transition)
+        transition-timing-function: ease-out
+
+
+.active
+    pointer-events: none
+    color: var(--clr-accent)
+
+    &::after
+        width: 33% !important

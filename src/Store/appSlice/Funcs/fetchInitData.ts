@@ -5,7 +5,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 //     id: number
 // }
 
-const fetchInitData = createAsyncThunk<string, undefined, { rejectValue: string, fulfilledValue: string }> (
+export const fetchInitData = createAsyncThunk<string, undefined, { rejectValue: string, fulfilledValue: string }> (
 
     'app/fetchInitData',
 
@@ -49,5 +49,3 @@ const fetchInitData = createAsyncThunk<string, undefined, { rejectValue: string,
         }
     }
 )
-
-export default fetchInitData

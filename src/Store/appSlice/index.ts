@@ -3,7 +3,7 @@ import type { T_AppState } from '@store/appSlice/types'
 
 // Actions
 import { togglePage as togglePageAction } from './Actions'
-import fetchInitData from '../appSlice/Funcs/fetchInitData'
+import { fetchInitData } from './Funcs'
 
 const initialState: T_AppState = {
     errorMessage: null,
@@ -82,3 +82,6 @@ export const {
     selectAppLoadMsg,
     selectAppSucMsg
 } = appSlice.selectors
+
+// Re export async funcs
+export { fetchInitData }
