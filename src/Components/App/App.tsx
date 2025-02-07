@@ -1,13 +1,19 @@
 import { useEffect } from 'react'
-import { useAppDispatch } from '@hooks'
-import { fetchInitData } from '@store/appSlice'
-import { Nav } from '@components'
+import { useAppDispatch, useAppSelector } from '@hooks'
+import { fetchInitData, selectAppPage } from '@store/appSlice'
+import { Nav, PageConfigurator, PageProjectDetail, PageProjectList } from '@components'
 import style from './App.module.sass'
 import '@sass/main.sass'
 
 export const App = () => {
 
+
+	console.log('---render App');
+
+
 	const dispatch = useAppDispatch()
+
+	const currentPage = useAppSelector(selectAppPage)
 
 	useEffect(() => {
 		dispatch(fetchInitData())
@@ -16,7 +22,11 @@ export const App = () => {
 	return (
 		<section className={`arte-conf-app ${style.app}`}>
 			<Nav />
-			<div className={style.body}>Body</div>
+			<div className={style.body}>
+				{ currentPage === 'configurator' && <PageConfigurator /> }
+				{ currentPage === 'projectDetail' && <PageProjectDetail /> }
+				{ currentPage === 'projectList' && <PageProjectList /> }
+			</div>
 		</section>
 	)
 }

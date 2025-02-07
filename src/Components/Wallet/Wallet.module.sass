@@ -1,0 +1,138 @@
+@use '../../Sass/_variables' as vars
+
+.wallet
+    display: flex
+    flex-direction: column
+    gap: 20px
+    user-select: none
+
+
+.caption
+    display: block
+    position: relative
+    width: 100%
+    height: auto
+    margin: 0
+    padding: 0
+    text-transform: uppercase
+    font-size: 15px
+    font-weight: 700
+    letter-spacing: 0.8px
+
+
+.body
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    gap: 10px
+    width: 100%
+    height: auto
+
+    @media (min-width: vars.$sm)
+        flex-wrap: nowrap
+        justify-content: space-between
+        align-items: center
+        gap: 20px
+
+
+.price
+    display: block
+    position: relative
+    font-size: 14px
+
+    @media (min-width: vars.$sm)
+        width: 100%
+
+
+.total
+    flex-shrink: 0
+    display: block
+    position: relative
+    width: 100%
+    font-size: 14px
+
+    @media (min-width: vars.$sm)
+        width: auto
+
+    &::before
+        content: 'Итого: '
+        font-size: inherit
+        font-weight: 700
+        letter-spacing: 0.3px
+
+        @media (min-width: vars.$sm)
+            display: none
+
+
+.calc
+    flex-shrink: 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 5px
+    width: 140px
+    height: 40px
+    border-radius: 20px
+    border: 1px solid var(--clr-font-light)
+
+
+.value
+    display: block
+    position: relative
+    width: 100%
+    text-align: center
+    font-size: 14px
+    color: var(--clr-font-light)
+    background: transparent
+    border: none
+
+
+.controller
+    flex-shrink: 0
+    display: block
+    position: relative
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background: transparent
+    cursor: pointer
+    transition: var(--base-transition)
+    overflow: hidden
+    padding: 0
+    border: none
+
+    @media (hover: hover) and (pointer: fine)
+        &:hover
+            background-color: var(--clr-accent)
+
+            &::before,
+            &::after
+                background: var(--clr-font-dark)
+
+    &::before, &::after
+        content: ''
+        display: block
+        position: absolute
+        z-index: 1
+        top: 50%
+        left: 50%
+        width: 10px
+        height: 1px
+        background: var(--clr-font-light)
+        transition: var(--base-transition)
+
+    &:before
+        transform: translate(-50%, -50%)
+
+    &:after
+        transform: translate(-50%, -50%) rotate(90deg)
+
+    &_dec
+        margin-left: -1px
+        &::after
+            display: none
+
+    &_inc
+        margin-right: -1px
+        position: relative

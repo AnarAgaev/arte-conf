@@ -4,8 +4,6 @@
     width: 100%
     height: auto
     position: relative
-    padding-left: 10px
-    padding-right: 10px
     user-select: none
 
     overflow-x: auto
@@ -26,16 +24,17 @@
     display: flex
     flex-wrap: nowrap
     align-items: center
-    gap: 15px
     justify-content: space-between
     position: relative
     width: fit-content
     min-width: 100%
     height: auto
+    border-bottom: 1px solid var(--clr-accent)
 
     @media (min-width: vars.$sm)
         justify-content: flex-end
         gap: 30px
+        border: none
 
     @media (min-width: vars.$md)
         gap: 50px
@@ -45,37 +44,40 @@
 
     &::after
         content: ''
-        display: block
+        display: none
         position: absolute
+        left: -20px
         bottom: 1px
-        left: -10px
-        width: calc( 100% + 20px )
+        width: calc( 100% + 40px )
         height: 1px
         background: var(--clr-font-light)
 
         @media (min-width: vars.$sm)
-            left: -20px
-            width: calc( 100% + 40px )
+            display: block
 
 
 .item
-    flex-shrink: 0
     cursor: pointer
     white-space: nowrap
     position: relative
     z-index: 1
-    font-size: 16px
-    padding-top: 20px
-    padding-bottom: 20px
+    width: 100%
+    font-size: 15px
+    padding: 15px 7.5px
     transition: var(--base-transition)
     cursor: pointer
     letter-spacing: 0.2px
+    text-align: center
+    background: transparent
 
     @media (min-width: vars.$sm)
+        width: auto
+        padding: 20px 0
+        font-size: 16px
+
+    @media (min-width: vars.$md)
         padding-top: 30px
         padding-bottom: 30px
-
-    @media (min-width: vars.$lg)
         font-size: 17px
 
     @media (hover: hover) and (pointer: fine)
@@ -84,7 +86,7 @@
 
     &::after
         content: ''
-        display: block
+        display: none
         position: absolute
         bottom: 0px
         left: 50%
@@ -96,10 +98,18 @@
         transition: var(--base-transition)
         transition-timing-function: ease-out
 
+        @media (min-width: vars.$sm)
+            display: block
+
 
 .active
     pointer-events: none
-    color: var(--clr-accent)
+    background: var(--clr-accent)
+    color: var(--clr-font-dark)
+
+    @media (min-width: vars.$sm)
+        color: var(--clr-accent)
+        background: transparent
 
     &::after
         width: 33% !important

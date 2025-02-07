@@ -1,6 +1,6 @@
 @use '_fonts' as fonts
 @use '_variables' as vars
-@use '_mixins' as mixins
+@use '_mixins' as mxns
 
 
 #arteConf
@@ -24,6 +24,9 @@
     --clr-err: #ff0000
 
     --clr-img-faild: #dfdfdf
+
+    --clr-load-start: #484848
+    --clr-load-end: #585858
 
     --font-prime: 'GothamPro', sans-serif
 
@@ -62,7 +65,7 @@
 
 
     img
-        @include mixins.image
+        @include mxns.image
 
 
     input[type="text"]
@@ -131,6 +134,67 @@
             .inner
                 opacity: 1
                 top: 0
+
+
+    .btn
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        gap: 10px
+        width: auto
+        padding: 0 40px
+        cursor: pointer
+        user-select: none
+        transition: var(--base-transition)
+        transition-property: background, color
+        background: transparent
+        border: 2px solid var(--clr-accent)
+        text-align: center
+        text-decoration: none
+        text-transform: uppercase
+        letter-spacing: 0.14px
+        font-size: 12px
+        letter-spacing: 0.8px
+        font-weight: 700 // Жирность не совпадает с маакетом. Попробовать преформатировать шрифт или подключить не форматированный
+
+        &_default
+            height: 50px
+
+        &_small
+            height: 30px
+
+        &_block
+            width: 100%
+
+        &_dark
+            background-color: var(--clr-accent)
+            color: var(--clr-font-dark)
+
+            @media (hover: hover) and (pointer: fine)
+                &:hover
+                    background-color: var(--clr-back)
+                    color: var(--clr-accent)
+
+        &_lite
+            background-color: var(--clr-back)
+            color: var(--clr-accent)
+
+            @media (hover: hover) and (pointer: fine)
+                &:hover
+                    background-color: var(--clr-accent)
+                    color: var(--clr-font-dark)
+
+        &.disabled
+            pointer-events: none
+            background: var(--clr-load-end)
+            border-color: var(--clr-load-end)
+            color: var(--clr-font-mid)
+            opacity: 0.5
+
+
+
+
+
 
 //     .button
 //         display: inline-flex
