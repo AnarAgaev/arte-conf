@@ -1,0 +1,63 @@
+@use '../../Sass/_variables' as vars
+@use '../../Sass/_mixins' as mxns
+
+.spinner
+    display: none
+    align-items: center
+    justify-content: center
+    position: fixed
+    top: 0
+    left: 0
+    inset: 0
+    z-index: 999
+    pointer-events: auto
+    background: transparent
+
+    *
+        pointer-events: none
+
+
+.visible
+    display: flex
+
+
+.wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    width: 150px
+    height: auto
+    aspect-ratio: 1 / 1
+    border-radius: 50%
+    background-color: var(--opacity-back)
+    backdrop-filter: blur(1.3px)
+
+
+.body
+    width: 60px
+    height: 60px
+    animation: rotate 2s linear infinite
+
+
+.path
+    stroke: var(--clr-accent)
+    stroke-linecap: round
+    animation: dash 1.5s ease-in-out infinite
+
+
+@keyframes rotate
+    100%
+        transform: rotate(360deg)
+
+
+@keyframes dash
+    0%
+        stroke-dasharray: 1, 150
+        stroke-dashoffset: 0
+    50%
+        stroke-dasharray: 90, 150
+        stroke-dashoffset: -35
+    100%
+        stroke-dasharray: 1, 150
+        stroke-dashoffset: -124

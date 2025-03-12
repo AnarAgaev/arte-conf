@@ -1,9 +1,11 @@
 import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '@hooks'
 import { fetchInitData, selectAppPage } from '@store/appSlice'
-import { Nav, PageConfigurator, PageProjectDetail, PageProjectList } from '@components'
+import { Spinner, Nav, PageConfigurator, PageProjectDetail, PageProjectList } from '@components'
 import style from './App.module.sass'
 import '@sass/main.sass'
+
+const { app, body } = style
 
 export const App = () => {
 
@@ -20,13 +22,16 @@ export const App = () => {
 	}, [dispatch])
 
 	return (
-		<section className={`arte-conf-app ${style.app}`}>
+		<section className={`arte-conf-app ${app}`}>
 			<Nav />
-			<div className={style.body}>
+
+			<div className={body}>
 				{ currentPage === 'configurator' && <PageConfigurator /> }
 				{ currentPage === 'projectDetail' && <PageProjectDetail /> }
 				{ currentPage === 'projectList' && <PageProjectList /> }
 			</div>
+
+			<Spinner />
 		</section>
 	)
 }

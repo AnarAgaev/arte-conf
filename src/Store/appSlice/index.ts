@@ -1,5 +1,6 @@
 import { ActionReducerMapBuilder, createSlice, PayloadAction, AnyAction } from '@reduxjs/toolkit'
 import type { T_AppState } from '@store/appSlice/types'
+import steps from './steps'
 
 // Actions
 import { togglePage as togglePageAction } from './Actions'
@@ -9,8 +10,9 @@ const initialState: T_AppState = {
     errorMessage: null,
     loadingMessage: null,
     successMessage: null,
-    status: 'idle',
-    page: 'configurator'
+    status: 'pending',
+    page: 'configurator',
+    steps: steps
 }
 
 const reducers = {
@@ -19,10 +21,12 @@ const reducers = {
 
 const selectors = {
     selectApp: (state: T_AppState) => state,
+    selectAppStatus: (state: T_AppState) => state.status,
     selectAppErrMsg: (state: T_AppState) => state.errorMessage,
     selectAppLoadMsg: (state: T_AppState) => state.loadingMessage,
     selectAppSucMsg: (state: T_AppState) => state.successMessage,
-    selectAppPage: (state: T_AppState) => state.page
+    selectAppPage: (state: T_AppState) => state.page,
+    selectAppSteps: (state: T_AppState) => state.steps
 }
 
 // Predicator function for mather reject request from Funcs
@@ -77,10 +81,12 @@ export default appSlice.reducer
 
 export const {
     selectApp,
+    selectAppStatus,
     selectAppPage,
     selectAppErrMsg,
     selectAppLoadMsg,
-    selectAppSucMsg
+    selectAppSucMsg,
+    selectAppSteps
 } = appSlice.selectors
 
 // Re export async funcs
