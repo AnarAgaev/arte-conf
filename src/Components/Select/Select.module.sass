@@ -1,0 +1,136 @@
+@use '../../Sass/_variables' as vars
+@use '../../Sass/_mixins' as mxns
+
+.select
+    display: block
+    position: relative
+    width: 100%
+    height: 40px
+    user-select: none
+
+    &_dropped
+        i::before
+            transform: scale(1, -1)
+
+        .collapse
+            display: block
+            opacity: 1
+
+        li
+            opacity: 1 !important
+
+    &:first-child
+        z-index: 1
+
+    &:last-child
+        z-index: 0
+
+
+.value
+    display: flex
+    gap: 10px
+    align-items: center
+    justify-content: space-between
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    margin: 0
+    padding: 10px 0 10px 10px
+    border: 1px solid var(--clr-font-light)
+    cursor: pointer
+
+
+.caption
+    display: flex
+    align-items: baseline
+    gap: 5px
+    width: 100%
+    max-width: calc(100% - 50px)
+    margin: 0
+    padding: 0
+
+
+.text
+    flex-shrink: 0
+    display: inline-block
+    position: relative
+    color: var(--clr-font-light)
+    font-size: 14px
+    font-weight: 400
+    margin: 0
+    padding: 0
+
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    box-sizing: border-box
+
+
+.match
+    display: inline-block
+    position: relative
+    margin: 0
+    padding: 0
+    color: var(--clr-font-mid)
+    font-size: 12px
+    font-weight: 400
+
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    box-sizing: border-box
+
+
+.arrow
+    flex-shrink: 0
+    display: block
+    position: relative
+    right: -1px
+    width: 40px
+    height: 40px
+    border-left: 1px solid var(--clr-font-light)
+
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        inset: 0
+        background: transparent no-repeat center
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjM5MDIgMTIuNzc3OUwxNC44NDAyIDguMzI3NzdDMTQuOTQzMyA4LjIyNDg1IDE1IDguMDg3NDUgMTUgNy45NDA5NUMxNSA3Ljc5NDQ1IDE0Ljk0MzMgNy42NTcwNSAxNC44NDAyIDcuNTU0MTJMMTQuNTEyNiA3LjIyNjRDMTQuMjk5MSA3LjAxMzE1IDEzLjk1MjEgNy4wMTMxNSAxMy43MzkgNy4yMjY0TDEwLjAwMjEgMTAuOTYzM0w2LjI2MTA1IDcuMjIyMjVDNi4xNTgwNCA3LjExOTMzIDYuMDIwNzIgNy4wNjI1IDUuODc0MyA3LjA2MjVDNS43Mjc3MiA3LjA2MjUgNS41OTA0IDcuMTE5MzMgNS40ODczMSA3LjIyMjI1TDUuMTU5NzUgNy41NDk5OEM1LjA1Njc1IDcuNjUyOTggNSA3Ljc5MDMgNSA3LjkzNjhDNSA4LjA4MzMgNS4wNTY3NSA4LjIyMDcgNS4xNTk3NSA4LjMyMzYzTDkuNjEzODYgMTIuNzc3OUM5LjcxNzIgMTIuODgxMSA5Ljg1NTE2IDEyLjkzNzcgMTAuMDAxOCAxMi45Mzc0QzEwLjE0OTEgMTIuOTM3NyAxMC4yODY5IDEyLjg4MTEgMTAuMzkwMiAxMi43Nzc5WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==")
+        transition: var(--base-transition)
+
+
+.body // for positing toggle section
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 0
+
+
+.collapse // toggle section
+    display: none
+    height: auto
+    opacity: 0
+    border: 1px solid var(--clr-font-light)
+    border-top: none
+    background: var(--clr-back)
+
+
+.inner // inner block in toggle section
+    // max-height: 200px // 5 items with height of 40px
+
+    // overflow-x: hidden
+    // overflow-y: auto
+
+    // display: flex
+    // flex-direction: column
+    margin: 0
+    padding: 0
+
+    @include mxns.verticalCustomScrollbar(0px)

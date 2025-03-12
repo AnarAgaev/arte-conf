@@ -3,10 +3,10 @@ import style from './InputAdd.module.sass'
 
 interface I_Props {
     placeholder: string
-    cbf: (value: string) => void
+    cbf: () => void
 }
 
-const { add, add_valid, icon, input, button } = style
+const { add, add_valid, input, button } = style
 
 export const InputAdd = ({ placeholder, cbf }: I_Props) => {
 
@@ -21,6 +21,7 @@ export const InputAdd = ({ placeholder, cbf }: I_Props) => {
 
     const [inputVal, setInputVal] = useState('')
     const inputRef = useRef<HTMLInputElement | null>(null)
+    const buttonRef = useRef<HTMLButtonElement | null>(null)
 
     const handleInputChange = (
         event: ChangeEvent<HTMLInputElement>
@@ -32,23 +33,29 @@ export const InputAdd = ({ placeholder, cbf }: I_Props) => {
 
     const addNewValue = () => {
         if (inputVal) {
-            cbf(inputVal)
+            cbf()
             setInputVal('')
             inputRef.current?.blur()
+            buttonRef.current?.blur()
+            // document.body.click()
         }
     }
 
     return (
         <div className={inputVal === '' ? add : `${add} ${add_valid}` }>
-            <i className={icon}></i>
             <input className={input}
+                type="text"
                 value={inputVal}
                 ref={inputRef}
-                type="text"
                 onChange={handleInputChange}
                 onKeyDown ={handleEnterPress}
                 placeholder={placeholder} />
-            <button className={button} type="button" onClick={addNewValue}></button>
+            <button
+                type="button"
+                ref={buttonRef}
+                className={button}
+                onClick={addNewValue}>
+            </button>
         </div>
     )
 }
