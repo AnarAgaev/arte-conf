@@ -10,7 +10,7 @@ const initialState: T_AppState = {
     errorMessage: null,
     loadingMessage: null,
     successMessage: null,
-    status: 'pending',
+    status: 'idle',
     page: 'configurator',
     steps: steps
 }
