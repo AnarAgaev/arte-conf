@@ -2,74 +2,90 @@ import { T_Steps } from "./types";
 
 const steps: T_Steps = [
     {
-        name: '1',
+        id: 0,
+        name: 'шаг 1',
         status: 'active',
         substeps: [
             {
+                id: 0,
                 name: 'тип потолка',
                 status: 'active'
             },
             {
+                id: 1,
                 name: 'тип монтажа',
                 status: 'next'
             },
             {
+                id: 2,
                 name: 'форма конфигурации',
                 status: 'next'
             }
         ]
     },
     {
-        name: '2',
+        id: 1,
+        name: 'шаг 2',
         status: 'next',
         substeps: [
             {
+                id: 0,
                 name: 'тип трека',
-                status: 'next'
+                status: 'active'
             },
             {
+                id: 1,
                 name: 'цвет',
                 status: 'next'
             },
             {
+                id: 2,
                 name: 'коллекция',
                 status: 'next'
             }
         ]
     },
     {
-        name: '3',
+        id: 2,
+        name: 'шаг 3',
         status: 'next',
         substeps: [
             {
+                id: 0,
                 name: 'подбор светильников в трек',
-                status: 'next'
+                status: 'active'
             },
             {
+                id: 1,
                 name: 'Дополнительное освещение',
                 status: 'next'
             }
         ]
     },
     {
-        name: '4',
+        id: 3,
+        name: 'шаг 4',
         status: 'next',
         substeps: [
             {
+                id: 0,
                 name: 'блок питания',
-                status: 'next'
+                status: 'active'
             }
         ]
     },
     {
-        name: 'total',
+        id: 4,
+        name: 'итого',
         status: 'next',
         substeps: [
             {
+                id: 0,
                 name: 'о клиенте',
-                status: 'next'
+                status: 'active'
             },
             {
+                id: 1,
                 name: 'ваша конфигурация',
                 status: 'next'
             }

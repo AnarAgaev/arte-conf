@@ -2,9 +2,29 @@ import { ActionReducerMapBuilder, createSlice, PayloadAction, AnyAction } from '
 import type { T_AppState } from '@store/appSlice/types'
 import steps from './steps'
 
-// Actions
-import { togglePage as togglePageAction } from './Actions'
-import { fetchInitData } from './Funcs'
+// Import Funcs
+import {
+    fetchInitData
+} from './Funcs'
+
+// Import Actions
+import {
+    togglePageAction,
+    goToNextStepAction,
+    resetAllStepsAction
+} from './Actions'
+
+// Import Selectors
+import {
+    selectAppSelector,
+    selectAppStatusSelector,
+    selectAppErrMsgSelector,
+    selectAppLoadMsgSelector,
+    selectAppSucMsgSelector,
+    selectAppPageSelector,
+    selectAppStepsSelector,
+    selectActiveStepSelector
+} from './Selectors'
 
 const initialState: T_AppState = {
     errorMessage: null,
@@ -16,17 +36,20 @@ const initialState: T_AppState = {
 }
 
 const reducers = {
-    togglePage: togglePageAction
+    togglePage: togglePageAction,
+    goToNextStep: goToNextStepAction,
+    resetAllSteps: resetAllStepsAction
 }
 
 const selectors = {
-    selectApp: (state: T_AppState) => state,
-    selectAppStatus: (state: T_AppState) => state.status,
-    selectAppErrMsg: (state: T_AppState) => state.errorMessage,
-    selectAppLoadMsg: (state: T_AppState) => state.loadingMessage,
-    selectAppSucMsg: (state: T_AppState) => state.successMessage,
-    selectAppPage: (state: T_AppState) => state.page,
-    selectAppSteps: (state: T_AppState) => state.steps
+    selectApp: selectAppSelector,
+    selectAppStatus: selectAppStatusSelector,
+    selectAppErrMsg: selectAppErrMsgSelector,
+    selectAppLoadMsg: selectAppLoadMsgSelector,
+    selectAppSucMsg: selectAppSucMsgSelector,
+    selectAppPage: selectAppPageSelector,
+    selectAppSteps: selectAppStepsSelector,
+    selectActiveStep: selectActiveStepSelector
 }
 
 // Predicator function for mather reject request from Funcs
@@ -75,9 +98,13 @@ const appSlice = createSlice({
     extraReducers
 })
 
-export const { togglePage } = appSlice.actions
-
 export default appSlice.reducer
+
+export const {
+    togglePage,
+    goToNextStep,
+    resetAllSteps
+} = appSlice.actions
 
 export const {
     selectApp,
@@ -86,7 +113,8 @@ export const {
     selectAppErrMsg,
     selectAppLoadMsg,
     selectAppSucMsg,
-    selectAppSteps
+    selectAppSteps,
+    selectActiveStep
 } = appSlice.selectors
 
 // Re export async funcs

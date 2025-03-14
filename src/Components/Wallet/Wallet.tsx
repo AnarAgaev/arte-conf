@@ -3,12 +3,6 @@ import style from './Wallet.module.sass'
 const { wallet, caption, body, price, total, calc, value, controller, controller_dec, controller_inc } = style
 
 export const Wallet = () => {
-
-
-    console.log('---render Wallet');
-
-
-
     return (
         <div className={wallet}>
             <h3 className={caption}>Стоимость полного комплекта:</h3>

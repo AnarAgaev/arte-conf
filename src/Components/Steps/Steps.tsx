@@ -8,14 +8,6 @@ const { steps, step, step_active, step_prev, step_next,
     substeps, substeps_visible, substep, substep_active,
     substep_prev, substep_next } = style
 
-const stepsNamesMap = {
-    1: '1 шаг',
-    2: '2 шаг',
-    3: '3 шаг',
-    4: '4 шаг',
-    total: 'итого',
-}
-
 const getSubsteps = (substeps: T_Steps[number]['substeps']): JSX.Element[] => substeps.map(
     ss => {
         const clazz = {
@@ -44,7 +36,7 @@ const getSteps = (steps: T_Steps): JSX.Element[] => steps.map(
 
         return (
             <li className={clazz[s.status]} key={s.name}>
-                {stepsNamesMap[s.name]}
+                {s.name}
                 <ul className={`${substeps}${s.status === 'active' ? ` ${substeps_visible}` : ''}`}>
                     { substepsElements }
                 </ul>
@@ -54,13 +46,6 @@ const getSteps = (steps: T_Steps): JSX.Element[] => steps.map(
 )
 
 export const Steps = () => {
-
-
-
-    console.log('---render Steps');
-
-
-
     const stepList = useAppSelector(selectAppSteps)
 
     const stepsElements = useMemo(() => getSteps(stepList), [

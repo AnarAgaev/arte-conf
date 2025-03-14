@@ -4,10 +4,6 @@ import style from './Viewport.module.sass'
 const { viewport, sketch } = style
 
 export const Viewport = () => {
-
-    console.log('---render Viewport');
-
-
     return (
         <div className={viewport}>
 

@@ -5,11 +5,6 @@ const { location, list } = style
 
 export const Location = () => {
 
-
-    console.log('---render Location');
-
-
-
     const projectsOptions = [
         'Project 1',
         'Project 2',
@@ -40,7 +35,6 @@ export const Location = () => {
         }}
         />
     )
-
 
     return (
         <div className={location}>

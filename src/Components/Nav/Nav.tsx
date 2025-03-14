@@ -6,10 +6,6 @@ const { nav, list, item, active } = style
 
 export const Nav = () => {
 
-
-    console.log('---render Nav');
-
-
     const dispatch = useAppDispatch()
 	const currentPage = useAppSelector(selectAppPage)
 

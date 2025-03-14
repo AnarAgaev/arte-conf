@@ -9,11 +9,6 @@ type I_Props = {
 const { option, label, text } = style
 
 export const SelectOption = ({ caption, isChecked, handler }: I_Props) => {
-
-
-    console.log('---render SelectOption');
-
-
     return (
         <li className={option}>
             <label className={label}>

@@ -9,12 +9,7 @@ const { app, body } = style
 
 export const App = () => {
 
-
-	console.log('---render App');
-
-
 	const dispatch = useAppDispatch()
-
 	const currentPage = useAppSelector(selectAppPage)
 
 	useEffect(() => {

@@ -12,10 +12,6 @@ const { select, select_dropped, value, caption,
 
 export const Select = ({ title, selectedValue, children }: I_Props) => {
 
-
-    console.log('---render Select');
-
-
     const [ dropped, toggleDropped ] = useState(false)
     const selectRef = useRef<HTMLDivElement | null>(null)
 

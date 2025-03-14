@@ -10,12 +10,6 @@ const { add, add_valid, input, button } = style
 
 export const InputAdd = ({ placeholder, cbf }: I_Props) => {
 
-
-
-    console.log('---render InputAdd');
-
-
-
     // #region Variables
     // #endregion
 
