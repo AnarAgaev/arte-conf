@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useAppSelector, useAppDispatch } from "@hooks"
-import { selectAppSteps, goToSubstep } from "@store/appSlice"
+import { selectAppSteps, goToSubstep, goToStep } from "@store/appSlice"
 import { T_Steps, T_StepStatus } from "@store/appSlice/types"
 import { T_AppDispatch } from "@store";
 import style from './Steps.module.sass'
@@ -21,7 +21,7 @@ const getSubsteps = (
             next: `${substep} ${substep_next}`,
         }
 
-        const onItem = (
+        const onSubstep = (
             status: T_StepStatus,
             id: T_Steps[0]['substeps'][0]['id']
         ) => {
@@ -32,7 +32,7 @@ const getSubsteps = (
         return (
             <li key={ss.name}
                 className={clazz[ss.status]}
-                onClick={() => onItem(ss.status, ss.id)}>
+                onClick={() => onSubstep(ss.status, ss.id)}>
                 {ss.name}
             </li>
         )
@@ -52,8 +52,19 @@ const getSteps = (
             next: `${step} ${step_next}`,
         }
 
+        const onStep = (
+            status: T_StepStatus,
+            id: T_Steps[0]['id']
+        ) => {
+            if (status !== 'prev') return
+            dispatch(goToStep(id))
+        }
+
         return (
-            <li className={clazz[s.status]} key={s.name}>
+            <li key={s.name}
+                className={clazz[s.status]}
+                onClick={() => onStep(s.status, s.id)}
+            >
                 {s.name}
                 <ul className={`${substeps}${s.status === 'active' ? ` ${substeps_visible}` : ''}`}>
                     { substepsElements }

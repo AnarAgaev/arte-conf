@@ -13,7 +13,8 @@ import {
     goToNextStepAction,
     goToNextSubstepAction,
     goToSubstepAction,
-    resetStepsAction
+    resetStepsAction,
+    goToStepAction
 } from './Actions'
 
 // Import Selectors
@@ -41,6 +42,7 @@ const reducers = {
     togglePage: togglePageAction,
     goToNextStep: goToNextStepAction,
     goToNextSubstep: goToNextSubstepAction,
+    goToStep: goToStepAction,
     goToSubstep: goToSubstepAction,
     resetSteps: resetStepsAction
 }
@@ -108,6 +110,7 @@ export const {
     togglePage,
     goToNextStep,
     goToNextSubstep,
+    goToStep,
     goToSubstep,
     resetSteps
 } = appSlice.actions

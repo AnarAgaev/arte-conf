@@ -1,11 +1,11 @@
 import { PayloadAction } from "@reduxjs/toolkit"
 import { T_AppState, T_Steps } from "../types"
 
-type T_Id = T_Steps[0]['substeps'][0]['id']
+type T_Payload = T_Steps[0]['substeps'][0]['id']
 
 export const goToSubstepAction = (
     { steps }: T_AppState,
-    { payload: targetSubstepId }: PayloadAction<T_Id>
+    { payload: targetSubstepId }: PayloadAction<T_Payload>
 ) => {
 
     const activeStepIdx = steps.findIndex(step => step.status === 'active')
@@ -13,16 +13,13 @@ export const goToSubstepAction = (
 
     const substeps = steps[activeStepIdx].substeps
 
-    const activeSubstepIdx = substeps.findIndex(substep => substep.id === targetSubstepId)
+    const targetSubstepIdx = substeps.findIndex(substep => substep.id === targetSubstepId)
+    if (targetSubstepIdx === -1) return
 
-    // If we staying on the last substep
-    if (activeSubstepIdx === -1 || activeSubstepIdx === substeps.length - 1) return
-
-    substeps.forEach((substep, idx) => {
-        substep.status = idx < activeSubstepIdx
-            ? 'prev'
-            : idx > activeSubstepIdx
-                ? 'next'
-                : 'active'
-    })
+    substeps.forEach((substep, idx) => substep.status = idx < targetSubstepIdx
+        ? 'prev'
+        : idx > targetSubstepIdx
+            ? 'next'
+            : 'active'
+    )
 }
