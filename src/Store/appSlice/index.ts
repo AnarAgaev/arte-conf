@@ -11,19 +11,21 @@ import {
 import {
     togglePageAction,
     goToNextStepAction,
-    resetAllStepsAction
+    goToNextSubstepAction,
+    goToSubstepAction,
+    resetStepsAction
 } from './Actions'
 
 // Import Selectors
 import {
-    selectAppSelector,
-    selectAppStatusSelector,
-    selectAppErrMsgSelector,
-    selectAppLoadMsgSelector,
-    selectAppSucMsgSelector,
-    selectAppPageSelector,
-    selectAppStepsSelector,
-    selectActiveStepSelector
+    appSelector,
+    appStatusSelector,
+    appErrMsgSelector,
+    appLoadMsgSelector,
+    appSucMsgSelector,
+    appPageSelector,
+    appStepsSelector,
+    activeStepSelector
 } from './Selectors'
 
 const initialState: T_AppState = {
@@ -38,18 +40,20 @@ const initialState: T_AppState = {
 const reducers = {
     togglePage: togglePageAction,
     goToNextStep: goToNextStepAction,
-    resetAllSteps: resetAllStepsAction
+    goToNextSubstep: goToNextSubstepAction,
+    goToSubstep: goToSubstepAction,
+    resetSteps: resetStepsAction
 }
 
 const selectors = {
-    selectApp: selectAppSelector,
-    selectAppStatus: selectAppStatusSelector,
-    selectAppErrMsg: selectAppErrMsgSelector,
-    selectAppLoadMsg: selectAppLoadMsgSelector,
-    selectAppSucMsg: selectAppSucMsgSelector,
-    selectAppPage: selectAppPageSelector,
-    selectAppSteps: selectAppStepsSelector,
-    selectActiveStep: selectActiveStepSelector
+    selectApp: appSelector,
+    selectAppStatus: appStatusSelector,
+    selectAppErrMsg: appErrMsgSelector,
+    selectAppLoadMsg: appLoadMsgSelector,
+    selectAppSucMsg: appSucMsgSelector,
+    selectAppPage: appPageSelector,
+    selectAppSteps: appStepsSelector,
+    selectActiveStep: activeStepSelector
 }
 
 // Predicator function for mather reject request from Funcs
@@ -103,7 +107,9 @@ export default appSlice.reducer
 export const {
     togglePage,
     goToNextStep,
-    resetAllSteps
+    goToNextSubstep,
+    goToSubstep,
+    resetSteps
 } = appSlice.actions
 
 export const {

@@ -1,3 +1,5 @@
 export * from './togglePage'
 export * from './goToNextStep'
-export * from './resetAllSteps'
+export * from './goToSubstep'
+export * from './goToNextSubstep'
+export * from './resetSteps'

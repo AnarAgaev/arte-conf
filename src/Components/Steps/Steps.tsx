@@ -1,32 +1,50 @@
 import { useMemo } from "react";
-import { useAppSelector } from "@hooks"
-import { selectAppSteps } from "@store/appSlice"
-import { T_Steps } from "@store/appSlice/types"
+import { useAppSelector, useAppDispatch } from "@hooks"
+import { selectAppSteps, goToSubstep } from "@store/appSlice"
+import { T_Steps, T_StepStatus } from "@store/appSlice/types"
+import { T_AppDispatch } from "@store";
 import style from './Steps.module.sass'
 
 const { steps, step, step_active, step_prev, step_next,
     substeps, substeps_visible, substep, substep_active,
     substep_prev, substep_next } = style
 
-const getSubsteps = (substeps: T_Steps[number]['substeps']): JSX.Element[] => substeps.map(
+const getSubsteps = (
+    substeps: T_Steps[number]['substeps'],
+    dispatch: T_AppDispatch
+): JSX.Element[] => substeps.map(
     ss => {
+
         const clazz = {
             active: `${substep} ${substep_active}`,
             prev: `${substep} ${substep_prev}`,
             next: `${substep} ${substep_next}`,
         }
 
+        const onItem = (
+            status: T_StepStatus,
+            id: T_Steps[0]['substeps'][0]['id']
+        ) => {
+            if (status !== 'prev') return
+            dispatch(goToSubstep(id))
+        }
+
         return (
-            <li className={clazz[ss.status]} key={ss.name}>
+            <li key={ss.name}
+                className={clazz[ss.status]}
+                onClick={() => onItem(ss.status, ss.id)}>
                 {ss.name}
             </li>
         )
     }
 )
 
-const getSteps = (steps: T_Steps): JSX.Element[] => steps.map(
+const getSteps = (
+    steps: T_Steps,
+    dispatch: T_AppDispatch
+): JSX.Element[] => steps.map(
     s => {
-        const substepsElements = getSubsteps(s.substeps)
+        const substepsElements = getSubsteps(s.substeps, dispatch)
 
         const clazz = {
             active: `${step} ${step_active}`,
@@ -46,11 +64,13 @@ const getSteps = (steps: T_Steps): JSX.Element[] => steps.map(
 )
 
 export const Steps = () => {
+    const dispatch = useAppDispatch()
     const stepList = useAppSelector(selectAppSteps)
 
-    const stepsElements = useMemo(() => getSteps(stepList), [
-        stepList
-    ])
+    const stepsElements = useMemo(
+        () => getSteps(stepList, dispatch),
+        [ stepList, dispatch ]
+    )
 
     return (
         <ul className={steps}>
