@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import type { T_StepOneState } from '@store/stepOneSlice/types'
+import initialState from './initialState'
 
 // Import Funcs
 import {} from './Funcs'
@@ -7,44 +7,25 @@ import {} from './Funcs'
 // Import Actions
 import {
     resetOneStepAction,
-    setCeilingTypeAction
+    setCeilingTypeAction,
+	setMountingTypeAction
 } from './Actions'
 
 // Import Selectors
 import {
-    ceilingTypeSelector
+    ceilingTypeSelector,
+	mountingTypeSelector
 } from './Selectors'
-
-const initialState: T_StepOneState = {
-    ceilingType: [
-        {
-            id: 0,
-            name: 'реечный',
-            img: '/images/reechnyi.jpg',
-            selected: false
-        },
-        {
-            id: 1,
-            name: 'натяжной',
-            img: '/images/natyazhnoy.jpg',
-            selected: false
-        },
-        {
-            id: 2,
-            name: 'ГКЛ',
-            img: '/images/gkl.png',
-            selected: false
-        }
-    ]
-}
 
 const reducers = {
     resetOneStep: resetOneStepAction,
-    setCeilingType: setCeilingTypeAction
+    setCeilingType: setCeilingTypeAction,
+	setMountingType: setMountingTypeAction
 }
 
 const selectors = {
-    selectCeilingType: ceilingTypeSelector
+    selectCeilingType: ceilingTypeSelector,
+    selectMountingType: mountingTypeSelector
 }
 
 const stepOneSlice = createSlice({
@@ -56,11 +37,13 @@ const stepOneSlice = createSlice({
 
 export const {
     resetOneStep,
-    setCeilingType
+    setCeilingType,
+	setMountingType
 } = stepOneSlice.actions
 
 export const {
-    selectCeilingType
+    selectCeilingType,
+	selectMountingType
 } = stepOneSlice.selectors
 
 export default stepOneSlice.reducer

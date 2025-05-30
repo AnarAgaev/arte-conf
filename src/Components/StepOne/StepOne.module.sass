@@ -1,66 +1,109 @@
 @use '../../Sass/_variables' as vars
 
 .pictureSignList
-    display: grid
-    grid-template-columns: repeat(auto-fill, minmax(126px, 1fr))
-    column-gap: 10px
-    row-gap: 20px
+	display: grid
+	grid-template-columns: repeat(auto-fill, minmax(126px, 1fr))
+	column-gap: 10px
+	row-gap: 20px
 
 
 .pictureSignItem
-    display: flex
-    flex-direction: column
-    gap: 10px
-    cursor: pointer
+	display: flex
+	flex-direction: column
+	gap: 10px
+	cursor: pointer
 
-    @media (hover: hover) and (pointer: fine)
-        &:hover
-            mark
-                color: var(--clr-accent)
+	@media (hover: hover) and (pointer: fine)
+		&:hover
+			mark
+				color: var(--clr-accent)
 
-    &_selected
-        pointer-events: none
+	&_selected
+		span::before
+			border-color: var(--clr-accent) !important
 
-        span::before
-            border-color: var(--clr-accent) !important
+		mark
+			color: var(--clr-accent)
 
-        mark
-            color: var(--clr-accent)
+	span
+		display: block
+		position: relative
+		width: 100%
+		height: auto
+		aspect-ratio: 1 / 1
 
-    span
-        display: block
-        position: relative
-        width: 100%
-        height: auto
-        aspect-ratio: 1 / 1
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			z-index: 1
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			border: 2px solid transparent
+			transition: var(--base-transition)
 
-        &::before
-            content: ''
-            display: block
-            position: absolute
-            z-index: 1
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            border: 2px solid transparent
-            transition: var(--base-transition)
+	img
+		display: block
+		position: relative
+		z-index: 0
+		width: 100%
+		height: auto
+		aspect-ratio: 1 / 1
 
-    img
-        display: block
-        position: relative
-        z-index: 0
-        width: 100%
-        height: auto
-        aspect-ratio: 1 / 1
+	mark
+		display: block
+		width: 100%
+		height: auto
+		text-align: center
+		font-weight: 400
+		font-size: 14px
+		line-height: 20px
+		background: transparent
+		transition: var(--base-transition)
 
-    mark
-        display: block
-        width: 100%
-        height: auto
-        text-align: center
-        font-weight: 400
-        font-size: 14px
-        line-height: 20px
-        background: transparent
-        transition: var(--base-transition)
+
+.textSignList
+	display: grid
+	grid-template-columns: 1fr
+	column-gap: 10px
+	row-gap: 20px
+
+	@media (min-width: vars.$sm)
+		grid-template-columns: repeat(3, 1fr)
+
+	@media (min-width: vars.$md)
+		grid-template-columns: repeat(3, min-content)
+
+
+.textSignItem
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	padding: 10px 20px
+	border: 1px solid var(--clr-font-light)
+	transition: var(--base-transition)
+
+	@media (hover: hover) and (pointer: fine)
+		&:hover
+			span
+				color: var(--clr-accent)
+
+	&_selected
+		border-color: var(--clr-accent)
+
+		span
+			color: var(--clr-accent)
+
+	span
+		display: block
+		width: 100%
+		height: auto
+		text-align: center
+		font-weight: 400
+		font-size: 14px
+		line-height: 20px
+		background: transparent
+		transition: var(--base-transition)
