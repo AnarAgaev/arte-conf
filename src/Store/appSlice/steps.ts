@@ -14,12 +14,12 @@ const steps: T_Steps = [
 			{
 				id: 1,
 				name: 'тип монтажа',
-				status: 'active'
+				status: 'prev'
 			},
 			{
 				id: 2,
 				name: 'форма конфигурации',
-				status: 'next'
+				status: 'active'
 			}
 		]
 	},

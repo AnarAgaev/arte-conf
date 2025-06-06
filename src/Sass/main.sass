@@ -4,217 +4,227 @@
 
 
 #arteConf
-    z-index: 1
+	z-index: 1
 
 
 .arte-conf-app
 
-    --base-transition: all .1s linear
-    --synth-transition: all 1s cubic-bezier(0.16, 1, 0.3, 1)
-    --synth-timing-func: cubic-bezier(0.16, 1, 0.3, 1)
+	--base-transition: all .1s linear
+	--synth-transition: all 1s cubic-bezier(0.16, 1, 0.3, 1)
+	--synth-timing-func: cubic-bezier(0.16, 1, 0.3, 1)
 
-    --clr-font-light: #fff
-    --clr-font-mid: #b1b1b1
-    --clr-font-dark: #000
+	--clr-font-light: #fff
+	--clr-font-mid: #b1b1b1
+	--clr-font-dark: #000
 
-    --clr-accent: #e1a624
-    --clr-back: #464646
-    --clr-border: #c6c6c6
-    --clr-track: #333
+	--clr-accent: #e1a624
+	--clr-back: #464646
+	--clr-border: #c6c6c6
+	--clr-track: #333
 
-    --clr-err: #ff0000
+	--clr-err: #ff0000
 
-    --clr-img-failed: #dfdfdf
+	--clr-img-failed: #dfdfdf
 
-    --clr-load-start: #484848
-    --clr-load-end: #585858
+	--clr-load-start: #484848
+	--clr-load-end: #585858
 
-    --opacity-back: rgba(0, 0, 0, .33)
+	--opacity-back: rgba(0, 0, 0, .33)
 
-    --font-prime: 'GothamPro', sans-serif
-
-
-
-    box-sizing: border-box
-    font-family: var(--font-prime)
-    font-size: 16px
-    font-style: normal
-    font-weight: normal
-    color: var(--clr-font-light)
-    letter-spacing: normal
+	--font-prime: 'GothamPro', sans-serif
 
 
 
-    *,
-    *::before,
-    *::after
-        box-sizing: border-box
-        outline: 0 !important
-        font-family: var(--font-prime)
-        font-size: 16px
-        font-style: normal
-        font-weight: 400
-        color: var(--clr-font-light)
-        letter-spacing: normal
-
-
-    ul
-        list-style: none
-        margin: 0
-        padding: 0
-
-    li
-        list-style: none
-
-
-    img
-        @include mxns.image
-
-
-    input[type="text"]
-        &::-webkit-input-placeholder
-            opacity: 1
-            transition: opacity 0.2s ease
-        &::-moz-placeholder
-            opacity: 1
-            transition: opacity 0.2s ease
-        &:-moz-placeholder
-            opacity: 1
-            transition: opacity 0.2s ease
-        &:-ms-input-placeholder
-            opacity: 1
-            transition: opacity 0.2s ease
-
-        &:focus
-            &::-webkit-input-placeholder
-                opacity: 0
-                transition: opacity 0.2s ease
-            &::-moz-placeholder
-                opacity: 0
-                transition: opacity 0.2s ease
-            &:-moz-placeholder
-                opacity: 0
-                transition: opacity 0.2s ease
-            &:-ms-input-placeholder
-                opacity: 0
-                transition: opacity 0.2s ease
-
-
-    .invisible
-        position: absolute !important
-        width: 1px !important
-        height: 1px !important
-        margin: -1px !important
-        border: 0 !important
-        padding: 0 !important
-        white-space: nowrap !important
-        clip-path: inset(100%) !important
-        clip: rect(0 0 0 0) !important
-        overflow: hidden !important
-        z-index: -1 !important
-
-
-    .hide
-        display: none !important
-
-
-    .collapse
-        display: grid
-        grid-template-rows: 0fr
-        overflow: hidden
-        transition: var(--base-transition)
-
-        .inner
-            position: relative
-            top: 20px
-            min-height: 0
-            opacity: 0
-            transition: var(--base-transition)
-
-        &.open
-            grid-template-rows: 0fr
-
-            .inner
-                opacity: 1
-                top: 0
-
-
-    .btn
-        display: inline-flex
-        align-items: center
-        justify-content: center
-        gap: 10px
-        width: auto
-        padding: 0 40px
-        cursor: pointer
-        user-select: none
-        transition: var(--base-transition)
-        transition-property: background, color
-        background: transparent
-        border: 2px solid var(--clr-accent)
-        text-align: center
-        text-decoration: none
-        text-transform: uppercase
-        letter-spacing: 0.14px
-        font-size: 12px
-        letter-spacing: 0.8px
-        font-weight: 700 // Жирность не совпадает с макетом. Попробовать переформатировать шрифт или подключить не форматированный
-
-        &_default
-            height: 50px
-
-        &_small
-            height: 30px
-
-        &_block
-            width: 100%
-
-        &_dark
-            background-color: var(--clr-accent)
-            color: var(--clr-font-dark)
-
-            @media (hover: hover) and (pointer: fine)
-                &:hover
-                    background-color: var(--clr-back)
-                    color: var(--clr-accent)
-
-        &_lite
-            background-color: var(--clr-back)
-            color: var(--clr-accent)
-
-            @media (hover: hover) and (pointer: fine)
-                &:hover
-                    background-color: var(--clr-accent)
-                    color: var(--clr-font-dark)
-
-        &.disabled
-            pointer-events: none
-            background: var(--clr-load-end)
-            border-color: var(--clr-load-end)
-            color: var(--clr-font-mid)
-            opacity: 0.5
+	box-sizing: border-box
+	font-family: var(--font-prime)
+	font-size: 16px
+	font-style: normal
+	font-weight: normal
+	color: var(--clr-font-light)
+	letter-spacing: normal
 
 
 
-    .step-fragment
-        display: flex
-        flex-direction: column
-        gap: 20px
+	*,
+	*::before,
+	*::after
+		box-sizing: border-box
+		outline: 0 !important
+		font-family: var(--font-prime)
+		font-size: 16px
+		font-style: normal
+		font-weight: 400
+		color: var(--clr-font-light)
+		letter-spacing: normal
 
 
-        &__caption
-            display: block
-            position: relative
-            margin: 0
-            padding: 0
-            font-weight: 700
-            font-size: 15px
-            line-height: 110.00000000000001%
-            text-transform: uppercase
+	ul
+		list-style: none
+		margin: 0
+		padding: 0
+
+	li
+		list-style: none
 
 
-        &__content
-            display: block
-            position: relative
-            margin: 0
-            padding: 0
+	img
+		@include mxns.image
+
+
+	input[type="text"]
+		&::-webkit-input-placeholder
+			opacity: 1
+			transition: opacity 0.2s ease
+		&::-moz-placeholder
+			opacity: 1
+			transition: opacity 0.2s ease
+		&:-moz-placeholder
+			opacity: 1
+			transition: opacity 0.2s ease
+		&:-ms-input-placeholder
+			opacity: 1
+			transition: opacity 0.2s ease
+
+		&:focus
+			&::-webkit-input-placeholder
+				opacity: 0
+				transition: opacity 0.2s ease
+			&::-moz-placeholder
+				opacity: 0
+				transition: opacity 0.2s ease
+			&:-moz-placeholder
+				opacity: 0
+				transition: opacity 0.2s ease
+			&:-ms-input-placeholder
+				opacity: 0
+				transition: opacity 0.2s ease
+
+
+	.invisible
+		position: absolute !important
+		width: 1px !important
+		height: 1px !important
+		margin: -1px !important
+		border: 0 !important
+		padding: 0 !important
+		white-space: nowrap !important
+		clip-path: inset(100%) !important
+		clip: rect(0 0 0 0) !important
+		overflow: hidden !important
+		z-index: -1 !important
+
+
+	.hide
+		display: none !important
+
+
+	.collapse
+		display: grid
+		grid-template-rows: 0fr
+		overflow: hidden
+		transition: var(--base-transition)
+
+		.inner
+			position: relative
+			top: 20px
+			min-height: 0
+			opacity: 0
+			transition: var(--base-transition)
+
+		&.open
+			grid-template-rows: 0fr
+
+			.inner
+				opacity: 1
+				top: 0
+
+
+	.btn
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		gap: 10px
+		width: auto
+		padding: 0 40px
+		cursor: pointer
+		user-select: none
+		transition: var(--base-transition)
+		transition-property: background, color
+		background: transparent
+		border: 2px solid var(--clr-accent)
+		text-align: center
+		text-decoration: none
+		text-transform: uppercase
+		letter-spacing: 0.14px
+		font-size: 12px
+		letter-spacing: 0.8px
+		font-weight: 700 // Жирность не совпадает с макетом. Попробовать переформатировать шрифт или подключить не форматированный
+
+		&_default
+			height: 50px
+
+		&_small
+			height: 30px
+
+		&_block
+			width: 100%
+
+		&_dark
+			background-color: var(--clr-accent)
+			color: var(--clr-font-dark)
+
+			@media (hover: hover) and (pointer: fine)
+				&:hover
+					background-color: var(--clr-back)
+					color: var(--clr-accent)
+
+		&_lite
+			background-color: var(--clr-back)
+			color: var(--clr-accent)
+
+			@media (hover: hover) and (pointer: fine)
+				&:hover
+					background-color: var(--clr-accent)
+					color: var(--clr-font-dark)
+
+		&.disabled
+			pointer-events: none
+			background: var(--clr-load-end)
+			border-color: var(--clr-load-end)
+			color: var(--clr-font-mid)
+			opacity: 0.5
+
+
+
+	.step-fragments-wrapper
+		display: flex
+		flex-direction: column
+		gap: 20px
+
+		@media (min-width: vars.$lg)
+			gap: 40px
+
+
+
+	.step-fragment
+		display: flex
+		flex-direction: column
+		gap: 20px
+
+
+		&__caption
+			display: block
+			position: relative
+			margin: 0
+			padding: 0
+			font-weight: 700
+			font-size: 15px
+			line-height: 110.00000000000001%
+			text-transform: uppercase
+
+
+		&__content
+			display: block
+			position: relative
+			margin: 0
+			padding: 0

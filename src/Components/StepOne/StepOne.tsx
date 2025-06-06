@@ -1,22 +1,36 @@
 import { useMemo } from "react"
 import { useAppSelector, useAppDispatch } from "@hooks"
 import { selectAppSteps, goToNextSubstep } from "@store/appSlice"
-import { selectCeilingType, selectMountingType, setCeilingType, setMountingType } from "@store/stepOneSlice"
+import { selectCeilingType, selectMountingType, selectConstructionForms,
+	setCeilingType, setMountingType, setConstructionForm, selectActiveConstructionForm,
+	setActiveSide, selectSides } from "@store/stepOneSlice"
+import { CalcController, SideSketchLShaped, SideSketchRectangle,
+	SideSketchLine, SideSketchUShaped, SideSketchSnake } from '@components'
 import { T_StepOneState } from "@store/stepOneSlice/types"
 import { T_AppDispatch } from "@store"
 import style from './StepOne.module.sass'
 
 const {
-	pictureSignList, pictureSignItem, pictureSignItem_selected,
-	textSignList, textSignItem, textSignItem_selected
+	StepOne__pictureSignList,
+	StepOne__pictureSignItem,
+	StepOne__pictureSignItem_selected,
+	StepOne__textSignList,
+	StepOne__textSignItem,
+	StepOne__textSignItem_selected,
+	StepOne__sides,
+	StepOne__sidesCalculator,
+	StepOne__sidesController,
+	StepOne__sidesSketch,
+	StepOne__sidesTotal
 } = style
 
-const getCeilingTypeElms = (
+// #region Node list getters
+const getCeilingTypeNodes = (
 	ceilingTypes: T_StepOneState['ceilingType'],
 	dispatch: T_AppDispatch
 ): JSX.Element[] => ceilingTypes.map(type => {
 
-	const clazz = `${pictureSignItem} ${type.selected ? `${pictureSignItem_selected}` : ''}`
+	const clazz = `${StepOne__pictureSignItem} ${type.selected ? `${StepOne__pictureSignItem_selected}` : ''}`
 
 	const onItem = (id: number) => {
 		dispatch(setCeilingType(id))
@@ -26,20 +40,19 @@ const getCeilingTypeElms = (
 	return (
 		<li key={type.id} className={clazz} onClick={() => onItem(type.id)}>
 			<span>
-				<img src={type.img} alt={type.name} />
+				<img src={type.img} alt={type.description} />
 			</span>
-			<mark>{type.name}</mark>
+			<mark>{type.description}</mark>
 		</li>
 	)
 })
 
-const getMountingTypeElms = (
+const getMountingTypeNodes = (
 	mountingTypes: T_StepOneState['mountingType'],
 	dispatch: T_AppDispatch
 ): JSX.Element[] => mountingTypes.map(type => {
 
-	// const clazz = `${pictureSignItem} ${type.selected ? `${pictureSignItem_selected}` : ''}`
-	const clazz = `${textSignItem} ${type.selected ? `${textSignItem_selected}` : ''}`
+	const clazz = `${StepOne__textSignItem} ${type.selected ? `${StepOne__textSignItem_selected}` : ''}`
 
 	const onItem = (id: number) => {
 		dispatch(setMountingType(id))
@@ -48,10 +61,70 @@ const getMountingTypeElms = (
 
 	return (
 		<li key={type.id} className={clazz} onClick={() => onItem(type.id)}>
-			<span>{type.name}</span>
+			<span>{type.description}</span>
 		</li>
 	)
 })
+
+const getConstructionFormNodes = (
+	constructionForms: T_StepOneState['constructionForm'],
+	dispatch: T_AppDispatch,
+): JSX.Element[] => constructionForms.map(form => {
+
+	const clazz = `${StepOne__pictureSignItem} ${form.selected ? `${StepOne__pictureSignItem_selected}` : ''}`
+
+	const onItem = (id: number) => {
+		dispatch(setConstructionForm(id))
+	}
+
+	return (
+		<li key={form.id} className={clazz} onClick={() => onItem(form.id)}>
+			<span>
+				<img src={form.img} alt={form.description} />
+			</span>
+			<mark>{form.description}</mark>
+		</li>
+	)
+})
+
+const getControllerNodes = (
+    sides: T_StepOneState['sides'],
+    dispatch: T_AppDispatch,
+    activeConstructionForm: T_StepOneState['constructionForm'][0] | undefined
+): JSX.Element[] => {
+
+	const controllerCountMap = {
+        'l-shaped': 2,
+        'line': 1,
+        'rectangle': 4,
+        'snake': 3,
+        'u-shaped': 3
+    };
+
+    const controllerCount = activeConstructionForm
+        ? controllerCountMap[activeConstructionForm.name] || 1
+        : 1
+
+    return Array.from({ length: Math.min(controllerCount, sides.length) })
+        .map((_, index) => {
+            const side = sides[index]
+            return (
+                <div key={side.id} className={StepOne__sidesController}>
+                    <span>{side.name}</span>
+                    <CalcController
+                        initialValue={1}
+                        step={1}
+                        onActive={() => dispatch(setActiveSide(side.id))}
+                    />
+                </div>
+            )
+        })
+}
+// #endregion
+
+const getSelectedFormName = (constructionForms: T_StepOneState['constructionForm']) => {
+	return constructionForms.find(form => form.selected)?.name
+}
 
 export const StepOne = () => {
 
@@ -61,15 +134,35 @@ export const StepOne = () => {
 	const substepActiveIdx = step.substeps.findIndex(substep => substep.status === 'active')
 	const ceilingTypes = useAppSelector(selectCeilingType)
 	const mountingTypes = useAppSelector(selectMountingType)
+	const constructionForms = useAppSelector(selectConstructionForms)
+	const activeConstructionForm = useAppSelector(selectActiveConstructionForm)
+	const sides = useAppSelector(selectSides)
 
-	const ceilingTypeElms = useMemo(
-		() => getCeilingTypeElms(ceilingTypes, dispatch),
+	// #region Node list getters
+	const ceilingTypeNodes = useMemo(
+		() => getCeilingTypeNodes(ceilingTypes, dispatch),
 		[ ceilingTypes, dispatch ]
 	)
 
-	const mountingTypeElms = useMemo(
-		() => getMountingTypeElms(mountingTypes, dispatch),
+	const mountingTypeNodes = useMemo(
+		() => getMountingTypeNodes(mountingTypes, dispatch),
 		[mountingTypes, dispatch]
+	)
+
+	const constructionFormNodes = useMemo(
+		() => getConstructionFormNodes(constructionForms, dispatch),
+		[constructionForms, dispatch]
+	)
+
+	const controllerNodes = useMemo(
+		() => getControllerNodes(sides, dispatch, activeConstructionForm),
+		[sides, dispatch, activeConstructionForm]
+	)
+	// #endregion
+
+	const selectedFormName = useMemo(
+		() => getSelectedFormName(constructionForms),
+		[constructionForms]
 	)
 
 	return (
@@ -81,8 +174,8 @@ export const StepOne = () => {
 						{ substepActive?.name }
 					</h3>
 					<div className="step-fragment__content">
-						<ul className={pictureSignList}>
-							{ ceilingTypeElms }
+						<ul className={StepOne__pictureSignList}>
+							{ ceilingTypeNodes }
 						</ul>
 					</div>
 				</section>
@@ -95,8 +188,8 @@ export const StepOne = () => {
 						{ substepActive?.name }
 					</h3>
 					<div className="step-fragment__content">
-						<ul className={textSignList}>
-							{ mountingTypeElms }
+						<ul className={StepOne__textSignList}>
+							{ mountingTypeNodes }
 						</ul>
 					</div>
 				</section>
@@ -104,14 +197,48 @@ export const StepOne = () => {
 
 			{/* Форма конфигурации */}
 			{ substepActiveIdx === 2 &&
-				<section className="step-fragment">
-					<h3 className="step-fragment__caption">
-						{ substepActive?.name }
-					</h3>
-					<div className="step-fragment__content">
-						...
-					</div>
-				</section>
+				<div className="step-fragments-wrapper">
+
+					<section className="step-fragment">
+						<h3 className="step-fragment__caption">
+							{ substepActive?.name }
+						</h3>
+						<div className="step-fragment__content">
+							<ul className={StepOne__pictureSignList}>
+								{ constructionFormNodes }
+							</ul>
+						</div>
+					</section>
+
+					{ selectedFormName &&
+						<section className="step-fragment">
+							<h3 className="step-fragment__caption">
+								Укажите размеры сторон (мм):
+							</h3>
+							<div className="step-fragment__content">
+								<div className={StepOne__sides}>
+
+									<div className={StepOne__sidesCalculator}>
+										{ controllerNodes }
+									</div>
+
+									<div className={StepOne__sidesSketch}>
+										{ selectedFormName === 'l-shaped' && <SideSketchLShaped />}
+										{ selectedFormName === 'rectangle' && <SideSketchRectangle />}
+										{ selectedFormName === 'line' && <SideSketchLine />}
+										{ selectedFormName === 'u-shaped' && <SideSketchUShaped />}
+										{ selectedFormName === 'snake' && <SideSketchSnake />}
+									</div>
+
+									<p className={StepOne__sidesTotal}>
+										Общая наружная длина 8000 мм
+									</p>
+								</div>
+							</div>
+						</section>
+					}
+
+				</div>
 			}
 		</>
 	)

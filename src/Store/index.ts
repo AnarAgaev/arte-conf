@@ -24,10 +24,28 @@ const rootReducer = combineReducers({
 })
 // #endregion
 
-const persistConfig = {
-    key: 'root',
-    storage,
+
+
+// ! Отключаем Persist --- Start
+const emptyStorage = {
+	getItem: () => Promise.resolve(null),
+	setItem: () => Promise.resolve(),
+	removeItem: () => Promise.resolve(),
 }
+
+const isPersistEnabled = false
+
+const persistConfig = {
+	key: 'root',
+  	storage: isPersistEnabled ? storage : emptyStorage, // переключаем хранилище
+}
+
+// *** Persist в продакшн
+// const persistConfig = {
+//     key: 'root',
+//     storage,
+// }
+// ! Отключаем Persist --- Finish
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 

@@ -1,0 +1,79 @@
+.CalcController
+	display: block
+	width: 100%
+	height: auto
+
+
+	&__body
+		flex-shrink: 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+		gap: 5px
+		width: 100%
+		height: 40px
+		border-radius: 20px
+		border: 1px solid var(--clr-font-light)
+
+
+	&__value
+		display: block
+		position: relative
+		width: 100%
+		padding: 0
+		text-align: center
+		font-size: 14px
+		color: var(--clr-font-light)
+		background: transparent
+		border: none
+
+
+	&__controller
+		flex-shrink: 0
+		display: block
+		position: relative
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		background: transparent
+		cursor: pointer
+		transition: var(--base-transition)
+		overflow: hidden
+		padding: 0
+		border: none
+
+		@media (hover: hover) and (pointer: fine)
+			&:hover
+				background-color: var(--clr-accent)
+
+				&::before,
+				&::after
+					background: var(--clr-font-dark)
+
+		&::before, &::after
+			content: ''
+			display: block
+			position: absolute
+			z-index: 1
+			top: 50%
+			left: 50%
+			width: 10px
+			height: 1px
+			background: var(--clr-font-light)
+			transition: var(--base-transition)
+
+		&:before
+			transform: translate(-50%, -50%)
+
+		&:after
+			transform: translate(-50%, -50%) rotate(90deg)
+
+		&_dec
+			margin-left: -1px
+
+			&::after
+				display: none
+
+		&_inc
+			margin-right: -1px
+			position: relative

@@ -5,40 +5,115 @@ const initialState: T_StepOneState = {
 	ceilingType: [
 		{
 			id: 0,
-			name: 'реечный',
-			img: '/images/reechnyi.jpg',
+			name: 'rack',
+			description: 'реечный',
+			img: '/images/reechnyi.webp',
 			selected: false
 		},
 		{
 			id: 1,
-			name: 'натяжной',
-			img: '/images/natyazhnoy.jpg',
+			name: 'straining',
+			description: 'натяжной',
+			img: '/images/straining.webp',
 			selected: false
 		},
 		{
 			id: 2,
-			name: 'ГКЛ',
-			img: '/images/gkl.png',
+			name: 'gkl',
+			description: 'ГКЛ',
+			img: '/images/gkl.webp',
 			selected: false
 		}
 	],
+
 
 	// Типы монтажа
 	mountingType: [
 		{
 			id: 0,
-			name: 'подвесной',
+			name: 'suspension',
+			description: 'подвесной',
 			selected: false
 		},
 		{
 			id: 1,
-			name: 'накладной',
+			name: 'overhead',
+			description: 'накладной',
 			selected: false
 		},
 		{
 			id: 2,
-			name: 'встроенный',
+			name: 'built-in',
+			description: 'встроенный',
 			selected: false
+		}
+	],
+
+
+	// Форма конструкции
+	constructionForm: [
+		{
+			id: 0,
+			name: 'l-shaped',
+			description: 'L-образная',
+			img: '/images/l-shaped.webp',
+			selected: false
+		},
+		{
+			id: 1,
+			name: 'rectangle',
+			description: 'Прямоугольник',
+			img: '/images/rectangle.webp',
+			selected: false
+		},
+		{
+			id: 2,
+			name: 'line',
+			description: 'Прямая',
+			img: '/images/line.webp',
+			selected: false
+		},
+		{
+			id: 3,
+			name: 'u-shaped',
+			description: 'П-образная',
+			img: '/images/u-shaped.webp',
+			selected: false
+		},
+		{
+			id: 4,
+			name: 'snake',
+			description: 'Змейка',
+			img: '/images/snake.webp',
+			selected: false
+		},
+	],
+
+	// Стороны на скетче
+	sides: [
+		{
+			id: 1,
+			length: 0,
+			isActive: false,
+			name: 'Сторона 1'
+		},
+		{
+			id: 2,
+			length: 0,
+			isActive: false,
+			name: 'Сторона 2'
+		},
+		{
+			id: 3,
+			length: 0,
+			isActive: false,
+			name: 'Сторона 3'
+		},
+		{
+			id: 4,
+			length: 0,
+			isActive: false,
+			name: 'Сторона 4'
 		}
 	]
 }

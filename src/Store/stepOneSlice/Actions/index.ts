@@ -1,3 +1,5 @@
 export * from './resetOneStep'
 export * from './setCeilingType'
 export * from './setMountingType'
+export * from './setConstructionForm'
+export * from './setActiveSide'
