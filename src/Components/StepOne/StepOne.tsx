@@ -2,10 +2,12 @@ import { useMemo } from "react"
 import { useAppSelector, useAppDispatch } from "@hooks"
 import { selectAppSteps, goToNextSubstep } from "@store/appSlice"
 import { selectCeilingType, selectMountingType, selectConstructionForms,
-	setCeilingType, setMountingType, setConstructionForm, selectActiveConstructionForm,
-	setActiveSide, selectSides, setSideLength, resetAllSidesValues } from "@store/stepOneSlice"
+	setCeilingType, setMountingType, setConstructionForm,
+	selectActiveConstructionForm, setActiveSide, selectSides,
+	setSideLength, resetAllSidesValues, selectTotalSidesLengths,
+	selectMovingToWall, setMovingToWall } from "@store/stepOneSlice"
 import { CalcController, SideSketchLShaped, SideSketchRectangle,
-	SideSketchLine, SideSketchUShaped, SideSketchSnake } from '@components'
+	SideSketchLine, SideSketchUShaped, SideSketchSnake, CheckBoxController } from '@components'
 import { T_StepOneState } from "@store/stepOneSlice/types"
 import { T_AppDispatch } from "@store"
 import style from './StepOne.module.sass'
@@ -139,6 +141,8 @@ export const StepOne = () => {
 	const constructionForms = useAppSelector(selectConstructionForms)
 	const activeConstructionForm = useAppSelector(selectActiveConstructionForm)
 	const sides = useAppSelector(selectSides)
+	const totalSidesLengths = useAppSelector(selectTotalSidesLengths)
+	const isMovingToWall = useAppSelector(selectMovingToWall)
 
 	// #region Node list getters
 	const ceilingTypeNodes = useMemo(
@@ -213,31 +217,45 @@ export const StepOne = () => {
 					</section>
 
 					{ selectedFormName &&
-						<section className="step-fragment">
-							<h3 className="step-fragment__caption">
-								Укажите размеры сторон (мм):
-							</h3>
-							<div className="step-fragment__content">
-								<div className={StepOne__sides}>
+						<>
+							<section className="step-fragment">
+								<h3 className="step-fragment__caption">
+									Укажите размеры сторон (мм):
+								</h3>
+								<div className="step-fragment__content">
+									<div className={StepOne__sides}>
 
-									<div className={StepOne__sidesCalculator}>
-										{ controllerNodes }
+										<div className={StepOne__sidesCalculator}>
+											{ controllerNodes }
+										</div>
+
+										<div className={StepOne__sidesSketch}>
+											{ selectedFormName === 'l-shaped' && <SideSketchLShaped />}
+											{ selectedFormName === 'rectangle' && <SideSketchRectangle />}
+											{ selectedFormName === 'line' && <SideSketchLine />}
+											{ selectedFormName === 'u-shaped' && <SideSketchUShaped />}
+											{ selectedFormName === 'snake' && <SideSketchSnake />}
+										</div>
+
+										{ totalSidesLengths &&
+											<p className={StepOne__sidesTotal}>
+												Общая наружная длина { totalSidesLengths } мм
+											</p>
+										}
 									</div>
-
-									<div className={StepOne__sidesSketch}>
-										{ selectedFormName === 'l-shaped' && <SideSketchLShaped />}
-										{ selectedFormName === 'rectangle' && <SideSketchRectangle />}
-										{ selectedFormName === 'line' && <SideSketchLine />}
-										{ selectedFormName === 'u-shaped' && <SideSketchUShaped />}
-										{ selectedFormName === 'snake' && <SideSketchSnake />}
-									</div>
-
-									<p className={StepOne__sidesTotal}>
-										Общая наружная длина 8000 мм
-									</p>
 								</div>
-							</div>
-						</section>
+							</section>
+
+							<section className="step-fragment">
+								<CheckBoxController
+									description="Переход на стену"
+									isChecked={isMovingToWall}
+									onAction={isChecked => {dispatch(setMovingToWall(isChecked))}}
+								/>
+							</section>
+
+
+						</>
 					}
 
 				</div>

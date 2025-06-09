@@ -13,6 +13,7 @@ import {
 	setActiveSideAction,
 	setSideLengthAction,
 	resetAllSidesValuesAction,
+	setMovingToWallAction,
 } from './Actions'
 
 // Import Selectors
@@ -22,7 +23,9 @@ import {
 	constructionFormsSelector,
 	activeConstructionFormSelector,
 	activeSideSelector,
-	sidesSelector
+	sidesSelector,
+	totalSidesLengthsSelector,
+	movingToWallSelector
 } from './Selectors'
 
 const reducers = {
@@ -32,7 +35,8 @@ const reducers = {
 	setConstructionForm: setConstructionFormAction,
 	setActiveSide: setActiveSideAction,
 	setSideLength: setSideLengthAction,
-	resetAllSidesValues: resetAllSidesValuesAction
+	resetAllSidesValues: resetAllSidesValuesAction,
+	setMovingToWall: setMovingToWallAction,
 }
 
 const selectors = {
@@ -41,7 +45,9 @@ const selectors = {
 	selectConstructionForms: constructionFormsSelector,
 	selectActiveSide: activeSideSelector,
 	selectSides: sidesSelector,
-	selectActiveConstructionForm: activeConstructionFormSelector
+	selectActiveConstructionForm: activeConstructionFormSelector,
+	selectTotalSidesLengths: totalSidesLengthsSelector,
+	selectMovingToWall: movingToWallSelector
 }
 
 const stepOneSlice = createSlice({
@@ -58,7 +64,8 @@ export const {
 	setConstructionForm,
 	setActiveSide,
 	setSideLength,
-	resetAllSidesValues
+	resetAllSidesValues,
+	setMovingToWall
 } = stepOneSlice.actions
 
 export const {
@@ -67,7 +74,9 @@ export const {
 	selectConstructionForms,
 	selectActiveConstructionForm,
 	selectActiveSide,
-	selectSides
+	selectSides,
+	selectTotalSidesLengths,
+	selectMovingToWall
 } = stepOneSlice.selectors
 
 export default stepOneSlice.reducer

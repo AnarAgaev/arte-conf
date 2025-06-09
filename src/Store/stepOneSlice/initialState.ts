@@ -115,7 +115,10 @@ const initialState: T_StepOneState = {
 			isActive: false,
 			name: 'Сторона 4',
 		}
-	]
+	],
+
+	// Переход на стену
+	MovingToWall: false
 }
 
 export default initialState
