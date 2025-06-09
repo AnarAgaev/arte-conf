@@ -11,7 +11,7 @@ import {
 	setMountingTypeAction,
 	setConstructionFormAction,
 	setActiveSideAction,
-	setSideValueAction,
+	setSideLengthAction,
 	resetAllSidesValuesAction,
 } from './Actions'
 
@@ -31,7 +31,7 @@ const reducers = {
 	setMountingType: setMountingTypeAction,
 	setConstructionForm: setConstructionFormAction,
 	setActiveSide: setActiveSideAction,
-	setSideValue: setSideValueAction,
+	setSideLength: setSideLengthAction,
 	resetAllSidesValues: resetAllSidesValuesAction
 }
 
@@ -57,7 +57,7 @@ export const {
 	setMountingType,
 	setConstructionForm,
 	setActiveSide,
-	setSideValue,
+	setSideLength,
 	resetAllSidesValues
 } = stepOneSlice.actions
 

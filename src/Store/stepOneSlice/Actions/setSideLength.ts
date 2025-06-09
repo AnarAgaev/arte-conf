@@ -3,16 +3,16 @@ import { T_StepOneState } from "../types";
 
 interface I_Payload {
 	sideId: T_StepOneState['sides'][0]['id']
-	value: T_StepOneState['sides'][0]['value']
+	newLength: T_StepOneState['sides'][0]['length']
 }
 
-export const setSideValueAction = (
+export const setSideLengthAction = (
     { sides }: T_StepOneState,
     action: PayloadAction<I_Payload>
 ) => {
     sides.forEach(side => {
 		if (side.id === action.payload.sideId) {
-			side.value = action.payload.value
+			side.length = action.payload.newLength
 		}
 	})
 }

@@ -29,9 +29,8 @@ export type T_StepOneState = {
 	// Стороны на скетче
 	sides: {
 		id: 1 | 2 | 3 | 4
-		length: number
+		length: number | null
 		isActive: boolean
 		name: string
-		value: number | null
 	}[]
 }
