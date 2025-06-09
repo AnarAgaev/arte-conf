@@ -95,25 +95,29 @@ const initialState: T_StepOneState = {
 			id: 1,
 			length: 0,
 			isActive: false,
-			name: 'Сторона 1'
+			name: 'Сторона 1',
+			value: null
 		},
 		{
 			id: 2,
 			length: 0,
 			isActive: false,
-			name: 'Сторона 2'
+			name: 'Сторона 2',
+			value: null
 		},
 		{
 			id: 3,
 			length: 0,
 			isActive: false,
-			name: 'Сторона 3'
+			name: 'Сторона 3',
+			value: null
 		},
 		{
 			id: 4,
 			length: 0,
 			isActive: false,
-			name: 'Сторона 4'
+			name: 'Сторона 4',
+			value: null
 		}
 	]
 }

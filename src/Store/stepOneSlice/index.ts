@@ -10,7 +10,9 @@ import {
     setCeilingTypeAction,
 	setMountingTypeAction,
 	setConstructionFormAction,
-	setActiveSideAction
+	setActiveSideAction,
+	setSideValueAction,
+	resetAllSidesValuesAction,
 } from './Actions'
 
 // Import Selectors
@@ -28,7 +30,9 @@ const reducers = {
     setCeilingType: setCeilingTypeAction,
 	setMountingType: setMountingTypeAction,
 	setConstructionForm: setConstructionFormAction,
-	setActiveSide: setActiveSideAction
+	setActiveSide: setActiveSideAction,
+	setSideValue: setSideValueAction,
+	resetAllSidesValues: resetAllSidesValuesAction
 }
 
 const selectors = {
@@ -52,7 +56,9 @@ export const {
     setCeilingType,
 	setMountingType,
 	setConstructionForm,
-	setActiveSide
+	setActiveSide,
+	setSideValue,
+	resetAllSidesValues
 } = stepOneSlice.actions
 
 export const {

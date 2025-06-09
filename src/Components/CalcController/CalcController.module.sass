@@ -15,6 +15,8 @@
 		border-radius: 20px
 		border: 1px solid var(--clr-font-light)
 
+		&:has(input:focus)
+			border-color: var(--clr-accent)
 
 	&__value
 		display: block
@@ -26,6 +28,7 @@
 		color: var(--clr-font-light)
 		background: transparent
 		border: none
+		user-select: none
 
 
 	&__controller

@@ -3,7 +3,7 @@ import { useAppSelector, useAppDispatch } from "@hooks"
 import { selectAppSteps, goToNextSubstep } from "@store/appSlice"
 import { selectCeilingType, selectMountingType, selectConstructionForms,
 	setCeilingType, setMountingType, setConstructionForm, selectActiveConstructionForm,
-	setActiveSide, selectSides } from "@store/stepOneSlice"
+	setActiveSide, selectSides, setSideValue, resetAllSidesValues } from "@store/stepOneSlice"
 import { CalcController, SideSketchLShaped, SideSketchRectangle,
 	SideSketchLine, SideSketchUShaped, SideSketchSnake } from '@components'
 import { T_StepOneState } from "@store/stepOneSlice/types"
@@ -75,6 +75,7 @@ const getConstructionFormNodes = (
 
 	const onItem = (id: number) => {
 		dispatch(setConstructionForm(id))
+		dispatch(resetAllSidesValues())
 	}
 
 	return (
@@ -112,8 +113,9 @@ const getControllerNodes = (
                 <div key={side.id} className={StepOne__sidesController}>
                     <span>{side.name}</span>
                     <CalcController
-                        initialValue={1}
+                        value={side.value}
                         step={1}
+						onChange={(newValue: number | null) => dispatch(setSideValue({sideId: side.id, value: newValue}))}
                         onActive={() => dispatch(setActiveSide(side.id))}
                     />
                 </div>

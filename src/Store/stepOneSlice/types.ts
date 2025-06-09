@@ -32,5 +32,6 @@ export type T_StepOneState = {
 		length: number
 		isActive: boolean
 		name: string
+		value: number | null
 	}[]
 }

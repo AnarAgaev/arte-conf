@@ -1,97 +1,124 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 import { useAppDispatch } from '@hooks'
 import { setActiveSide } from '@store/stepOneSlice'
 import style from './CalcController.module.sass'
 
 const {
-	CalcController__body,
-	CalcController__value,
-	CalcController__controller,
-	CalcController__controller_dec,
-	CalcController__controller_inc
+    CalcController__body,
+    CalcController__value,
+    CalcController__controller,
+    CalcController__controller_dec,
+    CalcController__controller_inc
 } = style
 
 interface I_Props {
-	onChange?: (value: number) => void
-	onActive?: () => void
-	initialValue?: number
-	step?: number
+    value?: number | null
+    step?: number
+    onChange?: (value: number | null) => void
+    onActive?: () => void
 }
 
-export const CalcController = ({ onChange, onActive, initialValue = 0, step = 1 }: I_Props) => {
+export const CalcController = ({
+    value = null,
+    step = 1,
+    onChange,
+    onActive,
+}: I_Props) => {
+    const dispatch = useAppDispatch()
+    const [isFocused, setIsFocused] = useState<boolean>(false)
+    const [inputValue, setInputValue] = useState<string>(value === null ? '' : value.toString())
+    const inputRef = useRef<HTMLInputElement>(null)
 
-	const dispatch = useAppDispatch()
+    useEffect(() => {
+        setInputValue(value === null ? '' : value.toString())
+    }, [value])
 
-	const [value, setValue] = useState<number>(initialValue)
-	const [inputValue, setInputValue] = useState<string>(initialValue.toString())
+    const updateValue = useCallback((newValue: number | null) => {
+        onChange?.(newValue)
+    }, [onChange])
 
-	const inputRef = useRef<HTMLInputElement>(null)
+    const handleIncrement = useCallback(() => {
+        const currentValue = value === null ? 0 : value
+        updateValue(currentValue + step)
+    }, [value, step, updateValue])
 
-	const handleIncrement = () => {
-		const newValue = value + step
-		updateValue(newValue)
-	}
+    const handleDecrement = useCallback(() => {
+        const currentValue = value === null ? 2 : value
+        updateValue(Math.max(currentValue - step, 1))
+    }, [value, step, updateValue])
 
-	const handleDecrement = () => {
-		const newValue = Math.max(value - step, 1)
-		updateValue(newValue)
-	}
+    const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+        const { value } = e.target
 
-	const updateValue = (newValue: number) => {
-		setValue(newValue)
-		setInputValue(newValue.toString())
-		onChange?.(newValue)
-	}
+        if (value === "" || /^\d*$/.test(value)) {
+            setInputValue(value)
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const inputValue = e.target.value
+			if (value !== "") {
+                updateValue(parseInt(value))
+            } else {
+                updateValue(null)
+            }
+        }
+    }, [updateValue])
 
-		if (inputValue === "" || /^\d+$/.test(inputValue)) {
-			setInputValue(inputValue)
-		}
-	}
+    const handleBlur = useCallback(() => {
+        if (inputValue === "") {
+            updateValue(null)
+        } else {
+            const numValue = parseInt(inputValue)
+            updateValue(isNaN(numValue) ? null : numValue)
+        }
+        setIsFocused(false)
+    }, [inputValue, updateValue])
 
-	const handleBlur = () => {
-		let newValue = parseInt(inputValue)
+    const handleFocus = useCallback(() => {
+        setIsFocused(true)
+        onActive?.()
+    }, [onActive])
 
-		if (isNaN(newValue) || newValue < 1) {
-			newValue = 1
-		}
+    const handleMouseEnter = useCallback(() => {
+        onActive?.()
+    }, [onActive])
 
-		updateValue(newValue)
-	}
+    const handleMouseLeave = useCallback(() => {
+        if (!isFocused) {
+            dispatch(setActiveSide(null))
+        }
+    }, [dispatch, isFocused])
 
-	const handleMouseEnter = () => {
-		onActive?.()
-	}
+    return (
+        <div
+            className={CalcController__body}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
+            <button
+                type="button"
+                onClick={handleDecrement}
+                className={`${CalcController__controller} ${CalcController__controller_dec}`}
+                tabIndex={-1}
+            />
 
-	return (
-		<div
-			className={CalcController__body}
-			onMouseEnter={handleMouseEnter}
-			onMouseLeave={() => dispatch(setActiveSide(null))}
-		>
-			<button
-				type="button"
-				onClick={handleDecrement}
-				className={`${CalcController__controller} ${CalcController__controller_dec}`}
-			></button>
+            <input
+                ref={inputRef}
+                type="text"
+                className={CalcController__value}
+                value={inputValue}
+                onChange={handleInputChange}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+                name="CalcControllerValue"
+                inputMode="numeric"
+                pattern="[0-9]*"
+                tabIndex={0}
+            />
 
-			<input
-				ref={inputRef}
-				type="text"
-				className={CalcController__value}
-				value={inputValue}
-				onChange={handleInputChange}
-				onBlur={handleBlur}
-				name="CalcControllerValue"
-			/>
-
-			<button
-				type="button"
-				onClick={handleIncrement}
-				className={`${CalcController__controller} ${CalcController__controller_inc}`}
-			></button>
-		</div>
-	)
+            <button
+                type="button"
+                onClick={handleIncrement}
+                className={`${CalcController__controller} ${CalcController__controller_inc}`}
+                tabIndex={-1}
+            />
+        </div>
+    )
 }
