@@ -5,9 +5,10 @@ import { selectCeilingType, selectMountingType, selectConstructionForms,
 	setCeilingType, setMountingType, setConstructionForm,
 	selectActiveConstructionForm, setActiveSide, selectSides,
 	setSideLength, resetAllSidesValues, selectTotalSidesLengths,
-	selectMovingToWall, setMovingToWall } from "@store/stepOneSlice"
+	selectMovingToWall, setMovingToWallVisible } from "@store/stepOneSlice"
 import { CalcController, SideSketchLShaped, SideSketchRectangle,
-	SideSketchLine, SideSketchUShaped, SideSketchSnake, CheckBoxController } from '@components'
+	SideSketchLine, SideSketchUShaped, SideSketchSnake,
+	CheckBoxController, MovingToWall } from '@components'
 import { T_StepOneState } from "@store/stepOneSlice/types"
 import { T_AppDispatch } from "@store"
 import style from './StepOne.module.sass'
@@ -250,11 +251,20 @@ export const StepOne = () => {
 								<CheckBoxController
 									description="Переход на стену"
 									isChecked={isMovingToWall}
-									onAction={isChecked => {dispatch(setMovingToWall(isChecked))}}
+									onAction={isChecked => {dispatch(setMovingToWallVisible(isChecked))}}
 								/>
 							</section>
 
-
+							{ isMovingToWall &&
+								<section className="step-fragment">
+									<h3 className="step-fragment__caption">
+										Количество переходов на стену (мм):
+									</h3>
+									<div className="step-fragment__content">
+										<MovingToWall />
+									</div>
+								</section>
+							}
 						</>
 					}
 

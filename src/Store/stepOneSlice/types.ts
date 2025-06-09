@@ -35,5 +35,12 @@ export type T_StepOneState = {
 	}[]
 
 	// Переход на стену
-	MovingToWall: boolean
+	movingToWall: boolean
+
+	moveItems: {
+		id: 1 | 2
+		length: number | null
+		isActive: boolean
+		description: string
+	}[]
 }

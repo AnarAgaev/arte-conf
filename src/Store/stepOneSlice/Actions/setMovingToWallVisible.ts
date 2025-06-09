@@ -1,11 +1,11 @@
 import { PayloadAction } from "@reduxjs/toolkit";
 import { T_StepOneState } from "../types";
 
-type I_Payload = T_StepOneState['MovingToWall']
+type I_Payload = T_StepOneState['movingToWall']
 
-export const setMovingToWallAction = (
+export const setMovingToWallVisibleAction = (
     state: T_StepOneState,
     action: PayloadAction<I_Payload>
 ) => {
-	state.MovingToWall = action.payload
+	state.movingToWall = action.payload
 }

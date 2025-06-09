@@ -14,6 +14,7 @@
 		height: 40px
 		border-radius: 20px
 		border: 1px solid var(--clr-font-light)
+		background: var(--clr-font-light)
 
 		&:has(input:focus)
 			border-color: var(--clr-accent)
@@ -22,10 +23,11 @@
 		display: block
 		position: relative
 		width: 100%
+		height: 100%
 		padding: 0
 		text-align: center
 		font-size: 14px
-		color: var(--clr-font-light)
+		color: var(--clr-font-dark)
 		background: transparent
 		border: none
 		user-select: none
@@ -49,10 +51,6 @@
 			&:hover
 				background-color: var(--clr-accent)
 
-				&::before,
-				&::after
-					background: var(--clr-font-dark)
-
 		&::before, &::after
 			content: ''
 			display: block
@@ -62,7 +60,7 @@
 			left: 50%
 			width: 10px
 			height: 1px
-			background: var(--clr-font-light)
+			background: var(--clr-font-dark)
 			transition: var(--base-transition)
 
 		&:before

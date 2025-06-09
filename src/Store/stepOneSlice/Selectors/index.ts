@@ -22,4 +22,6 @@ export const totalSidesLengthsSelector = (state: T_StepOneState) => {
     return sidesWithLength.reduce((sum, side) => sum + side.length!, 0)
 }
 
-export const movingToWallSelector = (state: T_StepOneState) => state.MovingToWall
+export const movingToWallSelector = (state: T_StepOneState) => state.movingToWall
+
+export const moveItemsSelector = (state: T_StepOneState) => state.moveItems

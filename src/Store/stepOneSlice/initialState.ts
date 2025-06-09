@@ -118,7 +118,22 @@ const initialState: T_StepOneState = {
 	],
 
 	// Переход на стену
-	MovingToWall: false
+	movingToWall: false,
+
+	moveItems: [
+		{
+			id: 1,
+			isActive: false,
+			length: null,
+			description: '1'
+		},
+		{
+			id: 2,
+			isActive: false,
+			length: null,
+			description: '2'
+		}
+	]
 }
 
 export default initialState
