@@ -17,10 +17,12 @@ import storage from 'redux-persist/lib/storage'
 // #region Reducers
 import appReducer from './appSlice'
 import stepOneReducer from './stepOneSlice'
+import stepTwoReducer from './stepTwoSlice'
 
 const rootReducer = combineReducers({
     app: appReducer,
-    stepOne: stepOneReducer
+    stepOne: stepOneReducer,
+	stepTwo: stepTwoReducer
 })
 // #endregion
 

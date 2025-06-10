@@ -4,7 +4,7 @@ export type T_StepOneState = {
     ceilingType: {
         id: number,
 		name: 'rack' | 'straining' | 'gkl'
-        description: 'реечный' | 'натяжной' | 'ГКЛ'
+        description: 'Реечный' | 'Натяжной' | 'ГКЛ'
         img: string
         selected: boolean
     }[]
@@ -13,7 +13,7 @@ export type T_StepOneState = {
 	mountingType: {
 		id: number,
 		name: 'suspension' | 'overhead' | 'built-in'
-        description: 'подвесной' | 'накладной' | 'встроенный'
+        description: 'Подвесной' | 'Накладной' | 'Встроенный'
         selected: boolean
 	}[]
 

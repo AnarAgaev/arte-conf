@@ -1,19 +1,20 @@
 import { T_StepOneState } from "./types";
 
 const initialState: T_StepOneState = {
+
 	// Типы потолков
 	ceilingType: [
 		{
 			id: 0,
 			name: 'rack',
-			description: 'реечный',
+			description: 'Реечный',
 			img: '/images/reechnyi.webp',
 			selected: false
 		},
 		{
 			id: 1,
 			name: 'straining',
-			description: 'натяжной',
+			description: 'Натяжной',
 			img: '/images/straining.webp',
 			selected: false
 		},
@@ -32,19 +33,19 @@ const initialState: T_StepOneState = {
 		{
 			id: 0,
 			name: 'suspension',
-			description: 'подвесной',
+			description: 'Подвесной',
 			selected: false
 		},
 		{
 			id: 1,
 			name: 'overhead',
-			description: 'накладной',
+			description: 'Накладной',
 			selected: false
 		},
 		{
 			id: 2,
 			name: 'built-in',
-			description: 'встроенный',
+			description: 'Встроенный',
 			selected: false
 		}
 	],
@@ -136,6 +137,7 @@ const initialState: T_StepOneState = {
 			description: '2'
 		}
 	]
+
 }
 
 export default initialState

@@ -14,12 +14,6 @@ import { T_AppDispatch } from "@store"
 import style from './StepOne.module.sass'
 
 const {
-	StepOne__pictureSignList,
-	StepOne__pictureSignItem,
-	StepOne__pictureSignItem_selected,
-	StepOne__textSignList,
-	StepOne__textSignItem,
-	StepOne__textSignItem_selected,
 	StepOne__sides,
 	StepOne__sidesCalculator,
 	StepOne__sidesController,
@@ -33,7 +27,7 @@ const getCeilingTypeNodes = (
 	dispatch: T_AppDispatch
 ): JSX.Element[] => ceilingTypes.map(type => {
 
-	const clazz = `${StepOne__pictureSignItem} ${type.selected ? `${StepOne__pictureSignItem_selected}` : ''}`
+	const clazz = `picture-sign-item ${type.selected ? 'picture-sign-item_selected' : ''}`
 
 	const onItem = (id: number) => {
 		dispatch(setCeilingType(id))
@@ -55,7 +49,8 @@ const getMountingTypeNodes = (
 	dispatch: T_AppDispatch
 ): JSX.Element[] => mountingTypes.map(type => {
 
-	const clazz = `${StepOne__textSignItem} ${type.selected ? `${StepOne__textSignItem_selected}` : ''}`
+	const clazz = `text-sign-item ${type.selected ? 'text-sign-item_selected' : ''}`
+
 
 	const onItem = (id: number) => {
 		dispatch(setMountingType(id))
@@ -74,7 +69,7 @@ const getConstructionFormNodes = (
 	dispatch: T_AppDispatch,
 ): JSX.Element[] => constructionForms.map(form => {
 
-	const clazz = `${StepOne__pictureSignItem} ${form.selected ? `${StepOne__pictureSignItem_selected}` : ''}`
+	const clazz = `picture-sign-item ${form.selected ? 'picture-sign-item_selected' : ''}`
 
 	const onItem = (id: number) => {
 		dispatch(setConstructionForm(id))
@@ -133,10 +128,10 @@ const getSelectedFormName = (constructionForms: T_StepOneState['constructionForm
 
 export const StepOne = () => {
 
+	// #region Component variables
 	const dispatch = useAppDispatch()
 	const step = useAppSelector(selectAppSteps)[0]
 	const substepActive = step.substeps.find(substep => substep.status === 'active')
-	const substepActiveIdx = step.substeps.findIndex(substep => substep.status === 'active')
 	const ceilingTypes = useAppSelector(selectCeilingType)
 	const mountingTypes = useAppSelector(selectMountingType)
 	const constructionForms = useAppSelector(selectConstructionForms)
@@ -144,6 +139,7 @@ export const StepOne = () => {
 	const sides = useAppSelector(selectSides)
 	const totalSidesLengths = useAppSelector(selectTotalSidesLengths)
 	const isMovingToWall = useAppSelector(selectMovingToWall)
+	// #endregion
 
 	// #region Node list getters
 	const ceilingTypeNodes = useMemo(
@@ -175,13 +171,13 @@ export const StepOne = () => {
 	return (
 		<>
 			{/* Типы потолка */}
-			{ substepActiveIdx === 0 &&
+			{ substepActive?.id === 0 &&
 				<section className="step-fragment">
 					<h3 className="step-fragment__caption">
 						{ substepActive?.name }
 					</h3>
 					<div className="step-fragment__content">
-						<ul className={StepOne__pictureSignList}>
+						<ul className="picture-sign-list">
 							{ ceilingTypeNodes }
 						</ul>
 					</div>
@@ -189,13 +185,13 @@ export const StepOne = () => {
 			}
 
 			{/* Типы монтажа */}
-			{ substepActiveIdx === 1 &&
+			{ substepActive?.id === 1 &&
 				<section className="step-fragment">
 					<h3 className="step-fragment__caption">
 						{ substepActive?.name }
 					</h3>
 					<div className="step-fragment__content">
-						<ul className={StepOne__textSignList}>
+						<ul className="text-sign-list">
 							{ mountingTypeNodes }
 						</ul>
 					</div>
@@ -203,7 +199,7 @@ export const StepOne = () => {
 			}
 
 			{/* Форма конфигурации */}
-			{ substepActiveIdx === 2 &&
+			{ substepActive?.id === 2 &&
 				<div className="step-fragments-wrapper">
 
 					<section className="step-fragment">
@@ -211,7 +207,7 @@ export const StepOne = () => {
 							{ substepActive?.name }
 						</h3>
 						<div className="step-fragment__content">
-							<ul className={StepOne__pictureSignList}>
+							<ul className="picture-sign-list">
 								{ constructionFormNodes }
 							</ul>
 						</div>

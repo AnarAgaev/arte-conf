@@ -1,7 +1,7 @@
 import { useAppSelector, useAppDispatch } from '@hooks'
 import { goToNextStep, resetSteps, selectActiveStep } from '@store/appSlice'
 import { resetOneStep } from '@store/stepOneSlice'
-import { Steps, StepOne } from '@components'
+import { Steps, StepOne, StepTwo } from '@components'
 import style from './Workspace.module.sass'
 
 const { workspace, body, buttons } = style
@@ -22,6 +22,7 @@ export const Workspace = () => {
 
             <div className={body}>
                 { activeStep.id === 0 && <StepOne /> }
+                { activeStep.id === 1 && <StepTwo /> }
             </div>
 
             <div className={buttons}>
