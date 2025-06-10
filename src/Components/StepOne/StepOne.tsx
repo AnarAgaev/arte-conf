@@ -10,7 +10,7 @@ import { CalcController, SideSketchLShaped, SideSketchRectangle,
 	SideSketchLine, SideSketchUShaped, SideSketchSnake,
 	CheckBoxController, MovingToWall, PictureSelectorList,
 	PictureSelectorListItem, TextSelectorList, TextSelectorListItem,
-	StepFragmentsWrapper } from '@components'
+	StepFragmentsWrapper, StepFragmentItem } from '@components'
 import { T_StepOneState } from "@store/stepOneSlice/types"
 import { T_AppDispatch } from "@store"
 import style from './StepOne.module.sass'
@@ -179,53 +179,53 @@ export const StepOne = () => {
 		<>
 			{/* Типы потолка */}
 			{ substep?.id === 0 &&
-				<section className="step-fragment">
-					<h3 className="step-fragment__caption">
+				<StepFragmentItem>
+					<h3>
 						{ substep?.name }
 					</h3>
-					<div className="step-fragment__content">
+					<article>
 						<PictureSelectorList>
 							{ ceilingTypeNodes }
 						</PictureSelectorList>
-					</div>
-				</section>
+					</article>
+				</StepFragmentItem>
 			}
 
 			{/* Типы монтажа */}
 			{ substep?.id === 1 &&
-				<section className="step-fragment">
-					<h3 className="step-fragment__caption">
+				<StepFragmentItem>
+					<h3>
 						{ substep?.name }
 					</h3>
-					<div className="step-fragment__content">
+					<article>
 						<TextSelectorList>
 							{ mountingTypeNodes }
 						</TextSelectorList>
-					</div>
-				</section>
+					</article>
+				</StepFragmentItem>
 			}
 
 			{/* Форма конфигурации */}
 			{ substep?.id === 2 &&
 				<StepFragmentsWrapper>
-					<section className="step-fragment">
-						<h3 className="step-fragment__caption">
+					<StepFragmentItem>
+						<h3>
 							{ substep?.name }
 						</h3>
-						<div className="step-fragment__content">
+						<article>
 							<PictureSelectorList>
 								{ constructionFormNodes }
 							</PictureSelectorList>
-						</div>
-					</section>
+						</article>
+					</StepFragmentItem>
 
 					{ selectedFormName &&
 						<>
-							<section className="step-fragment">
-								<h3 className="step-fragment__caption">
+							<StepFragmentItem>
+								<h3>
 									Укажите размеры сторон (мм):
 								</h3>
-								<div className="step-fragment__content">
+								<article>
 									<div className={StepOne__sides}>
 
 										<div className={StepOne__sidesCalculator}>
@@ -246,26 +246,26 @@ export const StepOne = () => {
 											</p>
 										}
 									</div>
-								</div>
-							</section>
+								</article>
+							</StepFragmentItem>
 
-							<section className="step-fragment">
+							<StepFragmentItem>
 								<CheckBoxController
 									description="Переход на стену"
 									isChecked={isMovingToWall}
 									onAction={isChecked => {dispatch(setMovingToWallVisible(isChecked))}}
 								/>
-							</section>
+							</StepFragmentItem>
 
 							{ isMovingToWall &&
-								<section className="step-fragment">
-									<h3 className="step-fragment__caption">
+								<StepFragmentItem>
+									<h3>
 										Количество переходов на стену (мм):
 									</h3>
-									<div className="step-fragment__content">
+									<article>
 										<MovingToWall />
-									</div>
-								</section>
+									</article>
+								</StepFragmentItem>
 							}
 						</>
 					}

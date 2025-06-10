@@ -4,7 +4,7 @@ import { selectActiveStep, goToNextSubstep } from "@store/appSlice"
 import { selectTrackTypes, selectTrackColors,
 	setTrackType, setTrackColor } from '@store/stepTwoSlice'
 import { PictureSelectorList, PictureSelectorListItem,
-	StepFragmentsWrapper } from '@components'
+	StepFragmentsWrapper, StepFragmentItem } from '@components'
 import { T_AppDispatch } from "@store"
 import { T_StepTwoState } from "@store/stepTwoSlice/types"
 import style from './StepTwo.module.sass'
@@ -89,39 +89,39 @@ export const StepTwo = () => {
 			{/* Тип трека */}
 			{ substep?.id === 0 &&
 				<StepFragmentsWrapper>
-					<section className="step-fragment">
-						<h3 className="step-fragment__caption">
+					<StepFragmentItem>
+						<h3>
 							{ substep?.name }
 						</h3>
-						<div className="step-fragment__content">
+						<article>
 							<PictureSelectorList>
 								{ trackTypeNodes }
 							</PictureSelectorList>
-						</div>
-					</section>
-					<section className="step-fragment">
-						<div className="step-fragment__content">
+						</article>
+					</StepFragmentItem>
+					<StepFragmentItem>
+						<article>
 							<div className={StepTwo__message}>
 								<p>При выборе данного типа трека, Вам необходимо связаться с менеджером, что бы сделать точный расчет</p>
 								<button type="button" className="btn btn_default btn_dark">Связаться с менеджером</button>
 							</div>
-						</div>
-					</section>
+						</article>
+					</StepFragmentItem>
 				</StepFragmentsWrapper>
 			}
 
 			{/* Цвет трека */}
 			{ substep?.id === 1 &&
-				<section className="step-fragment">
-					<h3 className="step-fragment__caption">
+				<StepFragmentItem>
+					<h3>
 						{ substep?.name }
 					</h3>
-					<div className="step-fragment__content">
+					<article>
 						<PictureSelectorList>
 							{ trackColorNodes }
 						</PictureSelectorList>
-					</div>
-				</section>
+					</article>
+				</StepFragmentItem>
 			}
 		</>
 	)
