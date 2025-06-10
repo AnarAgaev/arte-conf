@@ -98,6 +98,7 @@ const selectors = {
 }
 
 
+// Create slice
 const appSlice = createSlice({
     name: 'app',
     initialState,
@@ -107,7 +108,7 @@ const appSlice = createSlice({
 })
 
 
-// Export
+// Exports ...
 export default appSlice.reducer
 
 

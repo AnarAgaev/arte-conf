@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 import initialState from './initialState'
 
-// Import Funcs
+// Import Async Funcs
 import {} from './Funcs'
+
 
 // Import Actions
 import {
@@ -18,19 +19,8 @@ import {
 	setMoveToWallLengthAction
 } from './Actions'
 
-// Import Selectors
-import {
-    ceilingTypeSelector,
-	mountingTypeSelector,
-	constructionFormsSelector,
-	activeConstructionFormSelector,
-	activeSideSelector,
-	sidesSelector,
-	totalSidesLengthsSelector,
-	movingToWallSelector,
-	moveItemsSelector
-} from './Selectors'
 
+// Register Actions
 const reducers = {
     resetOneStep: resetOneStepAction,
     setCeilingType: setCeilingTypeAction,
@@ -44,6 +34,22 @@ const reducers = {
 	setMoveToWallLength: setMoveToWallLengthAction
 }
 
+
+// Import Selectors
+import {
+    ceilingTypeSelector,
+	mountingTypeSelector,
+	constructionFormsSelector,
+	activeConstructionFormSelector,
+	activeSideSelector,
+	sidesSelector,
+	totalSidesLengthsSelector,
+	movingToWallSelector,
+	moveItemsSelector
+} from './Selectors'
+
+
+// Register Selectors
 const selectors = {
     selectCeilingType: ceilingTypeSelector,
     selectMountingType: mountingTypeSelector,
@@ -56,6 +62,8 @@ const selectors = {
 	selectMoveItems: moveItemsSelector
 }
 
+
+// Create slice
 const stepOneSlice = createSlice({
     name: 'stepOne',
     initialState,
@@ -63,6 +71,12 @@ const stepOneSlice = createSlice({
     selectors
 })
 
+
+// Exports ...
+export default stepOneSlice.reducer
+
+
+// Export Actions
 export const {
     resetOneStep,
     setCeilingType,
@@ -76,6 +90,8 @@ export const {
 	setMoveToWallLength
 } = stepOneSlice.actions
 
+
+// Export Selectors
 export const {
     selectCeilingType,
 	selectMountingType,
@@ -87,5 +103,3 @@ export const {
 	selectMovingToWall,
 	selectMoveItems
 } = stepOneSlice.selectors
-
-export default stepOneSlice.reducer
