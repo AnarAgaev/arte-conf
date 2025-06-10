@@ -5,6 +5,7 @@ import style from './CalcController.module.sass'
 
 const {
     CalcController__body,
+    CalcController__body_transparent,
     CalcController__value,
     CalcController__controller,
     CalcController__controller_dec,
@@ -16,6 +17,7 @@ interface I_Props {
     step?: number
     onChange?: (value: number | null) => void
     onActive?: () => void
+	transparent?: boolean
 }
 
 export const CalcController = ({
@@ -23,6 +25,7 @@ export const CalcController = ({
     step = 1,
     onChange,
     onActive,
+	transparent
 }: I_Props) => {
     const dispatch = useAppDispatch()
     const [isFocused, setIsFocused] = useState<boolean>(false)
@@ -88,7 +91,7 @@ export const CalcController = ({
 
     return (
         <div
-            className={CalcController__body}
+            className={`${CalcController__body} ${transparent ? `${CalcController__body_transparent}`: ''}`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >

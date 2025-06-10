@@ -19,6 +19,21 @@
 		&:has(input:focus)
 			border-color: var(--clr-accent)
 
+		&_transparent
+			background: transparent
+
+			input
+				color: var(--clr-font-light)
+
+			button
+				&::before, &::after
+					background: var(--clr-font-light)
+
+				@media (hover: hover) and (pointer: fine)
+					&:hover
+						&::before, &::after
+							background: var(--clr-font-dark)
+
 	&__value
 		display: block
 		position: relative
