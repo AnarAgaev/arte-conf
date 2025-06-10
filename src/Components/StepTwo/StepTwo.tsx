@@ -1,6 +1,6 @@
 import { useMemo } from "react"
 import { useAppSelector, useAppDispatch } from "@hooks"
-import { selectAppSteps, goToNextSubstep } from "@store/appSlice"
+import { selectActiveStep, goToNextSubstep } from "@store/appSlice"
 import { selectTrackTypes, setTrackType } from '@store/stepTwoSlice'
 import { T_AppDispatch } from "@store"
 import { T_StepTwoState } from "@store/stepTwoSlice/types"
@@ -38,8 +38,8 @@ export const StepTwo = () => {
 
 	// #region Component variables
 	const dispatch = useAppDispatch()
-	const step = useAppSelector(selectAppSteps)[0]
-	const substepActive = step.substeps.find(substep => substep.status === 'active')
+	const step = useAppSelector(selectActiveStep)
+	const substep = step.substeps.find(substep => substep.status === 'active')
 	const trackTypes = useAppSelector(selectTrackTypes)
 	// #endregion
 
@@ -53,29 +53,27 @@ export const StepTwo = () => {
 	return (
 		<>
 			{/* Тип трека */}
-			{ substepActive?.id === 0 &&
-				<>
-					<div className="step-fragments-wrapper">
-						<section className="step-fragment">
-							<h3 className="step-fragment__caption">
-								{ substepActive?.name }
-							</h3>
-							<div className="step-fragment__content">
-								<ul className="picture-sign-list">
-									{ trackTypeNodes }
-								</ul>
+			{ substep?.id === 0 &&
+				<div className="step-fragments-wrapper">
+					<section className="step-fragment">
+						<h3 className="step-fragment__caption">
+							{ substep?.name }
+						</h3>
+						<div className="step-fragment__content">
+							<ul className="picture-sign-list">
+								{ trackTypeNodes }
+							</ul>
+						</div>
+					</section>
+					<section className="step-fragment">
+						<div className="step-fragment__content">
+							<div className={StepTwo__message}>
+								<p>При выборе данного типа трека, Вам необходимо связаться с менеджером, что бы сделать точный расчет</p>
+								<button type="button" className="btn btn_default btn_dark">Связаться с менеджером</button>
 							</div>
-						</section>
-						<section className="step-fragment">
-							<div className="step-fragment__content">
-								<div className={StepTwo__message}>
-									<p>При выборе данного типа трека, Вам необходимо связаться с менеджером, что бы сделать точный расчет</p>
-									<button type="button" className="btn btn_default btn_dark">Связаться с менеджером</button>
-								</div>
-							</div>
-						</section>
-					</div>
-				</>
+						</div>
+					</section>
+				</div>
 			}
 		</>
 	)

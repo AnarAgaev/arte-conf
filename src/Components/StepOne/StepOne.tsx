@@ -1,6 +1,6 @@
 import { useMemo } from "react"
 import { useAppSelector, useAppDispatch } from "@hooks"
-import { selectAppSteps, goToNextSubstep } from "@store/appSlice"
+import { selectActiveStep, goToNextSubstep } from "@store/appSlice"
 import { selectCeilingType, selectMountingType, selectConstructionForms,
 	setCeilingType, setMountingType, setConstructionForm,
 	selectActiveConstructionForm, setActiveSide, selectSides,
@@ -130,8 +130,8 @@ export const StepOne = () => {
 
 	// #region Component variables
 	const dispatch = useAppDispatch()
-	const step = useAppSelector(selectAppSteps)[0]
-	const substepActive = step.substeps.find(substep => substep.status === 'active')
+	const step = useAppSelector(selectActiveStep)
+	const substep = step.substeps.find(substep => substep.status === 'active')
 	const ceilingTypes = useAppSelector(selectCeilingType)
 	const mountingTypes = useAppSelector(selectMountingType)
 	const constructionForms = useAppSelector(selectConstructionForms)
@@ -171,10 +171,10 @@ export const StepOne = () => {
 	return (
 		<>
 			{/* Типы потолка */}
-			{ substepActive?.id === 0 &&
+			{ substep?.id === 0 &&
 				<section className="step-fragment">
 					<h3 className="step-fragment__caption">
-						{ substepActive?.name }
+						{ substep?.name }
 					</h3>
 					<div className="step-fragment__content">
 						<ul className="picture-sign-list">
@@ -185,10 +185,10 @@ export const StepOne = () => {
 			}
 
 			{/* Типы монтажа */}
-			{ substepActive?.id === 1 &&
+			{ substep?.id === 1 &&
 				<section className="step-fragment">
 					<h3 className="step-fragment__caption">
-						{ substepActive?.name }
+						{ substep?.name }
 					</h3>
 					<div className="step-fragment__content">
 						<ul className="text-sign-list">
@@ -199,12 +199,12 @@ export const StepOne = () => {
 			}
 
 			{/* Форма конфигурации */}
-			{ substepActive?.id === 2 &&
+			{ substep?.id === 2 &&
 				<div className="step-fragments-wrapper">
 
 					<section className="step-fragment">
 						<h3 className="step-fragment__caption">
-							{ substepActive?.name }
+							{ substep?.name }
 						</h3>
 						<div className="step-fragment__content">
 							<ul className="picture-sign-list">
