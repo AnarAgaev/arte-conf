@@ -3,7 +3,8 @@ import { useAppSelector, useAppDispatch } from "@hooks"
 import { selectActiveStep, goToNextSubstep } from "@store/appSlice"
 import { selectTrackTypes, selectTrackColors,
 	setTrackType, setTrackColor } from '@store/stepTwoSlice'
-import { PictureSelectorList, PictureSelectorListItem } from '@components'
+import { PictureSelectorList, PictureSelectorListItem,
+	StepFragmentsWrapper } from '@components'
 import { T_AppDispatch } from "@store"
 import { T_StepTwoState } from "@store/stepTwoSlice/types"
 import style from './StepTwo.module.sass'
@@ -87,7 +88,7 @@ export const StepTwo = () => {
 		<>
 			{/* Тип трека */}
 			{ substep?.id === 0 &&
-				<div className="step-fragments-wrapper">
+				<StepFragmentsWrapper>
 					<section className="step-fragment">
 						<h3 className="step-fragment__caption">
 							{ substep?.name }
@@ -106,7 +107,7 @@ export const StepTwo = () => {
 							</div>
 						</div>
 					</section>
-				</div>
+				</StepFragmentsWrapper>
 			}
 
 			{/* Цвет трека */}

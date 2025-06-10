@@ -1,0 +1,10 @@
+@use '../../Sass/_variables' as vars
+@use '../../Sass/_mixins' as mxns
+
+.StepFragmentsWrapper
+	display: flex
+	flex-direction: column
+	gap: 20px
+
+	@media (min-width: vars.$lg)
+		gap: 40px

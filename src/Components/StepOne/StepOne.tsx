@@ -9,7 +9,8 @@ import { selectCeilingType, selectMountingType, selectConstructionForms,
 import { CalcController, SideSketchLShaped, SideSketchRectangle,
 	SideSketchLine, SideSketchUShaped, SideSketchSnake,
 	CheckBoxController, MovingToWall, PictureSelectorList,
-	PictureSelectorListItem, TextSelectorList, TextSelectorListItem } from '@components'
+	PictureSelectorListItem, TextSelectorList, TextSelectorListItem,
+	StepFragmentsWrapper } from '@components'
 import { T_StepOneState } from "@store/stepOneSlice/types"
 import { T_AppDispatch } from "@store"
 import style from './StepOne.module.sass'
@@ -206,8 +207,7 @@ export const StepOne = () => {
 
 			{/* Форма конфигурации */}
 			{ substep?.id === 2 &&
-				<div className="step-fragments-wrapper">
-
+				<StepFragmentsWrapper>
 					<section className="step-fragment">
 						<h3 className="step-fragment__caption">
 							{ substep?.name }
@@ -269,8 +269,7 @@ export const StepOne = () => {
 							}
 						</>
 					}
-
-				</div>
+				</StepFragmentsWrapper>
 			}
 		</>
 	)
