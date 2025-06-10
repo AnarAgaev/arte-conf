@@ -8,7 +8,8 @@ import { selectCeilingType, selectMountingType, selectConstructionForms,
 	selectMovingToWall, setMovingToWallVisible } from "@store/stepOneSlice"
 import { CalcController, SideSketchLShaped, SideSketchRectangle,
 	SideSketchLine, SideSketchUShaped, SideSketchSnake,
-	CheckBoxController, MovingToWall } from '@components'
+	CheckBoxController, MovingToWall, PictureSelectorList,
+	PictureSelectorListItem } from '@components'
 import { T_StepOneState } from "@store/stepOneSlice/types"
 import { T_AppDispatch } from "@store"
 import style from './StepOne.module.sass'
@@ -27,20 +28,22 @@ const getCeilingTypeNodes = (
 	dispatch: T_AppDispatch
 ): JSX.Element[] => ceilingTypes.map(type => {
 
-	const clazz = `picture-sign-item ${type.selected ? 'picture-sign-item_selected' : ''}`
-
 	const onItem = (id: number) => {
 		dispatch(setCeilingType(id))
 		dispatch(goToNextSubstep())
 	}
 
 	return (
-		<li key={type.id} className={clazz} onClick={() => onItem(type.id)}>
+		<PictureSelectorListItem
+			key={type.id}
+			selected={type.selected}
+			clickHandler={() => onItem(type.id)}
+		>
 			<span>
 				<img src={type.img} alt={type.description} />
 			</span>
 			<mark>{type.description}</mark>
-		</li>
+		</PictureSelectorListItem>
 	)
 })
 
@@ -69,20 +72,22 @@ const getConstructionFormNodes = (
 	dispatch: T_AppDispatch,
 ): JSX.Element[] => constructionForms.map(form => {
 
-	const clazz = `picture-sign-item ${form.selected ? 'picture-sign-item_selected' : ''}`
-
 	const onItem = (id: number) => {
 		dispatch(setConstructionForm(id))
 		dispatch(resetAllSidesValues())
 	}
 
 	return (
-		<li key={form.id} className={clazz} onClick={() => onItem(form.id)}>
+		<PictureSelectorListItem
+			key={form.id}
+			selected={form.selected}
+			clickHandler={() => onItem(form.id)}
+		>
 			<span>
 				<img src={form.img} alt={form.description} />
 			</span>
 			<mark>{form.description}</mark>
-		</li>
+		</PictureSelectorListItem>
 	)
 })
 
@@ -177,9 +182,9 @@ export const StepOne = () => {
 						{ substep?.name }
 					</h3>
 					<div className="step-fragment__content">
-						<ul className="picture-sign-list">
+						<PictureSelectorList>
 							{ ceilingTypeNodes }
-						</ul>
+						</PictureSelectorList>
 					</div>
 				</section>
 			}
@@ -207,9 +212,9 @@ export const StepOne = () => {
 							{ substep?.name }
 						</h3>
 						<div className="step-fragment__content">
-							<ul className="picture-sign-list">
+							<PictureSelectorList>
 								{ constructionFormNodes }
-							</ul>
+							</PictureSelectorList>
 						</div>
 					</section>
 

@@ -3,6 +3,7 @@ import { useAppSelector, useAppDispatch } from "@hooks"
 import { selectActiveStep, goToNextSubstep } from "@store/appSlice"
 import { selectTrackTypes, selectTrackColors,
 	setTrackType, setTrackColor } from '@store/stepTwoSlice'
+import { PictureSelectorList, PictureSelectorListItem } from '@components'
 import { T_AppDispatch } from "@store"
 import { T_StepTwoState } from "@store/stepTwoSlice/types"
 import style from './StepTwo.module.sass'
@@ -17,20 +18,22 @@ const getTrackTypeNodes = (
 	dispatch: T_AppDispatch
 ): JSX.Element[] => trackTypes.map(type => {
 
-	const clazz = `picture-sign-item ${type.selected ? 'picture-sign-item_selected' : ''}`
-
 	const onItem = (id: number) => {
 		dispatch(setTrackType(id))
 		dispatch(goToNextSubstep())
 	}
 
 	return (
-		<li key={type.id} className={clazz} onClick={() => onItem(type.id)}>
+		<PictureSelectorListItem
+			key={type.id}
+			selected={type.selected}
+			clickHandler={() => onItem(type.id)}
+		>
 			<span>
 				<img src={type.img} alt={type.description} />
 			</span>
 			<mark>{type.description}</mark>
-		</li>
+		</PictureSelectorListItem>
 	)
 })
 
@@ -39,19 +42,21 @@ const getTrackColorNodes = (
 	dispatch: T_AppDispatch
 ): JSX.Element[] => trackColors.map(color => {
 
-	const clazz = `picture-sign-item ${color.selected ? 'picture-sign-item_selected' : ''}`
-
 	const onItem = (id: number) => {
 		dispatch(setTrackColor(id))
 		dispatch(goToNextSubstep())
 	}
 
 	return (
-		<li key={color.id} className={clazz} onClick={() => onItem(color.id)}>
+		<PictureSelectorListItem
+			key={color.id}
+			selected={color.selected}
+			clickHandler={() => onItem(color.id)}
+		>
 			<span>
 				<img src={color.img} alt={color.description} />
 			</span>
-		</li>
+		</PictureSelectorListItem>
 	)
 })
 // #endregion
@@ -88,9 +93,9 @@ export const StepTwo = () => {
 							{ substep?.name }
 						</h3>
 						<div className="step-fragment__content">
-							<ul className="picture-sign-list">
+							<PictureSelectorList>
 								{ trackTypeNodes }
-							</ul>
+							</PictureSelectorList>
 						</div>
 					</section>
 					<section className="step-fragment">
@@ -111,9 +116,9 @@ export const StepTwo = () => {
 						{ substep?.name }
 					</h3>
 					<div className="step-fragment__content">
-						<ul className="picture-sign-list">
+						<PictureSelectorList>
 							{ trackColorNodes }
-						</ul>
+						</PictureSelectorList>
 					</div>
 				</section>
 			}
