@@ -4,7 +4,7 @@ const steps: T_Steps = [
 	{
 		id: 0,
 		name: 'шаг 1',
-		status: 'active',
+		status: 'prev',
 		substeps: [
 			{
 				id: 0,
@@ -26,17 +26,17 @@ const steps: T_Steps = [
 	{
 		id: 1,
 		name: 'шаг 2',
-		status: 'next',
+		status: 'active',
 		substeps: [
 			{
 				id: 0,
 				name: 'тип трека',
-				status: 'active'
+				status: 'prev'
 			},
 			{
 				id: 1,
 				name: 'цвет',
-				status: 'next'
+				status: 'active'
 			},
 			{
 				id: 2,

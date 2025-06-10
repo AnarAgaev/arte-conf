@@ -3,7 +3,7 @@ import { T_StepTwoState } from "./types";
 const initialState: T_StepTwoState = {
 
 	// Тип трека
-	trackType: [
+	trackTypes: [
 		{
 			id: 0,
 			name: 'magnetic',
@@ -26,6 +26,26 @@ const initialState: T_StepTwoState = {
 			selected: false
 		}
 	],
+
+	// цвет трека
+	trackColors: [
+		{
+			id: 0,
+			name: 'black',
+			description: 'Черный',
+			// hex: '#000000',
+			selected: false,
+			img: '/images/color-black.svg'
+		},
+		{
+			id: 1,
+			name: 'white',
+			description: 'Белый',
+			img: '/images/color-white.svg',
+			// hex: '#ffffff',
+			selected: false
+		}
+	]
 
 }
 

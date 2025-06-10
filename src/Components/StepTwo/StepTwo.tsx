@@ -1,7 +1,8 @@
 import { useMemo } from "react"
 import { useAppSelector, useAppDispatch } from "@hooks"
 import { selectActiveStep, goToNextSubstep } from "@store/appSlice"
-import { selectTrackTypes, setTrackType } from '@store/stepTwoSlice'
+import { selectTrackTypes, selectTrackColors,
+	setTrackType, setTrackColor } from '@store/stepTwoSlice'
 import { T_AppDispatch } from "@store"
 import { T_StepTwoState } from "@store/stepTwoSlice/types"
 import style from './StepTwo.module.sass'
@@ -12,7 +13,7 @@ const {
 
 // #region Node list getters
 const getTrackTypeNodes = (
-	trackTypes: T_StepTwoState['trackType'],
+	trackTypes: T_StepTwoState['trackTypes'],
 	dispatch: T_AppDispatch
 ): JSX.Element[] => trackTypes.map(type => {
 
@@ -32,6 +33,27 @@ const getTrackTypeNodes = (
 		</li>
 	)
 })
+
+const getTrackColorNodes = (
+	trackColors: T_StepTwoState['trackColors'],
+	dispatch: T_AppDispatch
+): JSX.Element[] => trackColors.map(color => {
+
+	const clazz = `picture-sign-item ${color.selected ? 'picture-sign-item_selected' : ''}`
+
+	const onItem = (id: number) => {
+		dispatch(setTrackColor(id))
+		dispatch(goToNextSubstep())
+	}
+
+	return (
+		<li key={color.id} className={clazz} onClick={() => onItem(color.id)}>
+			<span>
+				<img src={color.img} alt={color.description} />
+			</span>
+		</li>
+	)
+})
 // #endregion
 
 export const StepTwo = () => {
@@ -41,12 +63,18 @@ export const StepTwo = () => {
 	const step = useAppSelector(selectActiveStep)
 	const substep = step.substeps.find(substep => substep.status === 'active')
 	const trackTypes = useAppSelector(selectTrackTypes)
+	const trackColors = useAppSelector(selectTrackColors)
 	// #endregion
 
 	// #region Node list getters
 	const trackTypeNodes = useMemo(
 		() => getTrackTypeNodes(trackTypes, dispatch),
 		[ trackTypes, dispatch ]
+	)
+
+	const trackColorNodes = useMemo(
+		() => getTrackColorNodes(trackColors, dispatch),
+		[trackColors, dispatch]
 	)
 	// #endregion
 
@@ -74,6 +102,20 @@ export const StepTwo = () => {
 						</div>
 					</section>
 				</div>
+			}
+
+			{/* Цвет трека */}
+			{ substep?.id === 1 &&
+				<section className="step-fragment">
+					<h3 className="step-fragment__caption">
+						{ substep?.name }
+					</h3>
+					<div className="step-fragment__content">
+						<ul className="picture-sign-list">
+							{ trackColorNodes }
+						</ul>
+					</div>
+				</section>
 			}
 		</>
 	)
