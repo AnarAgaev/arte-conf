@@ -1,0 +1,38 @@
+@use '../../Sass/_variables' as vars
+@use '../../Sass/_mixins' as mxns
+
+.TextSelectorListItem
+	display: flex
+	align-items: center
+	justify-content: center
+	position: relative
+	cursor: pointer
+	padding: 10px 20px
+	border: 1px solid var(--clr-font-light)
+	transition: var(--base-transition)
+
+	@media (hover: hover) and (pointer: fine)
+		&:hover
+			span
+				color: var(--clr-accent)
+
+	&_selected
+		border-color: var(--clr-accent)
+		background: var(--clr-accent)
+
+		span
+			color: var(--clr-font-dark) !important
+
+	span
+		display: block
+		position: relative
+		width: 100%
+		height: auto
+		text-align: center
+		font-weight: 600
+		font-size: 14px
+		line-height: 20px
+		background: transparent
+		transition: var(--base-transition)
+		letter-spacing: 0.33px
+

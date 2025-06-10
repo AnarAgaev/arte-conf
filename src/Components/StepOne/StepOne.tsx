@@ -9,7 +9,7 @@ import { selectCeilingType, selectMountingType, selectConstructionForms,
 import { CalcController, SideSketchLShaped, SideSketchRectangle,
 	SideSketchLine, SideSketchUShaped, SideSketchSnake,
 	CheckBoxController, MovingToWall, PictureSelectorList,
-	PictureSelectorListItem } from '@components'
+	PictureSelectorListItem, TextSelectorList, TextSelectorListItem } from '@components'
 import { T_StepOneState } from "@store/stepOneSlice/types"
 import { T_AppDispatch } from "@store"
 import style from './StepOne.module.sass'
@@ -52,18 +52,19 @@ const getMountingTypeNodes = (
 	dispatch: T_AppDispatch
 ): JSX.Element[] => mountingTypes.map(type => {
 
-	const clazz = `text-sign-item ${type.selected ? 'text-sign-item_selected' : ''}`
-
-
 	const onItem = (id: number) => {
 		dispatch(setMountingType(id))
 		dispatch(goToNextSubstep())
 	}
 
 	return (
-		<li key={type.id} className={clazz} onClick={() => onItem(type.id)}>
+		<TextSelectorListItem
+			key={type.id}
+			selected={type.selected}
+			clickHandler={() => onItem(type.id)}
+		>
 			<span>{type.description}</span>
-		</li>
+		</TextSelectorListItem>
 	)
 })
 
@@ -196,9 +197,9 @@ export const StepOne = () => {
 						{ substep?.name }
 					</h3>
 					<div className="step-fragment__content">
-						<ul className="text-sign-list">
+						<TextSelectorList>
 							{ mountingTypeNodes }
-						</ul>
+						</TextSelectorList>
 					</div>
 				</section>
 			}
