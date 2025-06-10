@@ -89,6 +89,7 @@ const initialState: T_StepOneState = {
 		},
 	],
 
+
 	// Стороны на скетче
 	sides: [
 		{
@@ -116,6 +117,7 @@ const initialState: T_StepOneState = {
 			name: 'Сторона 4',
 		}
 	],
+
 
 	// Переход на стену
 	movingToWall: false,

@@ -9,17 +9,17 @@ const steps: T_Steps = [
 			{
 				id: 0,
 				name: 'тип потолка',
-				status: 'prev'
+				status: 'active'
 			},
 			{
 				id: 1,
 				name: 'тип монтажа',
-				status: 'prev'
+				status: 'next'
 			},
 			{
 				id: 2,
 				name: 'форма конфигурации',
-				status: 'active'
+				status: 'next'
 			}
 		]
 	},

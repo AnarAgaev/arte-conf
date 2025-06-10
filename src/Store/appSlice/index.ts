@@ -1,68 +1,21 @@
 import { ActionReducerMapBuilder, createSlice, PayloadAction, AnyAction } from '@reduxjs/toolkit'
 import type { T_AppState } from '@store/appSlice/types'
-import steps from './steps'
+import initialState from './initialState'
 
-// Import Funcs
+
+// Import Async Funcs
 import {
     fetchInitData
 } from './Funcs'
 
-// Import Actions
-import {
-    togglePageAction,
-    goToNextStepAction,
-    goToNextSubstepAction,
-    goToSubstepAction,
-    resetStepsAction,
-    goToStepAction
-} from './Actions'
-
-// Import Selectors
-import {
-    appSelector,
-    appStatusSelector,
-    appErrMsgSelector,
-    appLoadMsgSelector,
-    appSucMsgSelector,
-    appPageSelector,
-    appStepsSelector,
-    activeStepSelector
-} from './Selectors'
-
-const initialState: T_AppState = {
-    errorMessage: null,
-    loadingMessage: null,
-    successMessage: null,
-    status: 'idle',
-    page: 'configurator',
-    steps: steps
-}
-
-const reducers = {
-    togglePage: togglePageAction,
-    goToNextStep: goToNextStepAction,
-    goToNextSubstep: goToNextSubstepAction,
-    goToStep: goToStepAction,
-    goToSubstep: goToSubstepAction,
-    resetSteps: resetStepsAction
-}
-
-const selectors = {
-    selectApp: appSelector,
-    selectAppStatus: appStatusSelector,
-    selectAppErrMsg: appErrMsgSelector,
-    selectAppLoadMsg: appLoadMsgSelector,
-    selectAppSucMsg: appSucMsgSelector,
-    selectAppPage: appPageSelector,
-    selectAppSteps: appStepsSelector,
-    selectActiveStep: activeStepSelector
-}
 
 // Predicator function for mather reject request from Funcs
 const isError = (action: AnyAction) => {
     return action.type.endsWith('rejected')
 }
 
+
+// Register Async Funcs
 const extraReducers = (builder: ActionReducerMapBuilder<T_AppState>) => {
 
     // #region fetchInitData
@@ -96,6 +49,55 @@ const extraReducers = (builder: ActionReducerMapBuilder<T_AppState>) => {
         })
 }
 
+
+// Import Actions
+import {
+    togglePageAction,
+    goToNextStepAction,
+    goToNextSubstepAction,
+    goToSubstepAction,
+    resetStepsAction,
+    goToStepAction
+} from './Actions'
+
+
+// Register Actions
+const reducers = {
+    togglePage: togglePageAction,
+    goToNextStep: goToNextStepAction,
+    goToNextSubstep: goToNextSubstepAction,
+    goToStep: goToStepAction,
+    goToSubstep: goToSubstepAction,
+    resetSteps: resetStepsAction
+}
+
+
+// Import Selectors
+import {
+    appSelector,
+    appStatusSelector,
+    appErrMsgSelector,
+    appLoadMsgSelector,
+    appSucMsgSelector,
+    appPageSelector,
+    appStepsSelector,
+    activeStepSelector
+} from './Selectors'
+
+
+// Register Selectors
+const selectors = {
+    selectApp: appSelector,
+    selectAppStatus: appStatusSelector,
+    selectAppErrMsg: appErrMsgSelector,
+    selectAppLoadMsg: appLoadMsgSelector,
+    selectAppSucMsg: appSucMsgSelector,
+    selectAppPage: appPageSelector,
+    selectAppSteps: appStepsSelector,
+    selectActiveStep: activeStepSelector
+}
+
+
 const appSlice = createSlice({
     name: 'app',
     initialState,
@@ -104,8 +106,12 @@ const appSlice = createSlice({
     extraReducers
 })
 
+
+// Export
 export default appSlice.reducer
 
+
+// Export Actions
 export const {
     togglePage,
     goToNextStep,
@@ -115,6 +121,8 @@ export const {
     resetSteps
 } = appSlice.actions
 
+
+// Export Selectors
 export const {
     selectApp,
     selectAppStatus,
@@ -126,5 +134,6 @@ export const {
     selectActiveStep
 } = appSlice.selectors
 
-// Re export async funcs
+
+// Re export Async Funcs
 export { fetchInitData }

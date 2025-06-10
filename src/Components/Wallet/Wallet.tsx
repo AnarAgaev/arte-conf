@@ -19,7 +19,10 @@ export const Wallet = () => {
 				<span className={Wallet__price}>450 000 ₽</span>
 
 				<div className={Wallet__controller}>
-					<CalcController transparent={true} />
+					<CalcController
+						value={3000}
+						transparent={true}
+					/>
 				</div>
 
 				<span className={Wallet__total}>2 450 000 ₽</span>
