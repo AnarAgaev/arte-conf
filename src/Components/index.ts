@@ -15,6 +15,8 @@ export * from './StepsStatus/StepsStatus'
 export * from './Spinner/Spinner'
 export * from './StepOne/StepOne'
 export * from './StepTwo/StepTwo'
+
+export * from './StepFour/StepFour'
 export * from './CalcController/CalcController'
 export * from './SideSketchLShaped/SideSketchLShaped'
 export * from './SideSketchRectangle/SideSketchRectangle'

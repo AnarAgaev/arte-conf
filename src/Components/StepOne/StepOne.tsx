@@ -181,7 +181,7 @@ export const StepOne = () => {
 			{ substep?.id === 0 &&
 				<StepFragmentItem>
 					<h3>
-						{ substep?.name }
+						{ substep?.description }
 					</h3>
 					<article>
 						<PictureSelectorList>
@@ -195,7 +195,7 @@ export const StepOne = () => {
 			{ substep?.id === 1 &&
 				<StepFragmentItem>
 					<h3>
-						{ substep?.name }
+						{ substep?.description }
 					</h3>
 					<article>
 						<TextSelectorList>
@@ -210,7 +210,7 @@ export const StepOne = () => {
 				<StepFragmentsWrapper>
 					<StepFragmentItem>
 						<h3>
-							{ substep?.name }
+							{ substep?.description }
 						</h3>
 						<article>
 							<PictureSelectorList>

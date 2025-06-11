@@ -18,11 +18,13 @@ import storage from 'redux-persist/lib/storage'
 import appReducer from './appSlice'
 import stepOneReducer from './stepOneSlice'
 import stepTwoReducer from './stepTwoSlice'
+import stepFourReducer from './stepFourSlice'
 
 const rootReducer = combineReducers({
     app: appReducer,
     stepOne: stepOneReducer,
-	stepTwo: stepTwoReducer
+	stepTwo: stepTwoReducer,
+	stepFour: stepFourReducer
 })
 // #endregion
 

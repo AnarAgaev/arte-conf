@@ -36,7 +36,7 @@ const selectors = {
 
 
 // Create slice
-const stepOneSlice = createSlice({
+const stepTwoSlice = createSlice({
     name: 'stepTwo',
     initialState,
     reducers,
@@ -45,7 +45,7 @@ const stepOneSlice = createSlice({
 
 
 // Exports ...
-export default stepOneSlice.reducer
+export default stepTwoSlice.reducer
 
 
 // Export Actions
@@ -53,11 +53,11 @@ export const {
 	resetTwoStep,
 	setTrackType,
 	setTrackColor
-} = stepOneSlice.actions
+} = stepTwoSlice.actions
 
 
 // Export Selectors
 export const {
 	selectTrackTypes,
 	selectTrackColors
-} = stepOneSlice.selectors
+} = stepTwoSlice.selectors

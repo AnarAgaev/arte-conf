@@ -91,7 +91,7 @@ export const StepTwo = () => {
 				<StepFragmentsWrapper>
 					<StepFragmentItem>
 						<h3>
-							{ substep?.name }
+							{ substep?.description }
 						</h3>
 						<article>
 							<PictureSelectorList>
@@ -114,7 +114,7 @@ export const StepTwo = () => {
 			{ substep?.id === 1 &&
 				<StepFragmentItem>
 					<h3>
-						{ substep?.name }
+						{ substep?.description }
 					</h3>
 					<article>
 						<PictureSelectorList>
