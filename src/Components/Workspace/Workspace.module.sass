@@ -1,27 +1,25 @@
 @use '../../Sass/_variables' as vars
 
-.workspace
-    display: flex
-    flex-direction: column
-    gap: 20px
-    width: 100%
+.Workspace
+	display: flex
+	flex-direction: column
+	gap: 20px
+	width: 100%
 
-    @media (min-width: vars.$lg)
-        gap: 40px
+	@media (min-width: vars.$lg)
+		grid-column: 1 / 2
+		gap: 40px
 
+	&__body
+		display: block
+		position: relative
+		margin: 0
+		padding: 0
 
-.body
-    display: block
-    position: relative
-    margin: 0
-    padding: 0
+	&__buttons
+		display: flex
+		flex-direction: column
+		gap: 5px
 
-
-
-.buttons
-    display: flex
-    flex-direction: column
-    gap: 5px
-
-    @media (min-width: vars.$sm)
-        flex-direction: row
+		@media (min-width: vars.$sm)
+			flex-direction: row

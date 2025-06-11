@@ -2,13 +2,7 @@
 @use '../../Sass/_mixins' as mxns
 
 .TextSelectorList
-	display: grid
-	grid-template-columns: 1fr
-	column-gap: 10px
-	row-gap: 20px
-
-	@media (min-width: vars.$sm)
-		grid-template-columns: repeat(3, 1fr)
-
-	@media (min-width: vars.$md)
-		grid-template-columns: repeat(3, min-content)
+	display: flex
+	flex-wrap: wrap
+	gap: 10px
+	user-select: none

@@ -2,15 +2,18 @@ import { useMemo } from "react"
 import { useAppSelector, useAppDispatch } from "@hooks"
 import { selectActiveStep, goToNextSubstep } from "@store/appSlice"
 import { selectTrackTypes, selectTrackColors,
-	setTrackType, setTrackColor } from '@store/stepTwoSlice'
+	setTrackType, setTrackColor, selectTrackCollections,
+	setTrackCollection } from '@store/stepTwoSlice'
 import { PictureSelectorList, PictureSelectorListItem,
-	StepFragmentsWrapper, StepFragmentItem } from '@components'
+	StepFragmentsWrapper, StepFragmentItem,
+	TextSelectorList, TextSelectorListItem } from '@components'
 import { T_AppDispatch } from "@store"
 import { T_StepTwoState } from "@store/stepTwoSlice/types"
 import style from './StepTwo.module.sass'
 
 const {
-	StepTwo__message
+	StepTwo__message,
+	StepTwo__warning,
 } = style
 
 // #region Node list getters
@@ -60,6 +63,26 @@ const getTrackColorNodes = (
 		</PictureSelectorListItem>
 	)
 })
+
+const getTrackCollectionNodes = (
+	trackCollections: T_StepTwoState['trackCollections'],
+	dispatch: T_AppDispatch
+): JSX.Element[] => trackCollections.map(collection => {
+
+	const onItem = (id: number) => {
+		dispatch(setTrackCollection(id))
+	}
+
+	return (
+		<TextSelectorListItem
+			key={collection.id}
+			selected={collection.selected}
+			clickHandler={() => onItem(collection.id)}
+		>
+			<span>{collection.description}</span>
+		</TextSelectorListItem>
+	)
+})
 // #endregion
 
 export const StepTwo = () => {
@@ -70,6 +93,7 @@ export const StepTwo = () => {
 	const substep = step.substeps.find(substep => substep.status === 'active')
 	const trackTypes = useAppSelector(selectTrackTypes)
 	const trackColors = useAppSelector(selectTrackColors)
+	const trackCollections = useAppSelector(selectTrackCollections)
 	// #endregion
 
 	// #region Node list getters
@@ -82,12 +106,17 @@ export const StepTwo = () => {
 		() => getTrackColorNodes(trackColors, dispatch),
 		[trackColors, dispatch]
 	)
+
+	const trackCollectionNodes = useMemo(
+		() => getTrackCollectionNodes(trackCollections, dispatch),
+		[trackCollections, dispatch]
+	)
 	// #endregion
 
 	return (
 		<>
 			{/* Тип трека */}
-			{ substep?.id === 0 &&
+			{ substep?.name === 'trackType' &&
 				<StepFragmentsWrapper>
 					<StepFragmentItem>
 						<h3>
@@ -111,7 +140,7 @@ export const StepTwo = () => {
 			}
 
 			{/* Цвет трека */}
-			{ substep?.id === 1 &&
+			{ substep?.name === 'trackColor' &&
 				<StepFragmentItem>
 					<h3>
 						{ substep?.description }
@@ -122,6 +151,68 @@ export const StepTwo = () => {
 						</PictureSelectorList>
 					</article>
 				</StepFragmentItem>
+			}
+
+			{/* Коллекция */}
+			{ substep?.name === 'trackCollection' &&
+				<StepFragmentsWrapper>
+					<StepFragmentItem>
+						<h3>
+							{ substep?.description }
+						</h3>
+						<article>
+							<TextSelectorList>
+								{ trackCollectionNodes }
+							</TextSelectorList>
+						</article>
+					</StepFragmentItem>
+
+					<StepFragmentItem>
+						<PictureSelectorList>
+
+						{/* Здесь будет логик по динамическому получения треков определенной коллекции --- START */}
+
+
+									<PictureSelectorListItem
+										key={1}
+										selected={false}
+										clickHandler={() => {}}
+										>
+										<div>
+											<img src="/images/track-example-1.webp" alt="description" />
+										</div>
+									</PictureSelectorListItem>
+									<PictureSelectorListItem
+										key={2}
+										selected={false}
+										clickHandler={() => {}}
+										>
+										<div>
+											<img src="/images/track-example-2.webp" alt="description" />
+										</div>
+									</PictureSelectorListItem>
+									<PictureSelectorListItem
+										key={3}
+										selected={false}
+										clickHandler={() => {}}
+										>
+										<div>
+											<img src="/images/track-example-3.webp" alt="description" />
+										</div>
+									</PictureSelectorListItem>
+
+
+						{/* Здесь будет логик по динамическому получения треков определенной коллекции --- FINISH */}
+						</PictureSelectorList>
+					</StepFragmentItem>
+
+					<StepFragmentItem>
+						<p className={StepTwo__warning}>
+							<i></i>
+							<span>Вы превысили максимальную длину подключения шинопровода</span>
+						</p>
+					</StepFragmentItem>
+				</StepFragmentsWrapper>
 			}
 		</>
 	)

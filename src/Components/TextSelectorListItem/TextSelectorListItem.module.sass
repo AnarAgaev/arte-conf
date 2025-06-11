@@ -6,10 +6,14 @@
 	align-items: center
 	justify-content: center
 	position: relative
+	width: calc( 50% - 5px )
 	cursor: pointer
 	padding: 10px 20px
 	border: 1px solid var(--clr-font-light)
 	transition: var(--base-transition)
+
+	@media (min-width: vars.$md)
+		width: auto
 
 	@media (hover: hover) and (pointer: fine)
 		&:hover

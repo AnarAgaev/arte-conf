@@ -29,4 +29,12 @@ export type T_StepTwoState = {
 			img: string
 		}
     ))[]
+
+	// Коллекция
+	trackCollections: {
+		id: number,
+		name: 'all' | 'optima' | 'rapid' | 'expert' | 'presto' | 'linea'
+		description: string
+        selected: boolean
+	}[]
 }

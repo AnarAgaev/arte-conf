@@ -1,22 +1,22 @@
 @use '../../Sass/_variables' as vars
 @use '../../Sass/_mixins' as mxns
 
-.viewport
-    display: flex
-    flex-direction: column
-    gap: 20px
-    width: 100%
+.Viewport
+	display: flex
+	flex-direction: column
+	gap: 20px
+	width: 100%
 
-    @media (min-width: vars.$lg)
-        gap: 30px
+	@media (min-width: vars.$lg)
+		grid-column: 2 / -1
+		gap: 30px
 
+	&__sketch
+		display: block
+		position: relative
+		width: 100%
+		height: auto
+		aspect-ratio: 670 / 446
 
-.sketch
-    display: block
-    position: relative
-    width: 100%
-    height: auto
-    aspect-ratio: 670 / 446
-
-    @include mxns.backgroundLoading
+		@include mxns.backgroundLoading
 

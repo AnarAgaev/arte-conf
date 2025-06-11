@@ -1,10 +1,8 @@
 @use '../../Sass/_variables' as vars
 
-.pageConfigurator
-    display: flex
-    flex-direction: column
-    gap: 20px
+.PageConfigurator
+	display: grid
+	gap: 20px
 
-    @media (min-width: vars.$lg)
-        flex-direction: row
-        justify-content: space-between
+	@media (min-width: vars.$lg)
+		grid-template-columns: repeat(2, calc(50% - 10px))

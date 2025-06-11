@@ -1,23 +1,21 @@
 import { Wallet, Location } from '@components'
 import style from './Viewport.module.sass'
 
-const { viewport, sketch } = style
-
 export const Viewport = () => {
-    return (
-        <div className={viewport}>
+	return (
+		<div className={style.Viewport}>
 
-            <div className={sketch}>
-                <img src="" alt="" />
-            </div>
+			<div className={style.Viewport__sketch}>
+				<img src="" alt="" />
+			</div>
 
-            <Wallet />
+			<Wallet />
 
-            <Location />
+			<Location />
 
-            <button className='btn btn_default btn_dark' type="button">
-                Добавить в проект
-            </button>
-        </div>
-    )
+			<button className='btn btn_default btn_dark' type="button">
+				Добавить в проект
+			</button>
+		</div>
+	)
 }

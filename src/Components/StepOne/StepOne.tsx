@@ -178,7 +178,7 @@ export const StepOne = () => {
 	return (
 		<>
 			{/* Типы потолка */}
-			{ substep?.id === 0 &&
+			{ substep?.name === 'ceilingType' &&
 				<StepFragmentItem>
 					<h3>
 						{ substep?.description }
@@ -192,7 +192,7 @@ export const StepOne = () => {
 			}
 
 			{/* Типы монтажа */}
-			{ substep?.id === 1 &&
+			{ substep?.name === 'mountingType' &&
 				<StepFragmentItem>
 					<h3>
 						{ substep?.description }
@@ -206,7 +206,7 @@ export const StepOne = () => {
 			}
 
 			{/* Форма конфигурации */}
-			{ substep?.id === 2 &&
+			{ substep?.name === 'constructionForm' &&
 				<StepFragmentsWrapper>
 					<StepFragmentItem>
 						<h3>

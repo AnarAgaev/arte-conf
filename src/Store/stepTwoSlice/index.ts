@@ -10,6 +10,7 @@ import {
 	resetTwoStepAction,
 	setTrackTypeAction,
 	setTrackColorAction,
+	setTrackCollectionAction,
 } from './Actions'
 
 
@@ -17,21 +18,24 @@ import {
 const reducers = {
 	resetTwoStep: resetTwoStepAction,
 	setTrackType: setTrackTypeAction,
-	setTrackColor: setTrackColorAction
+	setTrackColor: setTrackColorAction,
+	setTrackCollection: setTrackCollectionAction
 }
 
 
 // Import Selectors
 import {
 	trackTypesSelector,
-	trackColorsSelector
+	trackColorsSelector,
+	trackCollectionsSelector
 } from './Selectors'
 
 
 // Register Selectors
 const selectors = {
 	selectTrackTypes: trackTypesSelector,
-	selectTrackColors: trackColorsSelector
+	selectTrackColors: trackColorsSelector,
+	selectTrackCollections: trackCollectionsSelector
 }
 
 
@@ -52,12 +56,14 @@ export default stepTwoSlice.reducer
 export const {
 	resetTwoStep,
 	setTrackType,
-	setTrackColor
+	setTrackColor,
+	setTrackCollection
 } = stepTwoSlice.actions
 
 
 // Export Selectors
 export const {
 	selectTrackTypes,
-	selectTrackColors
+	selectTrackColors,
+	selectTrackCollections
 } = stepTwoSlice.selectors

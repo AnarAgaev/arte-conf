@@ -4,8 +4,6 @@ import { resetOneStep } from '@store/stepOneSlice'
 import { StepsStatus, StepOne, StepTwo,   StepFour } from '@components'
 import style from './Workspace.module.sass'
 
-const { workspace, body, buttons } = style
-
 export const Workspace = () => {
 
     const dispatch = useAppDispatch()
@@ -17,10 +15,10 @@ export const Workspace = () => {
     }
 
     return (
-        <div className={workspace}>
+        <div className={style.Workspace}>
             <StepsStatus />
 
-            <div className={body}>
+            <div className={style.Workspace__body}>
                 { activeStep.name === 'step1' && <StepOne /> }
                 { activeStep.name === 'step2' && <StepTwo /> }
                 { activeStep.name === 'step3' && <span>Step 3</span> }
@@ -28,7 +26,7 @@ export const Workspace = () => {
 				{ activeStep.name === 'stepTotal' && <span>Step Total</span> }
             </div>
 
-            <div className={buttons}>
+            <div className={style.Workspace__buttons}>
                 <button type='button'
                     className={`btn btn_small btn_lite${activeStep.id === 0 ? ' disabled' : ''}`}
                     onClick={onReset}>

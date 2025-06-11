@@ -31,25 +31,25 @@ const steps: T_Steps = [
 		id: 1,
 		name: 'step2',
 		description: 'шаг 2',
-		status: 'prev',
+		status: 'active',
 		substeps: [
 			{
 				id: 0,
 				name: 'trackType',
 				description: 'тип трека',
-				status: 'active'
+				status: 'prev'
 			},
 			{
 				id: 1,
 				name: 'trackColor',
 				description: 'цвет',
-				status: 'next'
+				status: 'prev'
 			},
 			{
 				id: 2,
 				name: 'trackCollection',
 				description: 'коллекция',
-				status: 'next'
+				status: 'active'
 			}
 		]
 	},
@@ -57,7 +57,7 @@ const steps: T_Steps = [
 		id: 2,
 		name: 'step3',
 		description: 'шаг 3',
-		status: 'prev',
+		status: 'next',
 		substeps: [
 			{
 				id: 0,
@@ -77,7 +77,7 @@ const steps: T_Steps = [
 		id: 3,
 		name: 'step4',
 		description: 'шаг 4',
-		status: 'active',
+		status: 'next',
 		substeps: [
 			{
 				id: 0,

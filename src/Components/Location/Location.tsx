@@ -1,8 +1,6 @@
 import { Select, SelectOption, InputAdd } from '@components'
 import style from './Location.module.sass'
 
-const { location, list } = style
-
 export const Location = () => {
 
     const projectsOptions = [
@@ -37,14 +35,14 @@ export const Location = () => {
     )
 
     return (
-        <div className={location}>
+        <div className={style.Location}>
             <Select title="Проект" selectedValue="Выбранный проект">
                 <InputAdd placeholder='Добавьте проект' cbf={() => {alert('add project')}} />
-                <ul className={list}>{ projectsOptions }</ul>
+                <ul className={style.Location__list}>{ projectsOptions }</ul>
             </Select>
             <Select title="Помещение" selectedValue="Выбранное помещение">
                 <InputAdd placeholder='Добавьте помещение' cbf={() => alert('add room')} />
-                <ul className={list}>{ roomOptions }</ul>
+                <ul className={style.Location__list}>{ roomOptions }</ul>
             </Select>
         </div>
     )

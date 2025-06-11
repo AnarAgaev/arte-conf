@@ -33,7 +33,7 @@ const initialState: T_StepTwoState = {
 			id: 0,
 			name: 'black',
 			description: 'Черный',
-			// hex: '#000000',
+			hex: '#000000',
 			selected: false,
 			img: '/images/color-black.svg'
 		},
@@ -42,9 +42,49 @@ const initialState: T_StepTwoState = {
 			name: 'white',
 			description: 'Белый',
 			img: '/images/color-white.svg',
-			// hex: '#ffffff',
+			hex: '#ffffff',
 			selected: false
 		}
+	],
+
+	// Коллекция
+	trackCollections: [
+		{
+			id: 0,
+			description: 'ВСЕ',
+			name: 'all',
+			selected: true
+		},
+		{
+			id: 1,
+			description: 'OPTIMA',
+			name: 'optima',
+			selected: false
+		},
+		{
+			id: 2,
+			description: 'RAPID',
+			name: 'rapid',
+			selected: false
+		},
+		{
+			id: 3,
+			description: 'EXPERT',
+			name: 'expert',
+			selected: false
+		},
+		{
+			id: 4,
+			description: 'PRESTO',
+			name: 'presto',
+			selected: false
+		},
+		{
+			id: 5,
+			description: 'LINEA',
+			name: 'linea',
+			selected: false
+		},
 	]
 
 }
