@@ -40,9 +40,9 @@ const getCeilingTypeNodes = (
 			selected={type.selected}
 			clickHandler={() => onItem(type.id)}
 		>
-			<span>
+			<div>
 				<img src={type.img} alt={type.description} />
-			</span>
+			</div>
 			<mark>{type.description}</mark>
 		</PictureSelectorListItem>
 	)
@@ -85,9 +85,9 @@ const getConstructionFormNodes = (
 			selected={form.selected}
 			clickHandler={() => onItem(form.id)}
 		>
-			<span>
+			<div>
 				<img src={form.img} alt={form.description} />
-			</span>
+			</div>
 			<mark>{form.description}</mark>
 		</PictureSelectorListItem>
 	)

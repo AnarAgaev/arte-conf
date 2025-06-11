@@ -1,77 +1,75 @@
-// import { useMemo } from "react"
-// import { useAppSelector, useAppDispatch } from "@hooks"
-// import { selectActiveStep, goToNextSubstep } from "@store/appSlice"
-// import { selectTrackTypes, selectTrackColors,
-// 	setTrackType, setTrackColor } from '@store/stepTwoSlice'
-// import { PictureSelectorList, PictureSelectorListItem,
-// 	StepFragmentsWrapper, StepFragmentItem } from '@components'
-// import { T_AppDispatch } from "@store"
-// import { T_StepTwoState } from "@store/stepTwoSlice/types"
-// import style from './StepTwo.module.sass'
-
-// const {
-// 	StepTwo__message
-// } = style
+import { useMemo } from "react"
+import { formatRussianNumber } from '@helpers'
+import { useAppSelector, useAppDispatch } from "@hooks"
+import { selectActiveStep } from "@store/appSlice"
+import { selectPowerSupplies, setPowerSupply } from '@store/stepFourSlice'
+import { PictureSelectorList, PictureSelectorListItem, StepFragmentItem } from '@components'
+import { T_AppDispatch } from "@store"
+import { T_StepFourState } from "@store/stepFourSlice/types"
 
 // #region Node list getters
-// const getTrackTypeNodes = (
-// 	trackTypes: T_StepTwoState['trackTypes'],
-// 	dispatch: T_AppDispatch
-// ): JSX.Element[] => trackTypes.map(type => {
+const getPowerSupplyNodes = (
+	powerSupplies: T_StepFourState['powerSupplies'],
+	dispatch: T_AppDispatch
+): JSX.Element[] => powerSupplies.map(powerSupply => {
 
-// 	const onItem = (id: number) => {
-// 		dispatch(setTrackType(id))
-// 		dispatch(goToNextSubstep())
-// 	}
+	const onItem = (id: number) => {
+		dispatch(setPowerSupply(id))
+	}
 
-// 	return (
-// 		<PictureSelectorListItem
-// 			key={type.id}
-// 			selected={type.selected}
-// 			clickHandler={() => onItem(type.id)}
-// 		>
-// 			<span>
-// 				<img src={type.img} alt={type.description} />
-// 			</span>
-// 			<mark>{type.description}</mark>
-// 		</PictureSelectorListItem>
-// 	)
-// })
+	return (
+		<PictureSelectorListItem
+			key={powerSupply.id}
+			selected={powerSupply.selected}
+			clickHandler={() => onItem(powerSupply.id)}
+		>
+			<div>
+				<img src={powerSupply.img} alt={powerSupply.description} />
+
+				<ul>
+					{ powerSupply.power && <li>Мощность: {powerSupply.power}</li> }
+					{ powerSupply.mountingType && <li>Тип монтажа: {powerSupply.mountingType}</li> }
+					{ powerSupply.collection && <li>Коллекция: {powerSupply.collection}</li> }
+					{ <li>Диммер: {powerSupply.dimmer ? 'Да' : 'Нет'}</li> }
+				</ul>
+			</div>
+			<mark>
+				{`Арт. ${powerSupply.article}`}
+				<span>{`${formatRussianNumber(powerSupply.price)} р.`}</span>
+			</mark>
+		</PictureSelectorListItem>
+	)
+})
 // #endregion
 
 export const StepFour = () => {
 
 	// #region Component variables
-	// const dispatch = useAppDispatch()
-	// const step = useAppSelector(selectActiveStep)
-	// const substep = step.substeps.find(substep => substep.status === 'active')
-	// const trackTypes = useAppSelector(selectTrackTypes)
-	// const trackColors = useAppSelector(selectTrackColors)
+	const dispatch = useAppDispatch()
+	const step = useAppSelector(selectActiveStep)
+	const substep = step.substeps.find(substep => substep.status === 'active')
+	const powerSupplies = useAppSelector(selectPowerSupplies)
 	// #endregion
 
 	// #region Node list getters
-	// const trackTypeNodes = useMemo(
-	// 	() => getTrackTypeNodes(trackTypes, dispatch),
-	// 	[ trackTypes, dispatch ]
-	// )
+	const powerSupplyNodes = useMemo(
+		() => getPowerSupplyNodes(powerSupplies, dispatch),
+		[ powerSupplies, dispatch ]
+	)
 	// #endregion
 
 	return (
 		<>
-			StepFour
-			{/* Цвет трека */}
-			{/* { substep?.id === 1 &&
-				<StepFragmentItem>
-					<h3>
-						{ substep?.description }
-					</h3>
-					<article>
-						<PictureSelectorList>
-							{ trackColorNodes }
-						</PictureSelectorList>
-					</article>
-				</StepFragmentItem>
-			} */}
+			<StepFragmentItem>
+				<h3>
+					{ substep?.description }
+				</h3>
+				<article>
+					<PictureSelectorList>
+						{ powerSupplyNodes }
+					</PictureSelectorList>
+				</article>
+			</StepFragmentItem>
 		</>
 	)
 }

@@ -30,9 +30,9 @@ const getTrackTypeNodes = (
 			selected={type.selected}
 			clickHandler={() => onItem(type.id)}
 		>
-			<span>
+			<div>
 				<img src={type.img} alt={type.description} />
-			</span>
+			</div>
 			<mark>{type.description}</mark>
 		</PictureSelectorListItem>
 	)
@@ -54,9 +54,9 @@ const getTrackColorNodes = (
 			selected={color.selected}
 			clickHandler={() => onItem(color.id)}
 		>
-			<span>
+			<div>
 				<img src={color.img} alt={color.description} />
-			</span>
+			</div>
 		</PictureSelectorListItem>
 	)
 })

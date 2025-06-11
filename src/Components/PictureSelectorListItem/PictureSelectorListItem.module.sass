@@ -6,17 +6,25 @@
 
 	@media (hover: hover) and (pointer: fine)
 		&:hover
-			mark
+			& > mark
 				color: var(--clr-accent)
 
+			& > div
+				ul
+					background: var(--opacity-fill)
+				li
+					opacity: 1
+					transform: translateY(0)
+					transition-delay: 0.1s
+
 	&_selected
-		span::before
+		& > div::before
 			border-color: var(--clr-accent) !important
 
-		mark
+		& > mark
 			color: var(--clr-accent)
 
-	span
+	& > div
 		display: block
 		position: relative
 		width: 100%
@@ -35,16 +43,42 @@
 			border: 2px solid transparent
 			transition: var(--base-transition)
 
-	img
-		display: block
-		position: relative
-		z-index: 0
-		width: 100%
-		height: auto
-		aspect-ratio: 1 / 1
+		img
+			display: block
+			position: relative
+			z-index: 0
+			width: 100%
+			height: auto
+			aspect-ratio: 1 / 1
 
-	mark
-		display: block
+		ul
+			display: grid
+			align-content: start
+			gap: 5px
+			position: absolute
+			z-index: 1
+			top: 0
+			left: 0
+			inset: 0
+			padding: 10px
+			background: var(--opacity-transparent)
+			transition: var(--synth-transition)
+
+		li
+			position: relative
+			transform: translateY(5px)
+			color: var(--clr-font-light)
+			font-size: 9px
+			font-style: normal
+			font-weight: 400
+			line-height: 1.2
+			opacity: 0
+			transition: var(--synth-transition)
+
+
+	& > mark
+		display: grid
+		gap: 2px
 		width: 100%
 		height: auto
 		text-align: center
@@ -53,3 +87,10 @@
 		line-height: 20px
 		background: transparent
 		transition: var(--base-transition)
+
+		span
+			color: var(--clr-font-mid)
+			font-size: 14px
+			font-style: normal
+			font-weight: 400
+			line-height: 1.4

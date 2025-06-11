@@ -8,7 +8,7 @@ const initialState: T_StepFourState = {
 			id: 0,
 			article: '033092',
 			img: '/images/033092.webp',
-			price: 4321,
+			price: 4321.03,
 
 			power: '300 W',
 			mountingType: 'Выносной',
@@ -24,7 +24,7 @@ const initialState: T_StepFourState = {
 			price: 5678,
 
 			power: '200 W',
-			mountingType: 'Встраиваемый',
+			mountingType: 'Накладной',
 			collection: 'Elegance',
 			dimmer: true,
 
@@ -34,7 +34,7 @@ const initialState: T_StepFourState = {
 			id: 2,
 			article: '010996',
 			img: '/images/010996.webp',
-			price: 5678,
+			price: 5678.2,
 
 			power: '340 W',
 			mountingType: 'Накладной',
@@ -50,13 +50,64 @@ const initialState: T_StepFourState = {
 			price: 13678,
 
 			power: '420 W',
-			mountingType: 'Встраиваемый',
+			mountingType: 'Выносной',
 			collection: 'Glossa',
 			dimmer: true,
 
 			selected: false
 		},
-	]
+		{
+			id: 4,
+			article: '517150',
+			img: '/images/517150.webp',
+			price: 5678,
+
+			power: '200 W',
+			mountingType: 'Накладной',
+			collection: 'Elegance',
+			dimmer: true,
+
+			selected: false
+		},
+		{
+			id: 5,
+			article: '010996',
+			img: '/images/010996.webp',
+			price: 5678.2,
+
+			power: '340 W',
+			mountingType: 'Накладной',
+			collection: 'Glossa',
+			dimmer: true,
+
+			selected: false
+		},
+		{
+			id: 6,
+			article: '033092',
+			img: '/images/033092.webp',
+			price: 4321.03,
+
+			power: '300 W',
+			mountingType: 'Выносной',
+			collection: 'LINEA',
+			dimmer: false,
+
+			selected: false
+		},
+		{
+			id: 7,
+			article: '077333',
+			img: '/images/077333.webp',
+			price: 13678,
+
+			power: '420 W',
+			mountingType: 'Выносной',
+			collection: 'Glossa',
+			dimmer: true,
+
+			selected: false
+		},	]
 
 }
 
