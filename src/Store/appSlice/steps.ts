@@ -3,90 +3,106 @@ import { T_Steps } from "./types";
 const steps: T_Steps = [
 	{
 		id: 0,
-		name: 'шаг 1',
+		name: 'step1',
+		description: 'шаг 1',
 		status: 'prev',
 		substeps: [
 			{
 				id: 0,
-				name: 'тип потолка',
+				name: 'ceilingType',
+				description: 'тип потолка',
 				status: 'active'
 			},
 			{
 				id: 1,
-				name: 'тип монтажа',
+				name: 'mountingType',
+				description: 'тип монтажа',
 				status: 'next'
 			},
 			{
 				id: 2,
-				name: 'форма конфигурации',
+				name: 'constructionForm',
+				description: 'форма конфигурации',
 				status: 'next'
 			}
 		]
 	},
 	{
 		id: 1,
-		name: 'шаг 2',
-		status: 'active',
+		name: 'step2',
+		description: 'шаг 2',
+		status: 'prev',
 		substeps: [
 			{
 				id: 0,
-				name: 'тип трека',
-				status: 'prev'
-			},
-			{
-				id: 1,
-				name: 'цвет',
+				name: 'trackType',
+				description: 'тип трека',
 				status: 'active'
 			},
 			{
+				id: 1,
+				name: 'trackColor',
+				description: 'цвет',
+				status: 'next'
+			},
+			{
 				id: 2,
-				name: 'коллекция',
+				name: 'trackCollection',
+				description: 'коллекция',
 				status: 'next'
 			}
 		]
 	},
 	{
 		id: 2,
-		name: 'шаг 3',
-		status: 'next',
+		name: 'step3',
+		description: 'шаг 3',
+		status: 'prev',
 		substeps: [
 			{
 				id: 0,
-				name: 'подбор светильников в трек',
+				name: 'lampsSelection',
+				description: 'подбор светильников в трек',
 				status: 'active'
 			},
 			{
 				id: 1,
-				name: 'Дополнительное освещение',
+				name: 'additionalLighting',
+				description: 'Дополнительное освещение',
 				status: 'next'
 			}
 		]
 	},
 	{
 		id: 3,
-		name: 'шаг 4',
-		status: 'next',
+		name: 'step4',
+		description: 'шаг 4',
+		status: 'active',
 		substeps: [
 			{
 				id: 0,
-				name: 'блок питания',
+				name: 'powerSupply',
+				description: 'блок питания',
 				status: 'active'
 			}
 		]
 	},
 	{
 		id: 4,
-		name: 'итого',
+		name: 'stepTotal',
+		description: 'итого',
 		status: 'next',
 		substeps: [
 			{
 				id: 0,
-				name: 'о клиенте',
+				name: 'aboutClient',
+				description: 'о клиенте',
 				status: 'active'
 			},
 			{
 				id: 1,
-				name: 'ваша конфигурация',
+				name: 'totalConfiguration',
+				description: 'ваша конфигурация',
 				status: 'next'
 			}
 		]

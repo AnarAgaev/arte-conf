@@ -6,11 +6,13 @@ export type T_StepStatus = 'prev' | 'active' | 'next'
 
 export type T_Steps = {
     id: 0 | 1 | 2 | 3 | 4
-    name: string
+    name: 'step1' | 'step2' | 'step3' | 'step4' | 'stepTotal'
+	description: string
     status: T_StepStatus
     substeps: {
         id: number
         name: string
+		description: string
         status: T_StepStatus
     }[]
 }[]
