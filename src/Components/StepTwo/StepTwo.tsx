@@ -6,7 +6,8 @@ import { selectTrackTypes, selectTrackColors,
 	setTrackCollection } from '@store/stepTwoSlice'
 import { PictureSelectorList, PictureSelectorListItem,
 	StepFragmentsWrapper, StepFragmentItem,
-	TextSelectorList, TextSelectorListItem } from '@components'
+	TextSelectorList, TextSelectorListItem,
+	TableContainer, TableSection } from '@components'
 import { T_AppDispatch } from "@store"
 import { T_StepTwoState } from "@store/stepTwoSlice/types"
 import style from './StepTwo.module.sass'
@@ -211,6 +212,119 @@ export const StepTwo = () => {
 							<i></i>
 							<span>Вы превысили максимальную длину подключения шинопровода</span>
 						</p>
+					</StepFragmentItem>
+
+					<StepFragmentItem>
+						<h3>
+							комплектация (что входит в ваш комплект):
+						</h3>
+						<article>
+							<TableContainer columns={[ 'Фото', 'Наименование', 'Длина', 'Количество' ]}>
+								<tbody>
+									<TableSection description="Сторона стены 1:" colCount={4}>
+
+
+										{/* Добавить логику --- START */}
+										{
+											(() => {
+												const elms: JSX.Element[] = []
+
+												for (let i = 0; i < 3; i++) {
+													elms.push(
+														<tr key={i}>
+															<td>
+																<i>
+																	<img src="/images/table-img-example.webp" alt="" />
+																</i>
+															</td>
+															<td>
+																Магнитный шинопровод встраиваемый под ГКЛ 9мм Arte Lamp LINEA A470233
+																<mark>Арт. A480733</mark>
+															</td>
+															<td>2000</td>
+															<td>3 шт</td>
+														</tr>
+													)
+												}
+
+												return elms
+											})()
+										}
+										{/* Добавить логику --- FINISH */}
+
+
+									</TableSection>
+
+									<TableSection description="Сторона стены 2:" colCount={4}>
+
+
+										{/* Добавить логику --- START */}
+										{
+											(() => {
+												const elms: JSX.Element[] = []
+
+												for (let i = 0; i < 4; i++) {
+													elms.push(
+														<tr key={i}>
+															<td>
+																<i>
+																	<img src="/images/table-img-example.webp" alt="" />
+																</i>
+															</td>
+															<td>
+																Магнитный шинопровод встраиваемый под ГКЛ 9мм Arte Lamp LINEA A470233
+																<mark>Арт. A480733</mark>
+															</td>
+															<td>2000</td>
+															<td>3 шт</td>
+														</tr>
+													)
+												}
+
+												return elms
+											})()
+										}
+										{/* Добавить логику --- FINISH */}
+
+
+									</TableSection>
+
+									<TableSection description="Сторона стены 3:" colCount={4}>
+
+
+										{/* Добавить логику --- START */}
+										{
+											(() => {
+												const elms: JSX.Element[] = []
+
+												for (let i = 0; i < 2; i++) {
+													elms.push(
+														<tr key={i}>
+															<td>
+																<i>
+																	<img src="/images/table-img-example.webp" alt="" />
+																</i>
+															</td>
+															<td>
+																Магнитный шинопровод встраиваемый под ГКЛ 9мм Arte Lamp LINEA A470233
+																<mark>Арт. A480733</mark>
+															</td>
+															<td>2000</td>
+															<td>3 шт</td>
+														</tr>
+													)
+												}
+
+												return elms
+											})()
+										}
+										{/* Добавить логику --- FINISH */}
+
+
+									</TableSection>
+								</tbody>
+							</TableContainer>
+						</article>
 					</StepFragmentItem>
 				</StepFragmentsWrapper>
 			}
