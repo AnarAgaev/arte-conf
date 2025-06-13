@@ -2,7 +2,7 @@ export type T_StepTwoState = {
 
     // тип трека
     trackTypes: {
-        id: number,
+        id: number
 		name: 'magnetic' | 'singlePhase' | 'onBelts'
         description: 'Магнитные' | 'Однофазные' | 'На ремнях'
         img: string
@@ -11,7 +11,7 @@ export type T_StepTwoState = {
 
 	// цвет трека
 	trackColors: ({
-        id: number;
+        id: number
         name: 'black' | 'white';
         description: 'Черный' | 'Белый';
         selected: boolean;
@@ -32,7 +32,7 @@ export type T_StepTwoState = {
 
 	// Коллекция
 	trackCollections: {
-		id: number,
+		id: number
 		name: 'all' | 'optima' | 'rapid' | 'expert' | 'presto' | 'linea'
 		description: string
         selected: boolean

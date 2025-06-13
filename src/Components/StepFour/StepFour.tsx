@@ -13,15 +13,15 @@ const getPowerSupplyNodes = (
 	dispatch: T_AppDispatch
 ): JSX.Element[] => powerSupplies.map(powerSupply => {
 
-	const onItem = (id: number) => {
-		dispatch(setPowerSupply(id))
+	const onItem = () => {
+		dispatch(setPowerSupply(powerSupply.id))
 	}
 
 	return (
 		<PictureSelectorListItem
 			key={powerSupply.id}
 			selected={powerSupply.selected}
-			clickHandler={() => onItem(powerSupply.id)}
+			clickHandler={onItem}
 		>
 			<div>
 				<img src={powerSupply.img} alt={powerSupply.description} />

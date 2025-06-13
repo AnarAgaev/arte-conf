@@ -2,7 +2,7 @@ export type T_StepOneState = {
 
     // тип потолка
     ceilingType: {
-        id: number,
+        id: number
 		name: 'rack' | 'straining' | 'gkl'
         description: 'Реечный' | 'Натяжной' | 'ГКЛ'
         img: string
@@ -11,7 +11,7 @@ export type T_StepOneState = {
 
 	// тип монтажа
 	mountingType: {
-		id: number,
+		id: number
 		name: 'suspension' | 'overhead' | 'built-in'
         description: 'Подвесной' | 'Накладной' | 'Встроенный'
         selected: boolean
@@ -19,7 +19,7 @@ export type T_StepOneState = {
 
 	// форма конструкции
 	constructionForm: {
-		id: number,
+		id: number
 		name: 'l-shaped' | 'rectangle' | 'line' | 'u-shaped' | 'snake'
         description: 'L-образная' | 'Прямоугольник' | 'Прямая' | 'П-образная' | 'Змейка'
         img: string

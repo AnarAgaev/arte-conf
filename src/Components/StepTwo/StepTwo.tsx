@@ -23,8 +23,8 @@ const getTrackTypeNodes = (
 	dispatch: T_AppDispatch
 ): JSX.Element[] => trackTypes.map(type => {
 
-	const onItem = (id: number) => {
-		dispatch(setTrackType(id))
+	const onItem = () => {
+		dispatch(setTrackType(type.id))
 		dispatch(goToNextSubstep())
 	}
 
@@ -32,7 +32,7 @@ const getTrackTypeNodes = (
 		<PictureSelectorListItem
 			key={type.id}
 			selected={type.selected}
-			clickHandler={() => onItem(type.id)}
+			clickHandler={onItem}
 		>
 			<div>
 				<img src={type.img} alt={type.description} />
@@ -47,8 +47,8 @@ const getTrackColorNodes = (
 	dispatch: T_AppDispatch
 ): JSX.Element[] => trackColors.map(color => {
 
-	const onItem = (id: number) => {
-		dispatch(setTrackColor(id))
+	const onItem = () => {
+		dispatch(setTrackColor(color.id))
 		dispatch(goToNextSubstep())
 	}
 
@@ -56,7 +56,7 @@ const getTrackColorNodes = (
 		<PictureSelectorListItem
 			key={color.id}
 			selected={color.selected}
-			clickHandler={() => onItem(color.id)}
+			clickHandler={onItem}
 		>
 			<div>
 				<img src={color.img} alt={color.description} />
@@ -70,15 +70,15 @@ const getTrackCollectionNodes = (
 	dispatch: T_AppDispatch
 ): JSX.Element[] => trackCollections.map(collection => {
 
-	const onItem = (id: number) => {
-		dispatch(setTrackCollection(id))
+	const onItem = () => {
+		dispatch(setTrackCollection(collection.id))
 	}
 
 	return (
 		<TextSelectorListItem
 			key={collection.id}
 			selected={collection.selected}
-			clickHandler={() => onItem(collection.id)}
+			clickHandler={onItem}
 		>
 			<span>{collection.description}</span>
 		</TextSelectorListItem>

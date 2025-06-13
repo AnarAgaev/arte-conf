@@ -29,8 +29,8 @@ const getCeilingTypeNodes = (
 	dispatch: T_AppDispatch
 ): JSX.Element[] => ceilingTypes.map(type => {
 
-	const onItem = (id: number) => {
-		dispatch(setCeilingType(id))
+	const onItem = () => {
+		dispatch(setCeilingType(type.id))
 		dispatch(goToNextSubstep())
 	}
 
@@ -38,7 +38,7 @@ const getCeilingTypeNodes = (
 		<PictureSelectorListItem
 			key={type.id}
 			selected={type.selected}
-			clickHandler={() => onItem(type.id)}
+			clickHandler={onItem}
 		>
 			<div>
 				<img src={type.img} alt={type.description} />
@@ -53,8 +53,8 @@ const getMountingTypeNodes = (
 	dispatch: T_AppDispatch
 ): JSX.Element[] => mountingTypes.map(type => {
 
-	const onItem = (id: number) => {
-		dispatch(setMountingType(id))
+	const onItem = () => {
+		dispatch(setMountingType(type.id))
 		dispatch(goToNextSubstep())
 	}
 
@@ -62,7 +62,7 @@ const getMountingTypeNodes = (
 		<TextSelectorListItem
 			key={type.id}
 			selected={type.selected}
-			clickHandler={() => onItem(type.id)}
+			clickHandler={onItem}
 		>
 			<span>{type.description}</span>
 		</TextSelectorListItem>
@@ -74,8 +74,8 @@ const getConstructionFormNodes = (
 	dispatch: T_AppDispatch,
 ): JSX.Element[] => constructionForms.map(form => {
 
-	const onItem = (id: number) => {
-		dispatch(setConstructionForm(id))
+	const onItem = () => {
+		dispatch(setConstructionForm(form.id))
 		dispatch(resetAllSidesValues())
 	}
 
@@ -83,7 +83,7 @@ const getConstructionFormNodes = (
 		<PictureSelectorListItem
 			key={form.id}
 			selected={form.selected}
-			clickHandler={() => onItem(form.id)}
+			clickHandler={onItem}
 		>
 			<div>
 				<img src={form.img} alt={form.description} />
@@ -253,6 +253,7 @@ export const StepOne = () => {
 								<CheckBoxController
 									description="Переход на стену"
 									isChecked={isMovingToWall}
+									isHardText={true}
 									onAction={isChecked => {dispatch(setMovingToWallVisible(isChecked))}}
 								/>
 							</StepFragmentItem>

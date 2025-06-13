@@ -4,19 +4,24 @@ const {
     CheckBoxController__body,
     CheckBoxController__marker,
     CheckBoxController__description,
+    CheckBoxController__description_hardText,
 } = style
 
 interface I_Props {
     description: string
 	onAction: (isChecked: boolean) => void
 	isChecked?: boolean
+	isHardText?: boolean
 }
 
 export const CheckBoxController = ({
     description,
 	onAction,
     isChecked = false,
+	isHardText = false
 }: I_Props) => {
+
+	const clazz = `${CheckBoxController__description} ${isHardText ? `${CheckBoxController__description_hardText}` : ''}`
 
     return (
         <label className={CheckBoxController__body}>
@@ -28,7 +33,7 @@ export const CheckBoxController = ({
 				name={description}
 			/>
 			<i className={CheckBoxController__marker}></i>
-			<span className={CheckBoxController__description}>{description}</span>
+			<span className={clazz}>{description}</span>
         </label>
     )
 }

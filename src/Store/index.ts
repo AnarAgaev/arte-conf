@@ -19,12 +19,14 @@ import appReducer from './appSlice'
 import stepOneReducer from './stepOneSlice'
 import stepTwoReducer from './stepTwoSlice'
 import stepFourReducer from './stepFourSlice'
+import stepTotalReducer from './stepTotalSlice'
 
 const rootReducer = combineReducers({
     app: appReducer,
     stepOne: stepOneReducer,
 	stepTwo: stepTwoReducer,
-	stepFour: stepFourReducer
+	stepFour: stepFourReducer,
+	stepTotal: stepTotalReducer
 })
 // #endregion
 

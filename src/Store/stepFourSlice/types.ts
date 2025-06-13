@@ -2,7 +2,7 @@ export type T_StepFourState = {
 
     // Блоки питания
     powerSupplies: {
-        id: number,
+        id: number
 		article: string
         img: string
 		price: string | number

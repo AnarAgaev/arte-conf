@@ -16,11 +16,16 @@
 		user-select: none
 
 		&:has(input:checked)
-			i::before
-				opacity: 1
+			i
+				border-color: var(--clr-accent)
+
+				&::before
+					opacity: 1
 
 		@media (hover: hover) and (pointer: fine)
 			&:hover
+				i
+					border-color: var(--clr-accent)
 				span
 					color: var(--clr-accent)
 
@@ -33,7 +38,7 @@
 		padding: 3px
 		justify-content: center
 		align-items: center
-		border: 1px solid var(--clr-accent)
+		border: 1px solid var(--clr-font-light)
 
 
 		&::before
@@ -54,5 +59,8 @@
 		font-style: normal
 		font-weight: 400
 		line-height: 110%
-		text-transform: uppercase
 		transition: var(--base-transition)
+
+		&_hardText
+			font-weight: 600
+			text-transform: uppercase
