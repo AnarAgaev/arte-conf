@@ -57,7 +57,7 @@ const steps: T_Steps = [
 		id: 2,
 		name: 'step3',
 		description: 'шаг 3',
-		status: 'next',
+		status: 'active',
 		substeps: [
 			{
 				id: 0,
@@ -91,7 +91,7 @@ const steps: T_Steps = [
 		id: 4,
 		name: 'stepTotal',
 		description: 'итого',
-		status: 'active',
+		status: 'next',
 		substeps: [
 			{
 				id: 0,

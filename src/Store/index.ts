@@ -11,6 +11,7 @@ import {
     REGISTER
 } from 'redux-persist'
 
+
 import storage from 'redux-persist/lib/storage'
 
 
@@ -18,6 +19,7 @@ import storage from 'redux-persist/lib/storage'
 import appReducer from './appSlice'
 import stepOneReducer from './stepOneSlice'
 import stepTwoReducer from './stepTwoSlice'
+import stepThreeReducer from './stepThreeSlice'
 import stepFourReducer from './stepFourSlice'
 import stepTotalReducer from './stepTotalSlice'
 
@@ -25,6 +27,7 @@ const rootReducer = combineReducers({
     app: appReducer,
     stepOne: stepOneReducer,
 	stepTwo: stepTwoReducer,
+	stepThree: stepThreeReducer,
 	stepFour: stepFourReducer,
 	stepTotal: stepTotalReducer
 })

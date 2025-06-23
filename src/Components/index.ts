@@ -34,5 +34,6 @@ export * from './TableSection/TableSection'
 // Steps ...
 export * from './StepOne/StepOne'
 export * from './StepTwo/StepTwo'
+export * from './StepThree/StepThree'
 export * from './StepFour/StepFour'
 export * from './StepTotal/StepTotal'

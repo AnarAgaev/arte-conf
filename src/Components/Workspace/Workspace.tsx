@@ -1,6 +1,6 @@
 import { useAppSelector, useAppDispatch } from '@hooks'
 import { goToNextStep, resetSteps, selectActiveStep } from '@store/appSlice'
-import { StepsStatus, StepOne, StepTwo, StepFour, StepTotal } from '@components'
+import { StepsStatus, StepOne, StepTwo, StepThree, StepFour, StepTotal } from '@components'
 import { resetOneStep } from '@store/stepOneSlice'
 import style from './Workspace.module.sass'
 
@@ -9,6 +9,7 @@ export const Workspace = () => {
     const dispatch = useAppDispatch()
     const activeStep = useAppSelector(selectActiveStep)
 
+	// !!! Добавить сброс всех шагов
     const onReset = () => {
         dispatch(resetSteps())
         dispatch(resetOneStep())
@@ -21,7 +22,7 @@ export const Workspace = () => {
             <div className={style.Workspace__body}>
                 { activeStep.name === 'step1' && <StepOne /> }
                 { activeStep.name === 'step2' && <StepTwo /> }
-                { activeStep.name === 'step3' && <span>Step 3</span> }
+                { activeStep.name === 'step3' && <StepThree /> }
                 { activeStep.name === 'step4' && <StepFour /> }
 				{ activeStep.name === 'stepTotal' && <StepTotal /> }
             </div>

@@ -1,0 +1,5 @@
+export * from './resetThreeStep'
+export * from './setLampColor'
+export * from './setControlType'
+export * from './setGlowTemperature'
+export * from './setLampPower'
