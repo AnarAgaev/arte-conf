@@ -1,3 +1,15 @@
+export type T_Lamp = {
+	id: number
+	lengthOnTrack: number
+	dimmer: boolean
+	colorTemperature: number
+	power: number
+	article: string
+	price: number
+	img: string
+	selected: boolean
+}
+
 export type T_Page = 'configurator' | 'projectDetail' | 'projectList'
 
 export type T_Status = 'idle' | 'pending' | 'succeeded' | 'failed'

@@ -1,20 +1,23 @@
-import { useMemo } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { useAppSelector, useAppDispatch } from "@hooks"
 import { selectActiveStep, goToNextSubstep } from "@store/appSlice"
+import { T_Lamp } from '@store/appSlice/types'
+import { formatRussianNumber } from "@helpers"
+
 import { selectLampColors, selectControlTypes, setLampColor,
 	selectGlowTemperatures, selectLampPowers,
-	setControlType, setGlowTemperature, setLampPower } from '@store/stepThreeSlice'
+	setControlType, setGlowTemperature, setLampPower,
+	selectSides, setLampsSide } from '@store/stepThreeSlice'
+
 import { PictureSelectorList, PictureSelectorListItem,
 	StepFragmentsWrapper, StepFragmentItem,
-	CheckBoxControllerList, CheckBoxController } from '@components'
+	CheckBoxControllerList, CheckBoxController,
+	TextSelectorList, TextSelectorListItem} from '@components'
+
 import { T_AppDispatch } from "@store"
 import { T_StepThreeState } from "@store/stepThreeSlice/types"
-// import style from './StepThree.module.sass'
 
-// const {
-// 	StepTwo__message,
-// 	StepTwo__warning,
-// } = style
+import style from './StepThree.module.sass'
 
 // #region Node list getters
 const getLampColorNodes = (
@@ -102,6 +105,89 @@ const getLampPowersNodes = (
 		/>
 	)
 })
+
+const getSidesNodes = (
+	sides: T_StepThreeState['sides'],
+	dispatch: T_AppDispatch
+): JSX.Element[] => sides.map(side => {
+
+	const onItem = () => {
+		dispatch(setLampsSide(side.id))
+	}
+
+	return (
+		<TextSelectorListItem
+			key={side.id}
+			selected={side.selected}
+			clickHandler={onItem}
+		>
+			<span>{side.description}</span>
+		</TextSelectorListItem>
+	)
+})
+
+
+const getLampsNodes = (
+	lamps: T_Lamp[],
+): JSX.Element[] => lamps.map(lamp => {
+
+	return (
+		<PictureSelectorListItem
+			key={lamp.id}
+			selected={lamp.selected}
+			clickHandler={() => alert('Добавляем лампу на сторону')}
+		>
+			<div>
+				<img src={lamp.img} alt={lamp.article} />
+
+				<ul>
+					{ lamp.lengthOnTrack && <li>Длинна на треке: {lamp.lengthOnTrack} мм</li> }
+					{ <li>Деммируемый: {lamp.dimmer ? 'Да' : 'Нет'}</li> }
+					{ lamp.colorTemperature && <li>Цветовая t: {lamp.colorTemperature} K</li> }
+					{ lamp.power && <li>Мощность: {lamp.power} W</li> }
+				</ul>
+			</div>
+			<mark>
+				{`Арт. ${lamp.article}`}
+				<span>{`${formatRussianNumber(lamp.price)} р.`}</span>
+			</mark>
+		</PictureSelectorListItem>
+	)
+})
+
+const getTotalLampsNodes = (
+	lamps: T_Lamp[],
+): JSX.Element[] => lamps.map((lamp, idx) => {
+
+	return (
+		<PictureSelectorListItem key={lamp.id}>
+			<div>
+				<img src={lamp.img} alt={lamp.article} />
+
+				<ul>
+					{ lamp.lengthOnTrack && <li>Длинна на треке: {lamp.lengthOnTrack} мм</li> }
+					{ <li>Деммируемый: {lamp.dimmer ? 'Да' : 'Нет'}</li> }
+					{ lamp.colorTemperature && <li>Цветовая t: {lamp.colorTemperature} K</li> }
+					{ lamp.power && <li>Мощность: {lamp.power} W</li> }
+					<li><i>Цена: {`${formatRussianNumber(lamp.price)} р.`}</i></li>
+				</ul>
+
+				<button onClick={() => alert('Удаляем лампу')}>
+					<span>Удалить</span>
+				</button>
+
+				<strong>+{idx * 2}</strong>
+			</div>
+
+			<mark>
+				{`Арт. ${lamp.article}`}
+				<span>{`${formatRussianNumber(lamp.price)} р.`}</span>
+			</mark>
+		</PictureSelectorListItem>
+	)
+})
+
+
 // #endregion
 
 export const StepThree = () => {
@@ -114,6 +200,7 @@ export const StepThree = () => {
 	const controlTypes = useAppSelector(selectControlTypes)
 	const glowTemperatures = useAppSelector(selectGlowTemperatures)
 	const lampPowers = useAppSelector(selectLampPowers)
+	const sides = useAppSelector(selectSides)
 	// #endregion
 
 	// #region Node list getters
@@ -135,6 +222,34 @@ export const StepThree = () => {
 	const lampPowersNodes = useMemo(
 		() => getLampPowersNodes(lampPowers, dispatch),
 		[ lampPowers, dispatch ]
+	)
+
+	const sidesNodes = useMemo(
+		() => getSidesNodes(sides, dispatch),
+		[sides, dispatch]
+	)
+
+
+	// ! Временная логика для демонстрации списка ламп --- START
+		// * Список ламп необходимо получать из стора
+		const [lamps, setLamps] = useState<T_Lamp[]>([]);
+
+		useEffect(() => {
+			fetch('../../../public/mocks/lamps-example.json')
+				.then(response => response.json())
+				.then(data => setLamps(data))
+				.catch(error => console.error('Error loading lamps:', error));
+		}, [])
+	// ! Временная логика для демонстрации списка ламп --- FINISH
+
+	const lampsNodes = useMemo(
+		() => getLampsNodes(lamps),
+		[lamps]
+	)
+
+	const totalLampsNods = useMemo(
+		() => getTotalLampsNodes(lamps).slice(3, 7),
+		[lamps]
 	)
 	// #endregion
 
@@ -177,6 +292,34 @@ export const StepThree = () => {
 								{ lampPowersNodes }
 							</CheckBoxControllerList>
 						</article>
+					</StepFragmentItem>
+
+					<StepFragmentItem>
+						<h3>Выберите светильники</h3>
+						<article>
+							<TextSelectorList>
+								{ sidesNodes }
+							</TextSelectorList>
+							<PictureSelectorList>
+								{ lampsNodes }
+							</PictureSelectorList>
+						</article>
+					</StepFragmentItem>
+
+					<StepFragmentItem>
+						<h3>Итог (ваш выбор):</h3>
+						<article>
+							<PictureSelectorList>
+								{ totalLampsNods }
+							</PictureSelectorList>
+						</article>
+					</StepFragmentItem>
+
+					<StepFragmentItem>
+						<div className={style.StepThree__message}>
+							<p>Если Вам нужно в помещение добавить дополнительное освещение. Например, бра, торшер или как-либо декоративный светильник, то перейдите по кнопке в КАТАЛОГ, что бы добавить в заказ</p>
+							<button type="button" className="btn btn_default btn_dark" onClick={() => dispatch(goToNextSubstep())}>Перейти в каталог</button>
+						</div>
 					</StepFragmentItem>
 				</StepFragmentsWrapper>
 			}

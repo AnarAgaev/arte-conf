@@ -103,6 +103,35 @@ const initialState: T_StepThreeState = {
 			value: 20,
 			selected: false
 		},
+	],
+
+
+	// стороны
+	sides: [
+		{
+			id: 0,
+			name: 'side1',
+			description: 'Сторона 1',
+			selected: true
+		},
+		{
+			id: 1,
+			name: 'side2',
+			description: 'Сторона 2',
+			selected: false
+		},
+		{
+			id: 2,
+			name: 'side3',
+			description: 'Сторона 3',
+			selected: false
+		},
+		{
+			id: 3,
+			name: 'side4',
+			description: 'Сторона 4',
+			selected: false
+		}
 	]
 
 }

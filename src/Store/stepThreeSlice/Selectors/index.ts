@@ -7,3 +7,5 @@ export const controlTypesSelector = (state: T_StepThreeState) => state.controlTy
 export const glowTemperaturesSelector = (state: T_StepThreeState) => state.glowTemperatures
 
 export const lampPowersSelector = (state: T_StepThreeState) => state.lampPowers
+
+export const sidesSelector = (state: T_StepThreeState) => state.sides

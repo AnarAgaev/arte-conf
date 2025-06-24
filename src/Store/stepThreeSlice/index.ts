@@ -12,6 +12,7 @@ import {
 	setControlTypeAction,
 	setGlowTemperatureAction,
 	setLampPowerAction,
+	setLampsSideAction,
 } from './Actions'
 
 
@@ -22,6 +23,7 @@ const reducers = {
 	setControlType: setControlTypeAction,
 	setGlowTemperature: setGlowTemperatureAction,
 	setLampPower: setLampPowerAction,
+	setLampsSide: setLampsSideAction,
 }
 
 
@@ -30,7 +32,8 @@ import {
 	lampColorsSelector,
 	controlTypesSelector,
 	glowTemperaturesSelector,
-	lampPowersSelector
+	lampPowersSelector,
+	sidesSelector,
 } from './Selectors'
 
 
@@ -39,7 +42,8 @@ const selectors = {
 	selectLampColors: lampColorsSelector,
 	selectControlTypes: controlTypesSelector,
 	selectGlowTemperatures: glowTemperaturesSelector,
-	selectLampPowers: lampPowersSelector
+	selectLampPowers: lampPowersSelector,
+	selectSides: sidesSelector,
 }
 
 
@@ -63,6 +67,7 @@ export const {
 	setControlType,
 	setGlowTemperature,
 	setLampPower,
+	setLampsSide,
 } = stepThreeSlice.actions
 
 
@@ -72,4 +77,5 @@ export const {
 	selectControlTypes,
 	selectGlowTemperatures,
 	selectLampPowers,
+	selectSides,
 } = stepThreeSlice.selectors

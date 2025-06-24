@@ -2,7 +2,10 @@
 	display: flex
 	flex-direction: column
 	gap: 10px
-	cursor: pointer
+	user-select: none
+
+	&:not(:has(button))
+		cursor: pointer
 
 	@media (hover: hover) and (pointer: fine)
 		&:hover
@@ -10,19 +13,30 @@
 				color: var(--clr-accent)
 
 			& > div
-				ul
+				&:has(ul)::after
 					background: var(--opacity-fill)
+
 				li
 					opacity: 1
 					transform: translateY(0)
 					transition-delay: 0.1s
+
+				button
+					opacity: 1
+					margin-bottom: 20px
+					pointer-events: auto
+
+				strong
+					opacity: 0
 
 	&_selected
 		& > div::before
 			border-color: var(--clr-accent) !important
 
 	& > div
-		display: block
+		display: flex
+		flex-direction: column
+		justify-content: space-between
 		position: relative
 		width: 100%
 		height: auto
@@ -40,9 +54,18 @@
 			border: 2px solid transparent
 			transition: var(--base-transition)
 
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			inset: 0
+			z-index: 1
+			background: var(--opacity-transparent)
+			transition: var(--synth-transition)
+
 		img
 			display: block
-			position: relative
+			position: absolute
 			z-index: 0
 			width: 100%
 			height: auto
@@ -51,14 +74,13 @@
 		ul
 			display: grid
 			align-content: start
-			gap: 5px
-			position: absolute
-			z-index: 1
+			gap: 3px
+			position: relative
+			z-index: 2
 			top: 0
 			left: 0
 			inset: 0
-			padding: 10px
-			background: var(--opacity-transparent)
+			padding: 8px
 			transition: var(--synth-transition)
 
 		li
@@ -70,7 +92,99 @@
 			font-weight: 400
 			line-height: 1.2
 			opacity: 0
+			letter-spacing: 0
 			transition: var(--synth-transition)
+
+			i
+				display: block
+				position: relative
+				width: 100%
+				height: auto
+				font-size: inherit
+				font-style: inherit
+				font-weight: inherit
+				line-height: inherit
+				color: var(--clr-accent)
+
+		button
+			display: flex
+			align-items: center
+			justify-content: center
+			gap: 5px
+			position: relative
+			z-index: 2
+			width: 100%
+			background: transparent
+			border: none
+			padding: 0
+			margin: 0 0 17px
+			cursor: pointer
+			opacity: 0
+			pointer-events: none
+			transition: var(--base-transition)
+
+			@media (hover: hover) and (pointer: fine)
+				&:hover
+					&::after
+						color: var(--clr-accent)
+					span
+						color: var(--clr-accent)
+
+						&::before
+							background: var(--clr-accent)
+							width: 0
+
+			&::after
+				content: '✖'
+				font-size: 13px
+				line-height: 12px
+				font-weight: lighter
+				color: var(--clr-font-light)
+				transition: var(--base-transition)
+
+			span
+				display: inline-block
+				position: relative
+				font-size: 12px
+				font-style: normal
+				font-weight: 600
+				line-height: 12px
+				letter-spacing: 0.6px
+				text-transform: uppercase
+				transition: var(--base-transition)
+
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					bottom: -2px
+					left: 50%
+					transform: translateX(-50%)
+					width: calc(100% - 2px)
+					height: 1px
+					background: var(--clr-font-light)
+					transition: var(--base-transition)
+
+		strong
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			position: absolute
+			z-index: 10
+			bottom: 10px
+			left: 0
+			width: 30px
+			height: 15px
+			background: var(--clr-accent)
+			color: var(--clr-font-dark)
+			font-size: 11px
+			font-style: normal
+			font-weight: 500
+			text-transform: uppercase
+			padding-right: 2px
+			opacity: 1
+			transition: var(--base-transition)
+
 
 
 	& > mark

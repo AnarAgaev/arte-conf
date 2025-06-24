@@ -44,4 +44,12 @@ export type T_StepThreeState = {
 		selected: boolean
 	}[]
 
+	// стороны
+	sides: {
+		id: number
+		name: 'side1' | 'side2' | 'side3' | 'side4'
+		description: 'Сторона 1' | 'Сторона 2' | 'Сторона 3' | 'Сторона 4'
+		selected: boolean
+	}[]
+
 }

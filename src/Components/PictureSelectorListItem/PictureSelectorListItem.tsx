@@ -3,8 +3,8 @@ import style from './PictureSelectorListItem.module.sass'
 
 interface I_Props {
 	children: ReactNode
-	selected: boolean
-	clickHandler: () => void
+	selected?: boolean
+	clickHandler?: () => void
 }
 
 export const PictureSelectorListItem = ({

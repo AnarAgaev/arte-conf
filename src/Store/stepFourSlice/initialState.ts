@@ -107,8 +107,8 @@ const initialState: T_StepFourState = {
 			dimmer: true,
 
 			selected: false
-		},	]
-
+		}
+	]
 }
 
 export default initialState
