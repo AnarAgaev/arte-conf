@@ -63,13 +63,13 @@ const steps: T_Steps = [
 				id: 0,
 				name: 'lampsSelection',
 				description: 'подбор светильников в трек',
-				status: 'active'
+				status: 'prev'
 			},
 			{
 				id: 1,
 				name: 'additionalLighting',
-				description: 'Дополнительное освещение',
-				status: 'next'
+				description: 'дополнительное освещение',
+				status: 'active'
 			}
 		]
 	},

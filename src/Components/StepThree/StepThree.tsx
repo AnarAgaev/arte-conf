@@ -7,12 +7,14 @@ import { formatRussianNumber } from "@helpers"
 import { selectLampColors, selectControlTypes, setLampColor,
 	selectGlowTemperatures, selectLampPowers,
 	setControlType, setGlowTemperature, setLampPower,
-	selectSides, setLampsSide } from '@store/stepThreeSlice'
+	selectSides, setLampsSide, setCatalogCategory,
+	selectCatalog} from '@store/stepThreeSlice'
 
 import { PictureSelectorList, PictureSelectorListItem,
 	StepFragmentsWrapper, StepFragmentItem,
 	CheckBoxControllerList, CheckBoxController,
-	TextSelectorList, TextSelectorListItem} from '@components'
+	TextSelectorList, TextSelectorListItem,
+	CalcController, Catalog } from '@components'
 
 import { T_AppDispatch } from "@store"
 import { T_StepThreeState } from "@store/stepThreeSlice/types"
@@ -126,7 +128,6 @@ const getSidesNodes = (
 	)
 })
 
-
 const getLampsNodes = (
 	lamps: T_Lamp[],
 ): JSX.Element[] => lamps.map(lamp => {
@@ -183,11 +184,42 @@ const getTotalLampsNodes = (
 				{`Арт. ${lamp.article}`}
 				<span>{`${formatRussianNumber(lamp.price)} р.`}</span>
 			</mark>
+
+			<div>
+				<CalcController
+					step={1}
+					value={idx * 2}
+					transparent
+				/>
+			</div>
 		</PictureSelectorListItem>
 	)
 })
 
+const getCatalogCategoriesNodes = (
+	catalog: T_StepThreeState['catalog'],
+	dispatch: T_AppDispatch
+): JSX.Element[] => catalog.map(category => {
 
+	const onItem = () => {
+		dispatch(setCatalogCategory(category.id))
+	}
+
+	return (
+		<PictureSelectorListItem
+			key={category.id}
+			selected={category.selected}
+			clickHandler={onItem}
+		>
+			<div>
+				<img src={category.img} alt={category.description} />
+			</div>
+			<mark style={{wordSpacing: '100px'}}>
+				{category.description}
+			</mark>
+		</PictureSelectorListItem>
+	)
+})
 // #endregion
 
 export const StepThree = () => {
@@ -201,6 +233,7 @@ export const StepThree = () => {
 	const glowTemperatures = useAppSelector(selectGlowTemperatures)
 	const lampPowers = useAppSelector(selectLampPowers)
 	const sides = useAppSelector(selectSides)
+	const catalog = useAppSelector(selectCatalog)
 	// #endregion
 
 	// #region Node list getters
@@ -229,6 +262,13 @@ export const StepThree = () => {
 		[sides, dispatch]
 	)
 
+	const catalogCategoriesNodes = useMemo(
+		() => getCatalogCategoriesNodes(catalog, dispatch),
+		[catalog, dispatch]
+	)
+
+
+
 
 	// ! Временная логика для демонстрации списка ламп --- START
 		// * Список ламп необходимо получать из стора
@@ -241,6 +281,10 @@ export const StepThree = () => {
 				.catch(error => console.error('Error loading lamps:', error));
 		}, [])
 	// ! Временная логика для демонстрации списка ламп --- FINISH
+
+
+
+
 
 	const lampsNodes = useMemo(
 		() => getLampsNodes(lamps),
@@ -320,6 +364,25 @@ export const StepThree = () => {
 							<p>Если Вам нужно в помещение добавить дополнительное освещение. Например, бра, торшер или как-либо декоративный светильник, то перейдите по кнопке в КАТАЛОГ, что бы добавить в заказ</p>
 							<button type="button" className="btn btn_default btn_dark" onClick={() => dispatch(goToNextSubstep())}>Перейти в каталог</button>
 						</div>
+					</StepFragmentItem>
+				</StepFragmentsWrapper>
+			}
+
+			{/* Дополнительное освещение --- Каталог */}
+			{ substep?.name === 'additionalLighting' &&
+				<StepFragmentsWrapper>
+					<StepFragmentItem>
+						<h3>Выберите категорию</h3>
+						<article>
+							<PictureSelectorList>
+								{ catalogCategoriesNodes }
+							</PictureSelectorList>
+						</article>
+					</StepFragmentItem>
+					<StepFragmentItem>
+						<article>
+							<Catalog />
+						</article>
 					</StepFragmentItem>
 				</StepFragmentsWrapper>
 			}

@@ -1,0 +1,95 @@
+@use '../../Sass/_variables' as vars
+
+.Catalog
+
+	&__wrapper
+		position: relative
+
+		ul
+			display: grid
+			gap: 5px
+			user-select: none
+
+			*
+				font-size: 14px
+				font-style: normal
+				font-weight: 400
+				line-height: 1.4
+
+			ul
+				margin-left: 30px
+				opacity: 0.9
+
+		li
+			display: grid
+			justify-items: start
+			gap: 5px
+			padding: 2.5px 0
+
+			&:last-child
+				margin-bottom: 0
+
+		mark
+			display: inline-block
+			position: relative
+			background: transparent !important
+			cursor: pointer
+			transition: var(--base-transition)
+
+			@media (hover: hover) and (pointer: fine)
+				&:hover
+					color: var(--clr-font-mid)
+
+
+	&__caption
+		position: relative
+		padding-right: 30px
+
+		mark
+			color: var(--clr-font-mid)
+
+			@media (hover: hover) and (pointer: fine)
+				&:hover
+					color: var(--clr-font-light)
+
+					&::before
+						width: 0
+						background: var(--clr-font-light)
+
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				bottom: 1px
+				left: 50%
+				transform: translateX(-50%)
+				width: 100%
+				height: 1px
+				background: var(--clr-font-mid)
+				transition: var(--base-transition)
+
+		i
+			display: flex
+			align-items: center
+			justify-content: center
+			position: absolute
+			top: 1px
+			right: 0
+			width: 20px
+			height: 20px
+			cursor: pointer
+
+			&::before
+				content: ''
+				display: block
+				position: relative
+				width: 100%
+				height: 100%
+				background: transparent no-repeat center
+				background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjc3NzkgOS42MDk4TDguMzI3NzcgNS4xNTk3NUM4LjIyNDg1IDUuMDU2NzUgOC4wODc0NSA1IDcuOTQwOTUgNUM3Ljc5NDQ1IDUgNy42NTcwNSA1LjA1Njc1IDcuNTU0MTIgNS4xNTk3NUw3LjIyNjQgNS40ODczOUM3LjAxMzE1IDUuNzAwODkgNy4wMTMxNSA2LjA0Nzg4IDcuMjI2NCA2LjI2MTA1TDEwLjk2MzMgOS45OTc5M0w3LjIyMjI1IDEzLjczOUM3LjExOTMzIDEzLjg0MiA3LjA2MjUgMTMuOTc5MyA3LjA2MjUgMTQuMTI1N0M3LjA2MjUgMTQuMjcyMyA3LjExOTMzIDE0LjQwOTYgNy4yMjIyNSAxNC41MTI3TDcuNTQ5OTggMTQuODQwMkM3LjY1Mjk4IDE0Ljk0MzMgNy43OTAzIDE1IDcuOTM2OCAxNUM4LjA4MzMgMTUgOC4yMjA3IDE0Ljk0MzMgOC4zMjM2MyAxNC44NDAyTDEyLjc3NzkgMTAuMzg2MUMxMi44ODExIDEwLjI4MjggMTIuOTM3NyAxMC4xNDQ4IDEyLjkzNzQgOS45OTgxN0MxMi45Mzc3IDkuODUwOTQgMTIuODgxMSA5LjcxMzA1IDEyLjc3NzkgOS42MDk4WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==")
+				transition: var(--base-transition)
+
+
+	&__active
+		& > div:first-child i::before
+				transform: rotate(90deg)

@@ -30,6 +30,7 @@ export * from './StepFragmentsWrapper/StepFragmentsWrapper'
 export * from './StepFragmentItem/StepFragmentItem'
 export * from './TableContainer/TableContainer'
 export * from './TableSection/TableSection'
+export * from './Catalog/Catalog'
 
 // Steps ...
 export * from './StepOne/StepOne'
