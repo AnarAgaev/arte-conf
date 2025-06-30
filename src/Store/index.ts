@@ -22,6 +22,7 @@ import stepTwoReducer from './stepTwoSlice'
 import stepThreeReducer from './stepThreeSlice'
 import stepFourReducer from './stepFourSlice'
 import stepTotalReducer from './stepTotalSlice'
+import projectsReducer from './projectsSlice'
 
 const rootReducer = combineReducers({
     app: appReducer,
@@ -29,7 +30,8 @@ const rootReducer = combineReducers({
 	stepTwo: stepTwoReducer,
 	stepThree: stepThreeReducer,
 	stepFour: stepFourReducer,
-	stepTotal: stepTotalReducer
+	stepTotal: stepTotalReducer,
+	projects: projectsReducer,
 })
 // #endregion
 

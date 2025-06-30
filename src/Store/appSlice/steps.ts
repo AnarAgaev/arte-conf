@@ -5,7 +5,7 @@ const steps: T_Steps = [
 		id: 0,
 		name: 'step1',
 		description: 'шаг 1',
-		status: 'prev',
+		status: 'active',
 		substeps: [
 			{
 				id: 0,
@@ -57,19 +57,19 @@ const steps: T_Steps = [
 		id: 2,
 		name: 'step3',
 		description: 'шаг 3',
-		status: 'active',
+		status: 'next',
 		substeps: [
 			{
 				id: 0,
 				name: 'lampsSelection',
 				description: 'подбор светильников в трек',
-				status: 'prev'
+				status: 'active'
 			},
 			{
 				id: 1,
 				name: 'additionalLighting',
 				description: 'дополнительное освещение',
-				status: 'active'
+				status: 'next'
 			}
 		]
 	},
@@ -97,13 +97,13 @@ const steps: T_Steps = [
 				id: 0,
 				name: 'aboutClient',
 				description: 'о клиенте',
-				status: 'prev'
+				status: 'active'
 			},
 			{
 				id: 1,
 				name: 'totalConfiguration',
 				description: 'ваша конфигурация',
-				status: 'active'
+				status: 'next'
 			}
 		]
 	}
