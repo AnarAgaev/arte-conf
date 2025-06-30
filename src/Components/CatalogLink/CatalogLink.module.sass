@@ -1,0 +1,36 @@
+@use '../../Sass/_variables' as vars
+
+.CatalogLink
+	display: inline-block
+	position: relative
+	background: transparent !important
+	cursor: pointer
+	transition: var(--base-transition)
+	text-decoration: none
+
+	@media (hover: hover) and (pointer: fine)
+		&:hover
+			color: var(--clr-font-mid)
+
+	&_caption
+		color: var(--clr-font-mid)
+
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			bottom: 1px
+			left: 50%
+			transform: translateX(-50%)
+			width: 100%
+			height: 1px
+			background: var(--clr-font-mid)
+			transition: var(--base-transition)
+
+		@media (hover: hover) and (pointer: fine)
+			&:hover
+				color: var(--clr-font-light)
+
+				&::before
+					width: 0
+					background: var(--clr-font-light)

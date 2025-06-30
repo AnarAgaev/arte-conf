@@ -3,6 +3,7 @@ import { useAppSelector, useAppDispatch } from "@hooks"
 import { T_AppDispatch } from "@store"
 import { T_StepThreeState } from '@store/stepThreeSlice/types'
 import { selectCatalogActiveCategoryList } from "@store/stepThreeSlice"
+import { CatalogLink } from "@components"
 import style from './Catalog.module.sass'
 
 const getListNodes = (
@@ -20,10 +21,10 @@ const getListNodes = (
 			<li key={item.id}>
 				{ item.list
 					? <div className={style.Catalog__caption}>
-						<span>{item.linkText}</span> <mark>Все</mark>
+						<span>{item.linkText}</span> <CatalogLink src="https://example.com" isCaption>Все</CatalogLink>
 						<i></i>
 					</div>
-					: <mark>{item.linkText}</mark>
+					: <CatalogLink src="http://example.com" isCaption={false}>{item.linkText}</CatalogLink>
 				}
 				{ item.list &&
 					<div className="collapse">
@@ -44,11 +45,6 @@ const getListNodes = (
 const listItemClickHandler = (e: React.MouseEvent<HTMLUListElement>) => {
     e.preventDefault()
     e.stopPropagation()
-
-    if ((e.target as HTMLElement).tagName === 'MARK') {
-        alert('Запрашиваем товары по категории')
-        return
-    }
 
     const clickedLi = (e.target as HTMLElement).closest('li')
     if (!clickedLi) return

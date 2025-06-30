@@ -11,7 +11,7 @@ const getLampsNodes = (
 	lamps: T_Lamp[],
 ): JSX.Element[] => {
 
-	const htmlNodes = lamps.map(lamp => {
+	return lamps.map(lamp => {
 		return (
 			<PictureSelectorListItem
 				key={lamp.id}
@@ -35,8 +35,6 @@ const getLampsNodes = (
 			</PictureSelectorListItem>
 		)
 	})
-
-	return [...htmlNodes, ...htmlNodes]
 }
 // #endregion
 
