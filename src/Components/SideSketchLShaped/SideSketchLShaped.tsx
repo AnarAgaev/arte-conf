@@ -20,7 +20,12 @@ const activeSideClassMap: {
 	2: SideSketchLShaped__accent_side2
 }
 
-export const SideSketchLShaped = () => {
+interface I_Props {
+	side1?: string,
+	side2?: string
+}
+
+export const SideSketchLShaped = ({ side1, side2 }: I_Props) => {
 
 	const activeSideId = useAppSelector(selectActiveSide)?.id
 	const activeSideClassName = activeSideId ? activeSideClassMap[activeSideId] : ''
@@ -29,10 +34,10 @@ export const SideSketchLShaped = () => {
 		<div className={SideSketchLShaped__wrap}>
 			<div className={SideSketchLShaped__body}>
 				<span className={`${SideSketchLShaped__sign} ${SideSketchLShaped__sign_side1}`}>
-					<mark>Сторона 1</mark>
+					<mark>{side1 || 'Сторона 1'}</mark>
 				</span>
 				<span className={`${SideSketchLShaped__sign} ${SideSketchLShaped__sign_side2}`}>
-					<mark>Сторона 2</mark>
+					<mark>{side2 || 'Сторона 2'}</mark>
 				</span>
 			</div>
 			<div className={`${SideSketchLShaped__accent} ${activeSideClassName}`}></div>

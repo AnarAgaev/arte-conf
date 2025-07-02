@@ -6,7 +6,7 @@ const initialState: T_AppState = {
     loadingMessage: null,
     successMessage: null,
     status: 'idle',
-    page: 'projectList',
+    page: 'projectDetail',
     steps: steps
 }
 

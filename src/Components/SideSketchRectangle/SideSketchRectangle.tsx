@@ -26,7 +26,14 @@ const activeSideClassMap: {
 	4: SideSketchRectangle__accent_side4
 }
 
-export const SideSketchRectangle = () => {
+interface I_Props {
+	side1?: string,
+	side2?: string,
+	side3?: string,
+	side4?: string,
+}
+
+export const SideSketchRectangle = ({ side1, side2, side3, side4 }: I_Props) => {
 
 	const activeSideId = useAppSelector(selectActiveSide)?.id
 	const activeSideClassName = activeSideId ? activeSideClassMap[activeSideId] : ''
@@ -35,16 +42,16 @@ export const SideSketchRectangle = () => {
 		<div className={SideSketchRectangle__wrap}>
 			<div className={SideSketchRectangle__body}>
 				<span className={`${SideSketchRectangle__sign} ${SideSketchRectangle__sign_side1}`}>
-					<mark>Сторона 1</mark>
+					<mark>{side1 || 'Сторона 1'}</mark>
 				</span>
 				<span className={`${SideSketchRectangle__sign} ${SideSketchRectangle__sign_side2}`}>
-					<mark>Сторона 2</mark>
+					<mark>{side2 || 'Сторона 2'}</mark>
 				</span>
 				<span className={`${SideSketchRectangle__sign} ${SideSketchRectangle__sign_side3}`}>
-					<mark>Сторона 3</mark>
+					<mark>{side3 || 'Сторона 3'}</mark>
 				</span>
 				<span className={`${SideSketchRectangle__sign} ${SideSketchRectangle__sign_side4}`}>
-					<mark>Сторона 4</mark>
+					<mark>{side4 || 'Сторона 4'}</mark>
 				</span>
 			</div>
 			<div className={`${SideSketchRectangle__accent} ${activeSideClassName}`}></div>

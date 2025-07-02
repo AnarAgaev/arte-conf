@@ -133,7 +133,7 @@ export const StepTwo = () => {
 						<article>
 							<div className={StepTwo__message}>
 								<p>При выборе данного типа трека, Вам необходимо связаться с менеджером, что бы сделать точный расчет</p>
-								<button type="button" className="btn btn_default btn_dark">Связаться с менеджером</button>
+								<button type="button" className="btn btn_large btn_dark">Связаться с менеджером</button>
 							</div>
 						</article>
 					</StepFragmentItem>

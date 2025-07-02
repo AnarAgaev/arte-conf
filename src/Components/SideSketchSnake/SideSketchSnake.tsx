@@ -23,7 +23,14 @@ const activeSideClassMap: {
 	3: SideSketchSnake__accent_side3,
 }
 
-export const SideSketchSnake = () => {
+interface I_Props {
+	side1?: string,
+	side2?: string,
+	side3?: string,
+}
+
+
+export const SideSketchSnake = ({ side1, side2, side3 }: I_Props) => {
 
 	const activeSideId = useAppSelector(selectActiveSide)?.id
 	const activeSideClassName = activeSideId ? activeSideClassMap[activeSideId] : ''
@@ -32,13 +39,13 @@ export const SideSketchSnake = () => {
 		<div className={SideSketchSnake__wrap}>
 			<div className={SideSketchSnake__body}>
 				<span className={`${SideSketchSnake__sign} ${SideSketchSnake__sign_side1}`}>
-					<mark>Сторона 1</mark>
+					<mark>{side1 || 'Сторона 1'}</mark>
 				</span>
 				<span className={`${SideSketchSnake__sign} ${SideSketchSnake__sign_side2}`}>
-					<mark>Сторона 2</mark>
+					<mark>{side2 || 'Сторона 2'}</mark>
 				</span>
 				<span className={`${SideSketchSnake__sign} ${SideSketchSnake__sign_side3}`}>
-					<mark>Сторона 3</mark>
+					<mark>{side3 || 'Сторона 3'}</mark>
 				</span>
 			</div>
 			<div className={`${SideSketchSnake__accent} ${activeSideClassName}`}></div>

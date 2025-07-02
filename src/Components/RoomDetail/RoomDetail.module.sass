@@ -1,0 +1,281 @@
+@use '../../Sass/_variables' as *
+
+.RoomDetail
+
+	&__wrapper
+		display: flex
+		flex-direction: column
+		gap: 20px
+
+
+	&__caption
+		display: flex
+		flex-direction: column
+		gap: 30px
+
+		@media (min-width: $md)
+			flex-direction: row
+			justify-content: space-between
+
+
+	&__content
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: 10px
+
+		h3
+			margin: 0
+			padding: 0
+			font-weight: 500
+			font-size: 18px
+			line-height: 25px
+			letter-spacing: 0.4px
+			text-transform: none
+
+		p
+			margin: 0
+			padding: 0
+			font-weight: 400
+			font-size: 14px
+			line-height: 20px
+
+		& > button
+			display: inline-block
+			position: relative
+			padding: 0
+			margin: 10px 0 0 0
+			font-weight: 400
+			font-size: 12px
+			line-height: 90%
+			text-transform: uppercase
+			color: var(--clr-accent)
+			background: transparent
+			border: none
+			cursor: pointer
+			transition: var(--base-transition)
+
+			@media (hover: hover) and (pointer: fine)
+				&:hover
+					opacity: 0.9
+					&::before
+						width: 0
+						opacity: 0
+
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				bottom: -3px
+				left: 50%
+				transform: translateX(-50%)
+				width: 100%
+				height: 1px
+				background: var(--clr-accent)
+				transition: var(--base-transition)
+
+
+	&__sketch
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		width: 100%
+		height: auto
+		aspect-ratio: 5 / 2
+		background: radial-gradient( circle 1px at 2px 2px, var(--clr-load-end) 1px, transparent 0 ) 0 0 / 9px 9px
+
+		@media (min-width: $md)
+			width: 40%
+
+		@media (min-width: $xl)
+			max-width: 370px
+			aspect-ratio: 370 / 140
+
+
+	&__table
+		display: none
+		position: relative
+		width: 100%
+		height: auto
+
+		@media (min-width: $lg)
+			margin-top: 40px !important
+
+		&_visible
+			display: block
+
+		table
+			width: 100%
+
+		tr
+			display: flex
+			flex-direction: column
+			gap: 5px
+			position: relative
+			padding: 20px 0
+
+			&:nth-child(odd)
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					z-index: 0
+					left: 50%
+					top: 0
+					transform: translate(-50%)
+					width: 100vw
+					height: 100%
+					background: var(--clr-load-end)
+
+					@media (min-width: $sm)
+						width: calc(100vw - 40px)
+
+					@media (min-width: $lg)
+						display: none
+
+			@media (min-width: $sm)
+				display: grid
+				grid-template-columns: 120px 1fr
+				row-gap: 0
+				column-gap: 20px
+
+			@media (min-width: $lg)
+				display: table-row
+				background: transparent !important
+
+				&:first-child
+					td
+						padding-top: 0
+				&:last-child
+					td
+						padding-bottom: 0
+
+		td
+			position: relative
+			z-index: 1
+			padding: 0
+
+			@media (min-width: $lg)
+				vertical-align: top
+				padding: 10px 20px
+
+
+			&:first-child
+				width: 120px
+				padding-left: 0
+				padding-right: 0
+
+				@media (min-width: $sm)
+					margin-bottom: 10px
+
+					@media (min-width: $lg)
+						margin-bottom: 0
+						width: 98px
+
+			&:nth-child(3)
+				@media (min-width: $lg)
+					text-align: center
+					min-width: 100px
+
+			&:last-child
+				@media (min-width: $lg)
+					text-align: end
+					min-width: 150px
+					padding-right: 0
+
+			&:nth-child(3),
+			&:last-child
+				font-weight: 400
+				font-size: 14px
+				line-height: 20px
+
+				@media (min-width: $sm)
+					grid-column: 1 / -1
+
+				@media (min-width: $lg)
+					width: 25%
+
+
+	&__picture
+		display: block
+		position: relative
+		width: 100%
+		height: auto
+		aspect-ratio: 1 / 1
+
+		img
+			display: block
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			object-fit: cover
+
+
+	&__productData
+		display: flex
+		flex-direction: column
+		width: 100%
+		height: auto
+		font-weight: 400
+		font-size: 14px
+		line-height: 20px
+		letter-spacing: 0.8px
+
+		span, mark
+			display: block
+			width: 100%
+			height: auto
+			margin: 0
+			padding: 0
+			font-weight: inherit
+			font-size: inherit
+			line-height: inherit
+			letter-spacing: inherit
+
+		mark
+			background: transparent
+			color: var(--clr-font-mid) !important
+
+
+	&__text
+		display: flex
+		align-items: baseline
+		gap: 5px
+		width: 100%
+		height: auto
+		font-weight: 400
+		font-size: 14px
+		line-height: 20px
+		letter-spacing: 0.8px
+
+		@media (min-width: $lg)
+			display: inline
+
+		i
+			font-size: inherit
+			font-weight: 700
+
+			@media (min-width: $lg)
+				display: none
+
+
+	&__controllers
+		display: flex
+		flex-direction: column
+		gap: 10px
+
+		@media (min-width: $sm)
+			flex-direction: row
+
+		@media (min-width: $lg)
+			margin-top: -50px
+
+		&_visible
+			margin-top: 0
+
+		button
+			padding: 0 36px !important

@@ -97,13 +97,13 @@ const steps: T_Steps = [
 				id: 0,
 				name: 'aboutClient',
 				description: 'о клиенте',
-				status: 'active'
+				status: 'prev'
 			},
 			{
 				id: 1,
 				name: 'totalConfiguration',
 				description: 'ваша конфигурация',
-				status: 'next'
+				status: 'active'
 			}
 		]
 	}

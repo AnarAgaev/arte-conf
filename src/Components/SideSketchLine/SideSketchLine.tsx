@@ -11,7 +11,11 @@ const {
 	SideSketchLine__sign_side1,
 } = style
 
-export const SideSketchLine = () => {
+interface I_Props {
+	side1?: string,
+}
+
+export const SideSketchLine = ({ side1 }: I_Props  ) => {
 
 	const activeSideId = useAppSelector(selectActiveSide)?.id
 	const activeSideClassName = activeSideId ? SideSketchLine__accent_side1 : ''
@@ -20,7 +24,7 @@ export const SideSketchLine = () => {
 		<div className={SideSketchLine__wrap}>
 			<div className={SideSketchLine__body}>
 				<span className={`${SideSketchLine__sign} ${SideSketchLine__sign_side1}`}>
-					<mark>Сторона 1</mark>
+					<mark>{side1 || 'Сторона 1'}</mark>
 				</span>
 			</div>
 			<div className={`${SideSketchLine__accent} ${activeSideClassName}`}></div>

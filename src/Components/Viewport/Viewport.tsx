@@ -95,7 +95,7 @@ export const Viewport = () => {
 
 					<Location />
 
-					<button className='btn btn_default btn_dark' type="button">
+					<button className='btn btn_large btn_dark' type="button">
 						Добавить в проект
 					</button>
 				</>

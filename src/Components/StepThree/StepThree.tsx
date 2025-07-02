@@ -362,7 +362,7 @@ export const StepThree = () => {
 					<StepFragmentItem>
 						<div className={style.StepThree__message}>
 							<p>Если Вам нужно в помещение добавить дополнительное освещение. Например, бра, торшер или как-либо декоративный светильник, то перейдите по кнопке в КАТАЛОГ, что бы добавить в заказ</p>
-							<button type="button" className="btn btn_default btn_dark" onClick={() => dispatch(goToNextSubstep())}>Перейти в каталог</button>
+							<button type="button" className="btn btn_large btn_dark" onClick={() => dispatch(goToNextSubstep())}>Перейти в каталог</button>
 						</div>
 					</StepFragmentItem>
 				</StepFragmentsWrapper>

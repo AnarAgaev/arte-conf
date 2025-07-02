@@ -174,7 +174,7 @@
 		justify-content: center
 		gap: 10px
 		width: auto
-		padding: 0 40px
+		padding: 0 16px
 		cursor: pointer
 		user-select: none
 		transition: var(--base-transition)
@@ -189,12 +189,15 @@
 		letter-spacing: 0.8px
 		font-weight: 700 // Жирность не совпадает с макетом. Попробовать переформатировать шрифт или подключить не форматированный
 
-		&_default
+		&_large
 			height: 50px
+			padding: 0 36px
+
+		&_middle
+			height: 40px
 
 		&_small
 			height: 30px
-			padding: 0 20px
 
 		&_block
 			width: 100%

@@ -32,6 +32,7 @@ export * from './TableContainer/TableContainer'
 export * from './TableSection/TableSection'
 export * from './Catalog/Catalog'
 export * from './CatalogLink/CatalogLink'
+export * from './RoomDetail/RoomDetail.tsx'
 
 // Steps ...
 export * from './StepOne/StepOne'
