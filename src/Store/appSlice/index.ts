@@ -57,7 +57,8 @@ import {
     goToNextSubstepAction,
     goToSubstepAction,
     resetStepsAction,
-    goToStepAction
+    goToStepAction,
+	toggleModalResetAllAction,
 } from './Actions'
 
 
@@ -68,7 +69,8 @@ const reducers = {
     goToNextSubstep: goToNextSubstepAction,
     goToStep: goToStepAction,
     goToSubstep: goToSubstepAction,
-    resetSteps: resetStepsAction
+    resetSteps: resetStepsAction,
+	toggleModalResetAll: toggleModalResetAllAction
 }
 
 
@@ -81,7 +83,8 @@ import {
     appSucMsgSelector,
     appPageSelector,
     appStepsSelector,
-    activeStepSelector
+    activeStepSelector,
+	modalResetAllSelector,
 } from './Selectors'
 
 
@@ -94,7 +97,8 @@ const selectors = {
     selectAppSucMsg: appSucMsgSelector,
     selectAppPage: appPageSelector,
     selectAppSteps: appStepsSelector,
-    selectActiveStep: activeStepSelector
+    selectActiveStep: activeStepSelector,
+	selectModalResetAll: modalResetAllSelector,
 }
 
 
@@ -119,7 +123,8 @@ export const {
     goToNextSubstep,
     goToStep,
     goToSubstep,
-    resetSteps
+    resetSteps,
+	toggleModalResetAll,
 } = appSlice.actions
 
 
@@ -132,7 +137,8 @@ export const {
     selectAppLoadMsg,
     selectAppSucMsg,
     selectAppSteps,
-    selectActiveStep
+    selectActiveStep,
+	selectModalResetAll,
 } = appSlice.selectors
 
 

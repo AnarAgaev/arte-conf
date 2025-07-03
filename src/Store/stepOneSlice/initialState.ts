@@ -123,6 +123,7 @@ const initialState: T_StepOneState = {
 	// Переход на стену
 	movingToWall: false,
 
+	// Количество переходов на стену
 	moveItems: [
 		{
 			id: 1,

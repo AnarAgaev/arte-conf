@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '@hooks'
-import { fetchInitData, selectAppPage } from '@store/appSlice'
-import { Spinner, Nav, PageConfigurator, PageProjectDetail, PageProjectList } from '@components'
+import { fetchInitData, selectAppPage, selectModalResetAll } from '@store/appSlice'
+import { Spinner, Nav, PageConfigurator, PageProjectDetail,
+	PageProjectList, ModalResetAll } from '@components'
 import style from './App.module.sass'
 import '@sass/main.sass'
 
@@ -11,6 +12,7 @@ export const App = () => {
 
 	const dispatch = useAppDispatch()
 	const currentPage = useAppSelector(selectAppPage)
+	const modalResetAll = useAppSelector(selectModalResetAll)
 
 	useEffect(() => {
 		dispatch(fetchInitData())
@@ -25,6 +27,8 @@ export const App = () => {
 				{ currentPage === 'projectDetail' && <PageProjectDetail /> }
 				{ currentPage === 'projectList' && <PageProjectList /> }
 			</div>
+
+			<ModalResetAll visible={modalResetAll.visible === 'show'} />
 
 			<Spinner />
 		</section>

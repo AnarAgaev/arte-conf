@@ -17,5 +17,13 @@ export const resetOneStepAction = (state: T_StepOneState) => {
 		side.isActive = false
 	})
 
-    // Resenting ...
+	// Переход на стену
+	state.movingToWall = false
+
+	// Количество переходов на стену
+	state.moveItems.forEach(item => {
+		item.isActive = false
+		item.length = null
+	})
+
 }

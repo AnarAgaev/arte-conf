@@ -1,3 +1,10 @@
+// Steps ...
+export * from './StepOne/StepOne'
+export * from './StepTwo/StepTwo'
+export * from './StepThree/StepThree'
+export * from './StepFour/StepFour'
+export * from './StepTotal/StepTotal'
+
 export * from './ErrorBoundary/ErrorBoundary'
 export * from './App/App'
 export * from './Nav/Nav'
@@ -32,11 +39,6 @@ export * from './TableContainer/TableContainer'
 export * from './TableSection/TableSection'
 export * from './Catalog/Catalog'
 export * from './CatalogLink/CatalogLink'
-export * from './RoomDetail/RoomDetail.tsx'
-
-// Steps ...
-export * from './StepOne/StepOne'
-export * from './StepTwo/StepTwo'
-export * from './StepThree/StepThree'
-export * from './StepFour/StepFour'
-export * from './StepTotal/StepTotal'
+export * from './RoomDetail/RoomDetail'
+export * from './Modal/Modal'
+export * from './ModalResetAll/ModalResetAll'

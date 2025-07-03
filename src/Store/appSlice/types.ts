@@ -16,6 +16,8 @@ export type T_Status = 'idle' | 'pending' | 'succeeded' | 'failed'
 
 export type T_StepStatus = 'prev' | 'active' | 'next'
 
+export type T_Visible = 'show' | 'hide'
+
 export type T_Steps = {
     id: 0 | 1 | 2 | 3 | 4
     name: 'step1' | 'step2' | 'step3' | 'step4' | 'stepTotal'
@@ -36,4 +38,7 @@ export type T_AppState = {
     errorMessage: string | null
     loadingMessage: string | null
     successMessage: string | null
+	modalResetAll: {
+		visible: T_Visible
+	}
 }

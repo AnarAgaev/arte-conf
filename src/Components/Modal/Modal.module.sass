@@ -1,0 +1,76 @@
+@use '../../Sass/_variables' as *
+
+.Modal
+
+	&__wrapper
+		display: block
+		position: relative
+		position: fixed
+		z-index: -1
+		top: 0
+		left: 0
+		overflow-y: auto
+		background-color: var(--opacity-back)
+		pointer-events: none
+		width: 0
+		height: 0
+		opacity: 0
+		user-select: none
+
+		@media (min-width: $md)
+			display: flex
+			align-items: center
+			justify-content: center
+			overflow: hidden
+
+	&__show
+		z-index: 1100
+		width: 100vw
+		height: 100vh
+		opacity: 1
+		pointer-events: all
+
+
+	&__body
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		gap: 20px
+		position: relative
+		z-index: 10
+		margin: 10px auto
+		padding: 20px
+		background: var(--clr-back)
+		width: calc( 100% - 20px )
+		max-width: 580px
+		height: auto
+
+		@media (min-width: $sm)
+			padding: 40px
+
+		@media (min-width: $md)
+			position: fixed
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			margin: 0
+
+
+	&__close
+		display: block
+		width: 20px
+		height: 20px
+		background: transparent no-repeat center
+		border: none
+		background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUgNUwxNSAxNC45NU01IDE1TDE1IDUuMDUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS42NjY2NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=")
+		cursor: pointer
+		transition: var(--base-transition)
+
+		@media (hover: hover) and (pointer: fine)
+			&:hover
+				opacity: 0.7
+
+
+	&__content
+		width: 100%
+		height: auto

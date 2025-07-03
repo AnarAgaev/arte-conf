@@ -1,19 +1,16 @@
 import { useAppSelector, useAppDispatch } from '@hooks'
-import { goToNextStep, resetSteps, selectActiveStep } from '@store/appSlice'
+import { goToNextStep, selectActiveStep, toggleModalResetAll } from '@store/appSlice'
 import { StepsStatus, StepOne, StepTwo, StepThree, StepFour, StepTotal } from '@components'
-import { resetOneStep } from '@store/stepOneSlice'
+import { selectCeilingType } from '@store/stepOneSlice'
 import style from './Workspace.module.sass'
 
 export const Workspace = () => {
 
     const dispatch = useAppDispatch()
     const activeStep = useAppSelector(selectActiveStep)
+	const ceilingType = useAppSelector(selectCeilingType)
 
-	// !!! Добавить сброс всех шагов
-    const onReset = () => {
-        dispatch(resetSteps())
-        dispatch(resetOneStep())
-    }
+	const isCeilingTypeSelected = ceilingType.filter(type => type.selected).length > 0
 
     return (
         <div className={style.Workspace}>
@@ -29,8 +26,8 @@ export const Workspace = () => {
 
             <div className={style.Workspace__buttons}>
                 <button type='button'
-                    className={`btn btn_small btn_lite${activeStep.id === 0 ? ' disabled' : ''}`}
-                    onClick={onReset}>
+                    className={`btn btn_small btn_lite ${isCeilingTypeSelected ? '' : 'disabled'}`}
+                    onClick={() => dispatch(toggleModalResetAll('show'))}>
                     сбросить все
                 </button>
                 <button type='button'
