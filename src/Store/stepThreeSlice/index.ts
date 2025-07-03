@@ -7,7 +7,7 @@ import {} from './Funcs'
 
 // Import Actions
 import {
-	resetThreeStepAction,
+	resetStepThreeAction,
 	setLampColorAction,
 	setControlTypeAction,
 	setGlowTemperatureAction,
@@ -19,7 +19,7 @@ import {
 
 // Register Actions
 const reducers = {
-	resetThreeStep: resetThreeStepAction,
+	resetStepThree: resetStepThreeAction,
 	setLampColor: setLampColorAction,
 	setControlType: setControlTypeAction,
 	setGlowTemperature: setGlowTemperatureAction,
@@ -68,7 +68,7 @@ export default stepThreeSlice.reducer
 
 // Export Actions
 export const {
-	resetThreeStep,
+	resetStepThree,
 	setLampColor,
 	setControlType,
 	setGlowTemperature,

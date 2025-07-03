@@ -7,7 +7,7 @@ import {} from './Funcs'
 
 // Import Actions
 import {
-    resetOneStepAction,
+    resetStepOneAction,
     setCeilingTypeAction,
 	setMountingTypeAction,
 	setConstructionFormAction,
@@ -22,7 +22,7 @@ import {
 
 // Register Actions
 const reducers = {
-    resetOneStep: resetOneStepAction,
+    resetStepOne: resetStepOneAction,
     setCeilingType: setCeilingTypeAction,
 	setMountingType: setMountingTypeAction,
 	setConstructionForm: setConstructionFormAction,
@@ -78,7 +78,7 @@ export default stepOneSlice.reducer
 
 // Export Actions
 export const {
-    resetOneStep,
+    resetStepOne,
     setCeilingType,
 	setMountingType,
 	setConstructionForm,

@@ -1,0 +1,3816 @@
+{
+	"tracks": [
+		{
+			"name": "Магнитный шинопровод встраиваемый под ГКЛ 9мм (черный) LINEA",
+			"id": "e5515c21-3681-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A470206",
+				"1000": "A470106"
+			},
+			"color": "black",
+			"mount": "embedded",
+			"trackType": "magnetic",
+			"collection": "linea",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480706"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480906"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480505"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483306"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480206"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481106"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482206"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод накладной (черный) LINEA",
+			"id": "a18988d2-3687-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A460206",
+				"3000": "A460306",
+				"1000": "A460106"
+			},
+			"collection": "linea",
+			"mount": "invoice",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480606"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480806"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480506"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483306"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480206"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481106"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482206"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод под натяжной потолок (черный) LINEA",
+			"id": "1fe41099-3aa5-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A460206",
+				"3000": "A460306",
+				"1000": "A460106"
+			},
+			"collection": "linea",
+			"mount": "stretchCeiling",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A641305V"
+						}
+					],
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480606"
+						}
+					],
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A641205L"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 2,
+							"article": "A641105I"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483306"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A620205"
+						}
+					]
+				],
+				"profileCap": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A621005E"
+						}
+					]
+				],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480206"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481106"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482206"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод подвесной (черный) LINEA",
+			"id": "cb571a0c-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"3000": "A460306",
+				"1000": "A460106",
+				"2000": "A460206"
+			},
+			"collection": "linea",
+			"mount": "suspended",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480606"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480506"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483306"
+						}
+					]
+				],
+				"necessary": [
+					[
+						{
+							"deleted": false,
+							"count": 0.5,
+							"article": "A481005"
+						}
+					]
+				],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480206"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481106"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482206"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Однофазный встраиваемый шинопровод (черный)",
+			"id": "cb571a0d-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A550206",
+				"1000": "A550106"
+			},
+			"collection": "singlePhase",
+			"mount": "embedded",
+			"trackType": "singlePhase",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A120106"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150106"
+						}
+					]
+				],
+				"angularConnectionPower": [],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A130106"
+						}
+					]
+				],
+				"directConnectionPower": [],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A160106"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Однофазный накладной шинопровод (черный)",
+			"id": "cb571a0e-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A540206",
+				"1000": "A540106"
+			},
+			"collection": "singlePhase",
+			"mount": "invoice",
+			"trackType": "singlePhase",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A120206L"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150206F"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150006"
+						}
+					]
+				],
+				"angularConnectionPower": [],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A130206"
+						}
+					]
+				],
+				"directConnectionPower": [],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A160006"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Однофазный шинопровод под натяжной потолок (черный)",
+			"id": "cb571a0f-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A540206",
+				"1000": "A540106"
+			},
+			"collection": "singlePhase",
+			"mount": "stretchCeiling",
+			"trackType": "singlePhase",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A641205L"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A120206L"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150206F"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150006"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A641105I"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A130206"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A630205"
+						}
+					]
+				],
+				"profileCap": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A631005E"
+						}
+					]
+				],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A160006"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Однофазный подвесной шинопровод (черный)",
+			"id": "cb571a10-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A540206",
+				"1000": "A540106"
+			},
+			"collection": "singlePhase",
+			"mount": "suspended",
+			"trackType": "singlePhase",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A120206L"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150206F"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150006"
+						}
+					]
+				],
+				"angularConnectionPower": [],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A130206"
+						}
+					]
+				],
+				"directConnectionPower": [],
+				"necessary": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A410106"
+						}
+					]
+				],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A160006"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод встраиваемый под ГКЛ 9мм (белый) LINEA",
+			"id": "cb571a11-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A470233",
+				"1000": "A470133"
+			},
+			"color": "white",
+			"mount": "embedded",
+			"trackType": "magnetic",
+			"collection": "linea",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480733"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480933"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484433"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480533"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483333"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480133"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480233"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481133"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482233"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод накладной (белый) LINEA",
+			"id": "cb571a12-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A460233",
+				"1000": "A460133"
+			},
+			"collection": "linea",
+			"mount": "invoice",
+			"trackType": "magnetic",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480633"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480833"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484433"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480533"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483333"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480133"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480233"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481133"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482233"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод под натяжной потолок (белый) LINEA",
+			"id": "cb571a13-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A460233",
+				"1000": "A460133"
+			},
+			"collection": "linea",
+			"mount": "stretchCeiling",
+			"trackType": "magnetic",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A641305V"
+						}
+					],
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480633"
+						}
+					],
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A641205L"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484433"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 2,
+							"article": "A641105I"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483333"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A620205"
+						}
+					]
+				],
+				"profileCap": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A621005E"
+						}
+					]
+				],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480133"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480233"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481133"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482233"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод подвесной (белый) LINEA",
+			"id": "cb571a14-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A460233",
+				"1000": "A460133"
+			},
+			"collection": "linea",
+			"mount": "suspended",
+			"trackType": "magnetic",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480633"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484433"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480533"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483333"
+						}
+					]
+				],
+				"necessary": [
+					[
+						{
+							"deleted": false,
+							"count": 0.5,
+							"article": "A481033"
+						}
+					]
+				],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480133"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480233"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481133"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482233"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Однофазный встраиваемый шинопровод (белый)",
+			"id": "cb571a15-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A550233",
+				"1000": "A550133"
+			},
+			"collection": "singlePhase",
+			"mount": "embedded",
+			"trackType": "singlePhase",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A120133"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150133"
+						}
+					]
+				],
+				"angularConnectionPower": [],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A130133"
+						}
+					]
+				],
+				"directConnectionPower": [],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A160133"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Однофазный накладной шинопровод (белый)",
+			"id": "cb571a16-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A540233",
+				"1000": "A540133"
+			},
+			"collection": "singlePhase",
+			"mount": "invoice",
+			"trackType": "singlePhase",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A120233L"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150233F"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150033"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150233"
+						}
+					]
+				],
+				"angularConnectionPower": [],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A130233"
+						}
+					]
+				],
+				"directConnectionPower": [],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A160033"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Однофазный подвесной шинопровод (белый)",
+			"id": "cb571a17-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A540233",
+				"1000": "A540133"
+			},
+			"collection": "singlePhase",
+			"mount": "suspended",
+			"trackType": "singlePhase",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A120233L"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150233F"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150033"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150233"
+						}
+					]
+				],
+				"angularConnectionPower": [],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A130233"
+						}
+					]
+				],
+				"directConnectionPower": [],
+				"necessary": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A410133"
+						}
+					]
+				],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A160033"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Однофазный шинопровод под натяжной потолок (белый)",
+			"id": "cb571a18-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A540233",
+				"1000": "A540133"
+			},
+			"collection": "singlePhase",
+			"mount": "stretchCeiling",
+			"trackType": "singlePhase",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A641205L"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A120233L"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150233F"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150033"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A150233"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A641105I"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A130233"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A630205"
+						}
+					]
+				],
+				"profileCap": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A631005E"
+						}
+					]
+				],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A160033"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод встраиваемый (черный) EXPERT",
+			"id": "cb571a19-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A580206",
+				"1000": "A580106"
+			},
+			"collection": "expert",
+			"mount": "embedded2",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590706"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590906"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A583006"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590306"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590106"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590206"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод накладной (черный) EXPERT",
+			"id": "cb571a1a-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A570206",
+				"1000": "A570106"
+			},
+			"collection": "expert",
+			"mount": "invoice",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590606"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590806"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590506"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590306"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590106"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590206"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод подвесной (черный) EXPERT",
+			"id": "cb571a1b-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A570206",
+				"1000": "A570106"
+			},
+			"collection": "expert",
+			"mount": "suspended",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590606"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590506"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590306"
+						}
+					]
+				],
+				"necessary": [
+					[
+						{
+							"deleted": false,
+							"count": 0.5,
+							"article": "A571006"
+						}
+					]
+				],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590106"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590206"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод встраиваемый под ГКЛ 12,5 (черный) LINEA",
+			"id": "cb571a1c-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A472206",
+				"3000": "A473306",
+				"1000": "A471106"
+			},
+			"collection": "linea",
+			"mount": "embedded2",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A487706"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A489906"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480505"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483306"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480206"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481106"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482206"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод встраиваемый под ГКЛ 12,5 (белый) LINEA",
+			"id": "cb571a1d-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A472233",
+				"1000": "A471133"
+			},
+			"collection": "linea",
+			"mount": "embedded2",
+			"trackType": "magnetic",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A487733"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A489933"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484433"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480533"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483333"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480133"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480233"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481133"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482233"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод под натяжной потолок (черный) EXPERT",
+			"id": "cb571a1e-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A570206",
+				"1000": "A570106"
+			},
+			"collection": "expert",
+			"mount": "stretchCeiling",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A641305V"
+						}
+					],
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590606"
+						}
+					],
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A641205L"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 2,
+							"article": "A641105I"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590306"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A640205"
+						}
+					]
+				],
+				"profileCap": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A641005E"
+						}
+					]
+				],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590106"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A590206"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "Магнитный шинопровод LINEA для натяжного потолка",
+			"id": "cb571a1f-3c43-11ee-8af8-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"3000": "A474306",
+				"2000": "A473206"
+			},
+			"collection": "linea",
+			"mount": "stretchCeiling2",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 2,
+							"article": "A641205L"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 2,
+							"article": "A641105I"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483306"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A485206E"
+						}
+					],
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483206E"
+						}
+					]
+				],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480206"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481106"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482206"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "МАГНИТНЫЙ ШИНОПРОВОД 2М ДЛЯ НАТЯЖНОГО ПОТОЛКА OPTIMA SLIM27 FOR ARTE LAMP ДЛЯ СЕРИИ OPTIMA черный",
+			"id": "51af268c-9277-11ee-8afa-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A750233"
+			},
+			"collection": "OPTIMA",
+			"mount": "fabric_stretch_ceiling",
+			"trackType": "magnetic",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484405L"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740433"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484305I"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740333"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [
+					[
+						{
+							"deleted": false,
+							"count": 2,
+							"article": "A751233E"
+						}
+					]
+				],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740233"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740133"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "МАГНИТНЫЙ ШИНОПРОВОД 2М ДЛЯ НАТЯЖНОГО ПОТОЛКА OPTIMA SLIM27 FOR ARTE LAMP ДЛЯ СЕРИИ OPTIMA белый",
+			"id": "51af268d-9277-11ee-8afa-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A750206"
+			},
+			"collection": "OPTIMA",
+			"mount": "fabric_stretch_ceiling",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484405L"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484305I"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740306"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [
+					[
+						{
+							"deleted": false,
+							"count": 2,
+							"article": "A751206E"
+						}
+					]
+				],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740206"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740106"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "МАГНИТНЫЙ ШИНОПРОВОД ПОДВЕСНОЙ (ТРЕК)  OPTIMA черный",
+			"id": "51af268e-9277-11ee-8afa-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A720106",
+				"3000": "A720306",
+				"1000": "A720106"
+			},
+			"collection": "OPTIMA",
+			"mount": "suspended",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740606"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740506"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740306"
+						}
+					]
+				],
+				"necessary": [
+					[
+						{
+							"deleted": false,
+							"count": 0.5,
+							"article": "A741006"
+						}
+					]
+				],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740206"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740106"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "МАГНИТНЫЙ ШИНОПРОВОД ПОДВЕСНОЙ (ТРЕК)  OPTIMA белый",
+			"id": "51af268f-9277-11ee-8afa-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A720133",
+				"3000": "A720333",
+				"1000": "A720133"
+			},
+			"collection": "OPTIMA",
+			"mount": "suspended",
+			"trackType": "magnetic",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740633"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740433"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740533"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740333"
+						}
+					]
+				],
+				"necessary": [
+					[
+						{
+							"deleted": false,
+							"count": 0.5,
+							"article": "A741033"
+						}
+					]
+				],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740233"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740133"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "МАГНИТНЫЙ ШИНОПРОВОД НАКЛАДНОЙ (ТРЕК)  OPTIMA белый",
+			"id": "51af2690-9277-11ee-8afa-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A720133",
+				"3000": "A720333",
+				"1000": "A720133"
+			},
+			"collection": "OPTIMA",
+			"mount": "invoice",
+			"trackType": "magnetic",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740633"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740733"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740433"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740533"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740333"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740233"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740133"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "МАГНИТНЫЙ ШИНОПРОВОД НАКЛАДНОЙ (ТРЕК)  OPTIMA черный",
+			"id": "51af2691-9277-11ee-8afa-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A720106",
+				"3000": "A720306",
+				"1000": "A720106"
+			},
+			"collection": "OPTIMA",
+			"mount": "invoice",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740606"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740706"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740506"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740306"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740206"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740106"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "МАГНИТНЫЙ ШИНОПРОВОД 2М ДЛЯ НАТЯЖНОГО ПОТОЛКА SLOTT FOR ARTE LAMP ДЛЯ СЕРИИ LINEA черный",
+			"id": "5266a04c-d0ae-11ee-8afa-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A474206"
+			},
+			"collection": "linea",
+			"mount": "fabric_stretch_ceiling",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484405L"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484305I"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483306"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [
+					[
+						{
+							"deleted": false,
+							"count": 2,
+							"article": "A484206E"
+						}
+					]
+				],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481106"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482206"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A480206"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "МАГНИТНЫЙ ШИНОПРОВОД 2М ДЛЯ НАТЯЖНОГО ПОТОЛКА SLOTT FOR ARTE LAMP ДЛЯ СЕРИИ LINEA белый",
+			"id": "5266a04d-d0ae-11ee-8afa-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A474233"
+			},
+			"collection": "linea",
+			"mount": "fabric_stretch_ceiling",
+			"trackType": "magnetic",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484405L"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484433"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A484305I"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A483333"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [
+					[
+						{
+							"deleted": false,
+							"count": 2,
+							"article": "A484233E"
+						}
+					]
+				],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A481133"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A482233"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "ШИНОПРОВОД НАКЛАДНОЙ (ТРЕК) RAPID черный",
+			"id": "e57d68e3-d158-11ee-8afa-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A613206",
+				"1000": "A613106"
+			},
+			"collection": "RAPID",
+			"mount": "invoice",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A613606L"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A613606T"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A613606V"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A613706X"
+						}
+					]
+				],
+				"angularConnectionPower": [],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A613506I"
+						}
+					]
+				],
+				"directConnectionPower": [],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A615106"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "МАГНИТНЫЙ ШИНОПРОВОД ГКЛ (ТРЕК)  OPTIMA черный",
+			"id": "42160dd6-0856-11ef-8afa-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A730206",
+				"3000": "A730306",
+				"1000": "A730106"
+			},
+			"collection": "OPTIMA",
+			"mount": "embedded2",
+			"trackType": "magnetic",
+			"color": "black",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A731606"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A731706"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740406"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740506"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740306"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740206"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740106"
+						}
+					]
+				]
+			}
+		},
+		{
+			"name": "МАГНИТНЫЙ ШИНОПРОВОД ГКЛ (ТРЕК)  OPTIMA белый",
+			"id": "42160dd7-0856-11ef-8afa-005056953bcb",
+			"deleted": false,
+			"articles": {
+				"2000": "A730233",
+				"3000": "A730333",
+				"1000": "A730133"
+			},
+			"collection": "OPTIMA",
+			"mount": "embedded2",
+			"trackType": "magnetic",
+			"color": "white",
+			"accessories": {
+				"angularConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A731633"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A731733"
+						}
+					]
+				],
+				"angularConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740433"
+						}
+					]
+				],
+				"directConnection": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740533"
+						}
+					]
+				],
+				"directConnectionPower": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740333"
+						}
+					]
+				],
+				"necessary": [],
+				"profiles": [],
+				"profileCap": [],
+				"powerConnectors": [
+					[
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740233"
+						},
+						{
+							"deleted": false,
+							"count": 1,
+							"article": "A740133"
+						}
+					]
+				]
+			}
+		}
+	],
+	"powerblocks": [
+		{
+			"id": "1fe4109b-3aa5-11ee-8af8-005056953bcb",
+			"article": "A482305",
+			"deleted": false,
+			"power": "150",
+			"mount": "remote",
+			"color": "gray",
+			"collections": [
+				"Expert",
+				"LINEA",
+				"OPTIMA",
+				"RAPID"
+			]
+		},
+		{
+			"id": "d524dd12-522c-11ee-8af9-005056953bcb",
+			"article": "A482405",
+			"deleted": false,
+			"power": "200",
+			"mount": "remote",
+			"color": "gray",
+			"collections": [
+				"Expert",
+				"LINEA",
+				"OPTIMA",
+				"RAPID"
+			]
+		},
+		{
+			"id": "d524dd13-522c-11ee-8af9-005056953bcb",
+			"article": "A482506",
+			"deleted": false,
+			"power": "100",
+			"mount": "block_embedded",
+			"color": "black",
+			"collections": [
+				"LINEA"
+			]
+		},
+		{
+			"id": "d524dd14-522c-11ee-8af9-005056953bcb",
+			"article": "A482533",
+			"deleted": false,
+			"power": "100",
+			"mount": "block_embedded",
+			"color": "white",
+			"collections": [
+				"LINEA"
+			]
+		},
+		{
+			"id": "d524dd15-522c-11ee-8af9-005056953bcb",
+			"article": "A482606",
+			"deleted": false,
+			"power": "200",
+			"mount": "block_embedded",
+			"color": "black",
+			"collections": [
+				"LINEA"
+			]
+		},
+		{
+			"id": "d524dd16-522c-11ee-8af9-005056953bcb",
+			"article": "A482633",
+			"deleted": false,
+			"power": "200",
+			"mount": "block_embedded",
+			"color": "white",
+			"collections": [
+				"LINEA"
+			]
+		},
+		{
+			"id": "d524dd17-522c-11ee-8af9-005056953bcb",
+			"article": "A482706",
+			"deleted": false,
+			"power": "100",
+			"mount": "block_embedded",
+			"color": "black",
+			"collections": [
+				"LINEA"
+			]
+		},
+		{
+			"id": "d524dd18-522c-11ee-8af9-005056953bcb",
+			"article": "A482806",
+			"deleted": false,
+			"power": "200",
+			"mount": "block_embedded",
+			"color": "black",
+			"collections": [
+				"LINEA"
+			]
+		},
+		{
+			"id": "d524dd19-522c-11ee-8af9-005056953bcb",
+			"article": "A582006",
+			"deleted": false,
+			"power": "150",
+			"mount": "block_embedded",
+			"color": "black",
+			"collections": [
+				"Expert"
+			]
+		},
+		{
+			"id": "e6845e59-98bf-11ee-8afa-005056953bcb",
+			"article": "A482205",
+			"deleted": false,
+			"power": "100",
+			"mount": "remote",
+			"color": "gray",
+			"collections": [
+				"Expert",
+				"LINEA",
+				"OPTIMA",
+				"RAPID"
+			]
+		},
+		{
+			"id": "e6845e5a-98bf-11ee-8afa-005056953bcb",
+			"article": "A742006",
+			"deleted": false,
+			"power": "150",
+			"mount": "block_embedded",
+			"color": "black",
+			"collections": [
+				"OPTIMA"
+			]
+		},
+		{
+			"id": "e6845e5b-98bf-11ee-8afa-005056953bcb",
+			"article": "A742033",
+			"deleted": false,
+			"power": "150",
+			"mount": "block_embedded",
+			"color": "white",
+			"collections": [
+				"OPTIMA"
+			]
+		},
+		{
+			"id": "e6845e5d-98bf-11ee-8afa-005056953bcb",
+			"article": "A481405",
+			"deleted": false,
+			"power": "250",
+			"mount": "remote",
+			"color": "gray",
+			"collections": [
+				"LINEA",
+				"Expert",
+				"OPTIMA",
+				"RAPID"
+			]
+		},
+		{
+			"id": "5266a04e-d0ae-11ee-8afa-005056953bcb",
+			"article": "A481305",
+			"deleted": false,
+			"power": "150",
+			"mount": "remote",
+			"color": "gray",
+			"collections": [
+				"LINEA",
+				"Expert",
+				"OPTIMA",
+				"RAPID"
+			]
+		},
+		{
+			"id": "5266a04f-d0ae-11ee-8afa-005056953bcb",
+			"article": "A481205",
+			"deleted": false,
+			"power": "100",
+			"mount": "remote",
+			"color": "gray",
+			"collections": [
+				"LINEA",
+				"Expert",
+				"OPTIMA",
+				"RAPID"
+			]
+		},
+		{
+			"id": "5266a051-d0ae-11ee-8afa-005056953bcb",
+			"article": "A481505",
+			"deleted": false,
+			"power": "300",
+			"mount": "remote",
+			"color": "gray",
+			"collections": [
+				"LINEA",
+				"Expert",
+				"OPTIMA",
+				"RAPID"
+			]
+		},
+		{
+			"id": "e57d68e4-d158-11ee-8afa-005056953bcb",
+			"article": "A615206",
+			"deleted": false,
+			"power": "150",
+			"mount": "block_embedded",
+			"color": "black",
+			"collections": [
+				"RAPID"
+			]
+		}
+	],
+	"spots": [
+		{
+			"id": "937eb55b-d50b-11ec-bf03-000c29e17ae3",
+			"article": "A5720PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "937eb55d-d50b-11ec-bf03-000c29e17ae3",
+			"article": "A5721PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "937eb55f-d50b-11ec-bf03-000c29e17ae3",
+			"article": "A5722PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "937eb561-d50b-11ec-bf03-000c29e17ae3",
+			"article": "A5723PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "937eb563-d50b-11ec-bf03-000c29e17ae3",
+			"article": "A5724PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "937eb565-d50b-11ec-bf03-000c29e17ae3",
+			"article": "A5725PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "937eb567-d50b-11ec-bf03-000c29e17ae3",
+			"article": "A5726PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "16218eb8-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A5740PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "180ba8be-fd06-11ec-bf33-000c29e17ae3",
+			"article": "A5741PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "180ba8c0-fd06-11ec-bf33-000c29e17ae3",
+			"article": "A5742PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "180ba8c2-fd06-11ec-bf33-000c29e17ae3",
+			"article": "A5743PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "180ba8c4-fd06-11ec-bf33-000c29e17ae3",
+			"article": "A5744PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "180ba8c6-fd06-11ec-bf33-000c29e17ae3",
+			"article": "A5745PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "180ba8c8-fd06-11ec-bf33-000c29e17ae3",
+			"article": "A5746PL-1BK",
+			"deleted": false,
+			"type": "EXPERT"
+		},
+		{
+			"id": "e3413295-d32a-11eb-8188-005056a9741d",
+			"article": "A4630PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "e3413297-d32a-11eb-8188-005056a9741d",
+			"article": "A4631PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "e3413299-d32a-11eb-8188-005056a9741d",
+			"article": "A4632PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "e341329b-d32a-11eb-8188-005056a9741d",
+			"article": "A4633PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "e341329d-d32a-11eb-8188-005056a9741d",
+			"article": "A4634PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "e341329f-d32a-11eb-8188-005056a9741d",
+			"article": "A4635PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "c7656134-d59d-11eb-8188-005056a9741d",
+			"article": "A4640PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "c7656136-d59d-11eb-8188-005056a9741d",
+			"article": "A4641PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "c7656138-d59d-11eb-8188-005056a9741d",
+			"article": "A4642PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "c765613a-d59d-11eb-8188-005056a9741d",
+			"article": "A4643PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "c765613c-d59d-11eb-8188-005056a9741d",
+			"article": "A4644PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "c765613e-d59d-11eb-8188-005056a9741d",
+			"article": "A4645PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "c49fa836-f04b-11eb-818a-005056a9741d",
+			"article": "A4638PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "c49fa838-f04b-11eb-818a-005056a9741d",
+			"article": "A4648PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "30802724-2a67-11ec-8191-005056a9741d",
+			"article": "A4630PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "30802726-2a67-11ec-8191-005056a9741d",
+			"article": "A4631PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "30802728-2a67-11ec-8191-005056a9741d",
+			"article": "A4632PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "3080272a-2a67-11ec-8191-005056a9741d",
+			"article": "A4633PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "3080272c-2a67-11ec-8191-005056a9741d",
+			"article": "A4634PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "3080272e-2a67-11ec-8191-005056a9741d",
+			"article": "A4635PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "30802730-2a67-11ec-8191-005056a9741d",
+			"article": "A4640PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "30802732-2a67-11ec-8191-005056a9741d",
+			"article": "A4641PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "30802734-2a67-11ec-8191-005056a9741d",
+			"article": "A4642PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "30802736-2a67-11ec-8191-005056a9741d",
+			"article": "A4643PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "30802738-2a67-11ec-8191-005056a9741d",
+			"article": "A4644PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "3080273a-2a67-11ec-8191-005056a9741d",
+			"article": "A4645PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "3080273c-2a67-11ec-8191-005056a9741d",
+			"article": "A4638PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "3080273e-2a67-11ec-8191-005056a9741d",
+			"article": "A4648PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "7dc040d4-b9cb-11ed-8af0-005056953bcb",
+			"article": "A4660PL-1AB",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "7dc040d6-b9cb-11ed-8af0-005056953bcb",
+			"article": "A4661PL-1AB",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "7dc040d8-b9cb-11ed-8af0-005056953bcb",
+			"article": "A4660PL-1SG",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "7dc040da-b9cb-11ed-8af0-005056953bcb",
+			"article": "A4661PL-1SG",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "015771bf-be8b-11ed-8af0-005056953bcb",
+			"article": "A4669PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "015771c1-be8b-11ed-8af0-005056953bcb",
+			"article": "A4679PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "7b5bd690-1fbb-11ee-8af7-005056953bcb",
+			"article": "A4690PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "7b5bd692-1fbb-11ee-8af7-005056953bcb",
+			"article": "A4691PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "7b5bd694-1fbb-11ee-8af7-005056953bcb",
+			"article": "A4692PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "7b5bd696-1fbb-11ee-8af7-005056953bcb",
+			"article": "A4693PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "7b5bd698-1fbb-11ee-8af7-005056953bcb",
+			"article": "A4694PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "7b5bd69a-1fbb-11ee-8af7-005056953bcb",
+			"article": "A4695PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "7b5bd69c-1fbb-11ee-8af7-005056953bcb",
+			"article": "A4696PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "6b3804bb-1fe5-11ee-8af7-005056953bcb",
+			"article": "A4770SP-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "6b3804bd-1fe5-11ee-8af7-005056953bcb",
+			"article": "A4780SP-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "6b3804bf-1fe5-11ee-8af7-005056953bcb",
+			"article": "A4771PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "6b3804c1-1fe5-11ee-8af7-005056953bcb",
+			"article": "A4781PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "f9e57997-a3ca-11ee-8afa-005056953bcb",
+			"article": "A4697PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "f9e57999-a3ca-11ee-8afa-005056953bcb",
+			"article": "A4697PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "937eb589-d50b-11ec-bf03-000c29e17ae3",
+			"article": "A4660PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "937eb58b-d50b-11ec-bf03-000c29e17ae3",
+			"article": "A4661PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "937eb58d-d50b-11ec-bf03-000c29e17ae3",
+			"article": "A4662PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "937eb58f-d50b-11ec-bf03-000c29e17ae3",
+			"article": "A4663PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "937eb591-d50b-11ec-bf03-000c29e17ae3",
+			"article": "A4664PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a011f8-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4665PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a011fa-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4668PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a011fc-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4670PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a011fe-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4671PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01200-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4672PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01202-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4673PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01204-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4674PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01206-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4675PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01208-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4678PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a0120a-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4660PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a0120c-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4661PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a0120e-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4662PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01210-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4663PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01212-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4664PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01214-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4665PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01216-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4668PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01218-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4670PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a0121a-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4671PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a0121c-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4672PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01220-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4674PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01222-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4675PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "33a01224-d50c-11ec-bf03-000c29e17ae3",
+			"article": "A4678PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218e98-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4680PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218e9a-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4681PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218e9c-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4682PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218e9e-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4683PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218ea0-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4684PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218ea2-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4685PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218ea4-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4686PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218eaa-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4690PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218eac-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4691PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218eae-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4692PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218eb0-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4693PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218eb2-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4694PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218eb4-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4695PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "16218eb6-fd04-11ec-bf33-000c29e17ae3",
+			"article": "A4696PL-1BK",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "fa0de8c9-29da-11ed-bf33-000c29e17ae3",
+			"article": "A4673PL-1WH",
+			"deleted": false,
+			"type": "LINEA"
+		},
+		{
+			"id": "02850bb7-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7260PL-1BK",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "02850bb9-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7261PL-1BK",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "02850bbb-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7262PL-1BK",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "02850bbd-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7260PL-1WH",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "02850bbf-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7261PL-1WH",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "02850bc1-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7262PL-1WH",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "02850bc3-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7263PL-1BK",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "02850bc5-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7264PL-1BK",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "02850bc7-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7265PL-1BK",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "02850bc9-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7263PL-1WH",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "25e96daa-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7264PL-1WH",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "25e96dac-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7265PL-1WH",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "25e96dae-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7266PL-1BK",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "25e96db0-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7267PL-1BK",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "25e96db2-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7266PL-1WH",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "25e96db4-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7267PL-1WH",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "25e96db6-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7268PL-1BK",
+			"deleted": false,
+			"type": "OPTIMA"
+		},
+		{
+			"id": "25e96db8-e8d2-11ed-8af5-005056953bcb",
+			"article": "A7268PL-1WH",
+			"deleted": false,
+			"type": "OPTIMA"
+		}
+	],
+	"dictionary": [
+		{
+			"deleted": false,
+			"id": "e5515c28-3681-11ee-8af8-005056953bcb",
+			"name": "trackType",
+			"display": "Тип трека",
+			"forTracks": true,
+			"forBlocks": false,
+			"sort": "000000001",
+			"values": [
+				{
+					"deleted": false,
+					"id": "e5515c2a-3681-11ee-8af8-005056953bcb",
+					"name": "magnetic",
+					"display": "магнитный",
+					"sort": "000000005"
+				},
+				{
+					"deleted": false,
+					"id": "31b17089-3cd3-11ee-8af8-005056953bcb",
+					"name": "singlePhase",
+					"display": "однофазный",
+					"sort": "000000015"
+				}
+			]
+		},
+		{
+			"deleted": false,
+			"id": "e5515c1f-3681-11ee-8af8-005056953bcb",
+			"name": "collection",
+			"display": "Коллекция",
+			"forTracks": true,
+			"forBlocks": true,
+			"sort": "000000002",
+			"values": [
+				{
+					"deleted": false,
+					"id": "e5515c22-3681-11ee-8af8-005056953bcb",
+					"name": "expert",
+					"display": "Expert",
+					"sort": "000000001"
+				},
+				{
+					"deleted": false,
+					"id": "e5515c23-3681-11ee-8af8-005056953bcb",
+					"name": "linea",
+					"display": "LINEA",
+					"sort": "000000002"
+				},
+				{
+					"deleted": false,
+					"id": "31b1708a-3cd3-11ee-8af8-005056953bcb",
+					"name": "singlePhase",
+					"display": "TRACK ACCESSORIES",
+					"sort": "000000016"
+				},
+				{
+					"deleted": false,
+					"id": "51af268b-9277-11ee-8afa-005056953bcb",
+					"name": "OPTIMA",
+					"display": "OPTIMA",
+					"sort": "000000020"
+				},
+				{
+					"deleted": false,
+					"id": "e57d68e2-d158-11ee-8afa-005056953bcb",
+					"name": "RAPID",
+					"display": "RAPID",
+					"sort": "000000023"
+				}
+			]
+		},
+		{
+			"deleted": false,
+			"id": "e5515c26-3681-11ee-8af8-005056953bcb",
+			"name": "mount",
+			"display": "Тип монтажа блока питания",
+			"forTracks": false,
+			"forBlocks": true,
+			"sort": "000000003",
+			"values": [
+				{
+					"deleted": false,
+					"id": "e5515c2c-3681-11ee-8af8-005056953bcb",
+					"name": "remote",
+					"display": "выносной",
+					"sort": "000000007"
+				},
+				{
+					"deleted": false,
+					"id": "31b1708c-3cd3-11ee-8af8-005056953bcb",
+					"name": "block_embedded",
+					"display": "встраиваемый",
+					"sort": "000000018"
+				}
+			]
+		},
+		{
+			"deleted": false,
+			"id": "e5515c27-3681-11ee-8af8-005056953bcb",
+			"name": "mount",
+			"display": "Тип монтажа трека",
+			"forTracks": true,
+			"forBlocks": false,
+			"sort": "000000004",
+			"values": [
+				{
+					"deleted": false,
+					"id": "e5515c29-3681-11ee-8af8-005056953bcb",
+					"name": "embedded",
+					"display": "встраиваемый под ГКЛ 9мм",
+					"sort": "000000004"
+				},
+				{
+					"deleted": false,
+					"id": "a18988d1-3687-11ee-8af8-005056953bcb",
+					"name": "invoice",
+					"display": "накладной",
+					"sort": "000000009"
+				},
+				{
+					"deleted": false,
+					"id": "1fe41098-3aa5-11ee-8af8-005056953bcb",
+					"name": "stretchCeiling",
+					"display": "под натяжной потолок",
+					"sort": "000000010"
+				},
+				{
+					"deleted": false,
+					"id": "31b17086-3cd3-11ee-8af8-005056953bcb",
+					"name": "embedded2",
+					"display": "встраиваемый под ГКЛ 12,5",
+					"sort": "000000012"
+				},
+				{
+					"deleted": false,
+					"id": "31b17087-3cd3-11ee-8af8-005056953bcb",
+					"name": "suspended",
+					"display": "подвесной",
+					"sort": "000000013"
+				},
+				{
+					"deleted": false,
+					"id": "31b17088-3cd3-11ee-8af8-005056953bcb",
+					"name": "stretchCeiling2",
+					"display": "под натяжной потолок в сборе",
+					"sort": "000000014"
+				},
+				{
+					"deleted": false,
+					"id": "009f1da7-d56c-11ee-8afa-005056953bcb",
+					"name": "fabric_stretch_ceiling",
+					"display": "под тканевый натяжной потолок",
+					"sort": "000000024"
+				},
+				{
+					"deleted": false,
+					"id": "0bfa294a-a01e-11ef-8b01-005056953bcb",
+					"name": "embedded2",
+					"display": "встраиваемый под ГКЛ",
+					"sort": "000000026"
+				}
+			]
+		},
+		{
+			"deleted": false,
+			"id": "e5515c20-3681-11ee-8af8-005056953bcb",
+			"name": "color",
+			"display": "Цвет",
+			"forTracks": true,
+			"forBlocks": true,
+			"sort": "000000005",
+			"values": [
+				{
+					"deleted": false,
+					"id": "e5515c24-3681-11ee-8af8-005056953bcb",
+					"name": "black",
+					"display": "черный",
+					"sort": "000000003"
+				},
+				{
+					"deleted": false,
+					"id": "e5515c2d-3681-11ee-8af8-005056953bcb",
+					"name": "gray",
+					"display": "серый",
+					"sort": "000000008"
+				},
+				{
+					"deleted": false,
+					"id": "31b1708b-3cd3-11ee-8af8-005056953bcb",
+					"name": "white",
+					"display": "белый",
+					"sort": "000000017"
+				}
+			]
+		},
+		{
+			"deleted": false,
+			"id": "e5515c25-3681-11ee-8af8-005056953bcb",
+			"name": "power",
+			"display": "Мощность",
+			"forTracks": false,
+			"forBlocks": true,
+			"sort": "000000006",
+			"values": [
+				{
+					"deleted": false,
+					"id": "e5515c2b-3681-11ee-8af8-005056953bcb",
+					"name": "100",
+					"display": "100",
+					"sort": "000000006"
+				},
+				{
+					"deleted": false,
+					"id": "1fe4109a-3aa5-11ee-8af8-005056953bcb",
+					"name": "150",
+					"display": "150",
+					"sort": "000000011"
+				},
+				{
+					"deleted": false,
+					"id": "d524dd11-522c-11ee-8af9-005056953bcb",
+					"name": "200",
+					"display": "200",
+					"sort": "000000019"
+				},
+				{
+					"deleted": false,
+					"id": "e6845e5c-98bf-11ee-8afa-005056953bcb",
+					"name": "250",
+					"display": "250",
+					"sort": "000000021"
+				},
+				{
+					"deleted": false,
+					"id": "5266a050-d0ae-11ee-8afa-005056953bcb",
+					"name": "300",
+					"display": "300",
+					"sort": "000000022"
+				}
+			]
+		}
+	]
+}

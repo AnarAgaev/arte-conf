@@ -1,7 +1,11 @@
 import { useAppDispatch } from "@hooks"
 import { Modal } from "@components"
-import { resetSteps, toggleModalResetAll } from "@store/appSlice"
-import { resetOneStep } from '@store/stepOneSlice'
+import { resetStepsData, toggleModalResetAll } from "@store/appSlice"
+import { resetStepOne } from '@store/stepOneSlice'
+import { resetStepTwo } from "@store/stepTwoSlice"
+import { resetStepThree } from "@store/stepThreeSlice"
+import { resetStepFour } from "@store/stepFourSlice"
+import { resetStepTotal } from "@store/stepTotalSlice"
 import style from './ModalResetAll.module.sass'
 
 const {
@@ -24,10 +28,15 @@ export const ModalResetAll = ({ visible }: I_Props) => {
 	const onClose = () => dispatch(toggleModalResetAll('hide'))
 
 	const onReset = () => {
-        dispatch(resetSteps())
-        dispatch(resetOneStep())
+		// Сбрасываем все шаги
+        dispatch(resetStepsData())
+        dispatch(resetStepOne())
+		dispatch(resetStepTwo())
+		dispatch(resetStepThree())
+		dispatch(resetStepFour())
+		dispatch(resetStepTotal())
 
-
+		// Закрываем модальное окно
 		dispatch(toggleModalResetAll('hide'))
     }
 

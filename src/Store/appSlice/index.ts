@@ -56,7 +56,7 @@ import {
     goToNextStepAction,
     goToNextSubstepAction,
     goToSubstepAction,
-    resetStepsAction,
+    resetStepsDataAction,
     goToStepAction,
 	toggleModalResetAllAction,
 } from './Actions'
@@ -69,7 +69,7 @@ const reducers = {
     goToNextSubstep: goToNextSubstepAction,
     goToStep: goToStepAction,
     goToSubstep: goToSubstepAction,
-    resetSteps: resetStepsAction,
+    resetStepsData: resetStepsDataAction,
 	toggleModalResetAll: toggleModalResetAllAction
 }
 
@@ -123,7 +123,7 @@ export const {
     goToNextSubstep,
     goToStep,
     goToSubstep,
-    resetSteps,
+    resetStepsData,
 	toggleModalResetAll,
 } = appSlice.actions
 

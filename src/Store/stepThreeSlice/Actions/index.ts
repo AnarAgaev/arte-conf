@@ -1,4 +1,4 @@
-export * from './resetThreeStep'
+export * from './resetStepThree'
 export * from './setLampColor'
 export * from './setControlType'
 export * from './setGlowTemperature'

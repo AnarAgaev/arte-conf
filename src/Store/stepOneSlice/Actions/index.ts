@@ -1,4 +1,4 @@
-export * from './resetOneStep'
+export * from './resetStepOne'
 export * from './setCeilingType'
 export * from './setMountingType'
 export * from './setConstructionForm'

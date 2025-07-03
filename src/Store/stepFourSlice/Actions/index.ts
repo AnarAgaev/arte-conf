@@ -1,2 +1,2 @@
-export * from './resetFourStep'
+export * from './resetStepFour'
 export * from './setPowerSupply'

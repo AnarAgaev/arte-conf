@@ -7,14 +7,14 @@ import {} from './Funcs'
 
 // Import Actions
 import {
-	resetTotalStepAction,
+	resetStepTotalAction,
 	setCalcOptimizationAction,
 } from './Actions'
 
 
 // Register Actions
 const reducers = {
-	resetTotalStep: resetTotalStepAction,
+	resetStepTotal: resetStepTotalAction,
 	setCalcOptimization: setCalcOptimizationAction,
 }
 
@@ -46,7 +46,7 @@ export default stepTotalSlice.reducer
 
 // Export Actions
 export const {
-	resetTotalStep,
+	resetStepTotal,
 	setCalcOptimization,
 } = stepTotalSlice.actions
 

@@ -24,6 +24,7 @@ export type T_StepThreeState = {
 		}
     ))[]
 
+
     // тип управления
 	controlTypes: {
 		id: number
@@ -33,6 +34,7 @@ export type T_StepThreeState = {
 		selected: boolean
 	}[]
 
+
 	// температура свечения
 	glowTemperatures: {
 		id: number
@@ -40,12 +42,14 @@ export type T_StepThreeState = {
 		selected: boolean
 	}[]
 
+
 	// мощность светильников
 	lampPowers: {
 		id: number
 		value: number | string
 		selected: boolean
 	}[]
+
 
 	// стороны
 	sides: {

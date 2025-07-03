@@ -7,7 +7,7 @@ import {} from './Funcs'
 
 // Import Actions
 import {
-	resetTwoStepAction,
+	resetStepTwoAction,
 	setTrackTypeAction,
 	setTrackColorAction,
 	setTrackCollectionAction,
@@ -16,7 +16,7 @@ import {
 
 // Register Actions
 const reducers = {
-	resetTwoStep: resetTwoStepAction,
+	resetStepTwo: resetStepTwoAction,
 	setTrackType: setTrackTypeAction,
 	setTrackColor: setTrackColorAction,
 	setTrackCollection: setTrackCollectionAction
@@ -54,7 +54,7 @@ export default stepTwoSlice.reducer
 
 // Export Actions
 export const {
-	resetTwoStep,
+	resetStepTwo,
 	setTrackType,
 	setTrackColor,
 	setTrackCollection

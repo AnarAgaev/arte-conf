@@ -7,7 +7,7 @@ type T_SimplifiedStep = {
     }[]
 }[]
 
-export const resetStepsAction = ({ steps }: T_AppState) => {
+export const resetStepsDataAction = ({ steps }: T_AppState) => {
 
     function setFirstStatusAsActive(arr: T_SimplifiedStep) {
         arr.forEach((i, idx) => {

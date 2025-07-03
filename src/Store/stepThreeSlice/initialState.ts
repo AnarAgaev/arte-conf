@@ -112,7 +112,7 @@ const initialState: T_StepThreeState = {
 			id: 0,
 			name: 'side1',
 			description: 'Сторона 1',
-			selected: true
+			selected: false
 		},
 		{
 			id: 1,

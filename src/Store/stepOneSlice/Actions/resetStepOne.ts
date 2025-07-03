@@ -1,6 +1,6 @@
 import { T_StepOneState } from "../types"
 
-export const resetOneStepAction = (state: T_StepOneState) => {
+export const resetStepOneAction = (state: T_StepOneState) => {
 
     // Сбрасываем тип потолка
     state.ceilingType.forEach(type => type.selected = false)
@@ -25,5 +25,4 @@ export const resetOneStepAction = (state: T_StepOneState) => {
 		item.isActive = false
 		item.length = null
 	})
-
 }

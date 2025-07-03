@@ -7,14 +7,14 @@ import {} from './Funcs'
 
 // Import Actions
 import {
-	resetFourStepAction,
+	resetStepFourAction,
 	setPowerSupplyAction
 } from './Actions'
 
 
 // Register Actions
 const reducers = {
-	resetFourStep: resetFourStepAction,
+	resetStepFour: resetStepFourAction,
 	setPowerSupply: setPowerSupplyAction
 }
 
@@ -46,7 +46,7 @@ export default stepFourSlice.reducer
 
 // Export Actions
 export const {
-	resetFourStep,
+	resetStepFour,
 	setPowerSupply
 } = stepFourSlice.actions
 

@@ -1,2 +1,2 @@
-export * from './resetTotalStep'
+export * from './resetStepTotal'
 export * from './setCalcOptimization'
