@@ -77,7 +77,7 @@ export const StepTotal = () => {
 														<tr key={i}>
 															<td>
 																<i>
-																	<img src="/images/table-img-example.webp" alt="" />
+																	<img src="images/table-img-example.webp" alt="" />
 																</i>
 															</td>
 															<td>
@@ -112,7 +112,7 @@ export const StepTotal = () => {
 														<tr key={i}>
 															<td>
 																<i>
-																	<img src="/images/table-img-example.webp" alt="" />
+																	<img src="images/table-img-example.webp" alt="" />
 																</i>
 															</td>
 															<td>
@@ -147,7 +147,7 @@ export const StepTotal = () => {
 														<tr key={i}>
 															<td>
 																<i>
-																	<img src="/images/table-img-example.webp" alt="" />
+																	<img src="images/table-img-example.webp" alt="" />
 																</i>
 															</td>
 															<td>
@@ -182,7 +182,7 @@ export const StepTotal = () => {
 														<tr key={i}>
 															<td>
 																<i>
-																	<img src="/images/table-img-example.webp" alt="" />
+																	<img src="images/table-img-example.webp" alt="" />
 																</i>
 															</td>
 															<td>

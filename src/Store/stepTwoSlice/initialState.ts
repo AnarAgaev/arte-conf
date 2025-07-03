@@ -8,21 +8,21 @@ const initialState: T_StepTwoState = {
 			id: 0,
 			name: 'magnetic',
 			description: 'Магнитные',
-			img: '/images/magnetic.webp',
+			img: 'images/magnetic.webp',
 			selected: false
 		},
 		{
 			id: 1,
 			name: 'singlePhase',
 			description: 'Однофазные',
-			img: '/images/single-phase.webp',
+			img: 'images/single-phase.webp',
 			selected: false
 		},
 		{
 			id: 2,
 			name: 'onBelts',
 			description: 'На ремнях',
-			img: '/images/on-belts.webp',
+			img: 'images/on-belts.webp',
 			selected: false
 		}
 	],
@@ -35,13 +35,13 @@ const initialState: T_StepTwoState = {
 			description: 'Черный',
 			hex: '#000000',
 			selected: false,
-			img: '/images/color-black.svg'
+			img: 'images/color-black.svg'
 		},
 		{
 			id: 1,
 			name: 'white',
 			description: 'Белый',
-			img: '/images/color-white.svg',
+			img: 'images/color-white.svg',
 			hex: '#ffffff',
 			selected: false
 		}

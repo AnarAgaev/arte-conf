@@ -7,7 +7,7 @@
 		"power": "20",
 		"article": "A460206",
 		"price": 5678.20,
-		"img": "/images/lamp1.webp",
+		"img": "images/lamp1.webp",
 		"selected": false
 	},
 	{
@@ -18,7 +18,7 @@
 		"power": "20",
 		"article": "A460206",
 		"price": 3291.03,
-		"img": "/images/lamp2.webp",
+		"img": "images/lamp2.webp",
 		"selected": false
 	},
 	{
@@ -29,7 +29,7 @@
 		"power": "20",
 		"article": "A460206",
 		"price": 7825,
-		"img": "/images/lamp3.webp",
+		"img": "images/lamp3.webp",
 		"selected": false
 	},
 	{
@@ -40,7 +40,7 @@
 		"power": "20",
 		"article": "A460206",
 		"price": 5678.03,
-		"img": "/images/lamp4.webp",
+		"img": "images/lamp4.webp",
 		"selected": false
 	},
 	{
@@ -51,7 +51,7 @@
 		"power": "20",
 		"article": "A460206",
 		"price": 1678.33,
-		"img": "/images/lamp5.webp",
+		"img": "images/lamp5.webp",
 		"selected": false
 	},
 	{
@@ -62,7 +62,7 @@
 		"power": "20",
 		"article": "A460206",
 		"price": 2810.22,
-		"img": "/images/lamp6.webp",
+		"img": "images/lamp6.webp",
 		"selected": false
 	},
 	{
@@ -73,7 +73,7 @@
 		"power": "20",
 		"article": "A460206",
 		"price": 5678.03,
-		"img": "/images/lamp7.webp",
+		"img": "images/lamp7.webp",
 		"selected": false
 	},
 	{
@@ -84,7 +84,7 @@
 		"power": "20",
 		"article": "A460206",
 		"price": 5678.03,
-		"img": "/images/lamp8.webp",
+		"img": "images/lamp8.webp",
 		"selected": false
 	},
 	{
@@ -95,7 +95,7 @@
 		"power": "20",
 		"article": "A460206",
 		"price": 4200,
-		"img": "/images/lamp9.webp",
+		"img": "images/lamp9.webp",
 		"selected": false
 	},
 	{
@@ -106,7 +106,7 @@
 		"power": "20",
 		"article": "A460206",
 		"price": 7329.11,
-		"img": "/images/lamp10.webp",
+		"img": "images/lamp10.webp",
 		"selected": false
 	},
 	{
@@ -117,7 +117,7 @@
 		"power": "20",
 		"article": "A460206",
 		"price": 5678.03,
-		"img": "/images/lamp11.webp",
+		"img": "images/lamp11.webp",
 		"selected": false
 	},
 	{
@@ -128,7 +128,7 @@
 		"power": "20",
 		"article": "A460206",
 		"price": 5678.03,
-		"img": "/images/lamp5.webp",
+		"img": "images/lamp5.webp",
 		"selected": false
 	}
 ]

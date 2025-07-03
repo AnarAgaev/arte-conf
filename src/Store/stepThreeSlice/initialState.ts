@@ -10,13 +10,13 @@ const initialState: T_StepThreeState = {
 			description: 'Черный',
 			hex: '#000000',
 			selected: false,
-			img: '/images/color-black.svg'
+			img: 'images/color-black.svg'
 		},
 		{
 			id: 1,
 			name: 'white',
 			description: 'Белый',
-			img: '/images/color-white.svg',
+			img: 'images/color-white.svg',
 			hex: '#ffffff',
 			selected: false
 		}
@@ -28,21 +28,21 @@ const initialState: T_StepThreeState = {
 			id: 0,
 			name: 'Tuya Bluetooth',
 			description: 'Управление',
-			img: '/images/control-bluetooth.webp',
+			img: 'images/control-bluetooth.webp',
 			selected: false
 		},
 		{
 			id: 1,
 			name: 'DIM-1-10V',
 			description: 'Управление',
-			img: '/images/control-dim.webp',
+			img: 'images/control-dim.webp',
 			selected: false
 		},
 		{
 			id: 2,
 			name: 'NO DIM',
 			description: 'Недиммируемые',
-			img: '/images/control-nodim.webp',
+			img: 'images/control-nodim.webp',
 			selected: false
 		},
 	],
@@ -141,7 +141,7 @@ const initialState: T_StepThreeState = {
 			id: 0,
 			name: 'functionalLighting',
 			description: 'Функциональное освещение',
-			img: '/images/functionalLighting.webp',
+			img: 'images/functionalLighting.webp',
 			selected: false,
 			list: [
 				{
@@ -334,7 +334,7 @@ const initialState: T_StepThreeState = {
 			id: 1,
 			name: 'lightControl',
 			description: 'Управление светом',
-			img: '/images/lightControl.webp',
+			img: 'images/lightControl.webp',
 			selected: false,
 			list: []
 		},
@@ -342,7 +342,7 @@ const initialState: T_StepThreeState = {
 			id: 2,
 			name: 'powerSupplies',
 			description: 'Источники питания',
-			img: '/images/powerSupplies.webp',
+			img: 'images/powerSupplies.webp',
 			selected: false,
 			list: []
 		},
@@ -350,7 +350,7 @@ const initialState: T_StepThreeState = {
 			id: 3,
 			name: 'lightSources',
 			description: 'Источники света',
-			img: '/images/lightSources.webp',
+			img: 'images/lightSources.webp',
 			selected: false,
 			list: []
 		},

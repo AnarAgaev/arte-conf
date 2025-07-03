@@ -180,7 +180,7 @@ export const StepTwo = () => {
 										clickHandler={() => {}}
 										>
 										<div>
-											<img src="/images/track-example-1.webp" alt="description" />
+											<img src="images/track-example-1.webp" alt="description" />
 										</div>
 									</PictureSelectorListItem>
 									<PictureSelectorListItem
@@ -189,7 +189,7 @@ export const StepTwo = () => {
 										clickHandler={() => {}}
 										>
 										<div>
-											<img src="/images/track-example-2.webp" alt="description" />
+											<img src="images/track-example-2.webp" alt="description" />
 										</div>
 									</PictureSelectorListItem>
 									<PictureSelectorListItem
@@ -198,7 +198,7 @@ export const StepTwo = () => {
 										clickHandler={() => {}}
 										>
 										<div>
-											<img src="/images/track-example-3.webp" alt="description" />
+											<img src="images/track-example-3.webp" alt="description" />
 										</div>
 									</PictureSelectorListItem>
 
@@ -234,7 +234,7 @@ export const StepTwo = () => {
 														<tr key={i}>
 															<td>
 																<i>
-																	<img src="/images/table-img-example.webp" alt="" />
+																	<img src="images/table-img-example.webp" alt="" />
 																</i>
 															</td>
 															<td>
@@ -268,7 +268,7 @@ export const StepTwo = () => {
 														<tr key={i}>
 															<td>
 																<i>
-																	<img src="/images/table-img-example.webp" alt="" />
+																	<img src="images/table-img-example.webp" alt="" />
 																</i>
 															</td>
 															<td>
@@ -302,7 +302,7 @@ export const StepTwo = () => {
 														<tr key={i}>
 															<td>
 																<i>
-																	<img src="/images/table-img-example.webp" alt="" />
+																	<img src="images/table-img-example.webp" alt="" />
 																</i>
 															</td>
 															<td>

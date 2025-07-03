@@ -47,7 +47,7 @@ export const RoomDetail = ({ children }: I_Props) => {
 								<tr key={item}>
 									<td>
 										<div className={RoomDetail__picture}>
-											<img src="/images/table-img-example.webp" alt="" />
+											<img src="images/table-img-example.webp" alt="" />
 										</div>
 									</td>
 									<td>

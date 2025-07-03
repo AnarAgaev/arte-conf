@@ -19,8 +19,6 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
-
-		"charset": "utf8"
 	},
 	"include": ["vite.config.ts"]
 }

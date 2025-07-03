@@ -55,7 +55,7 @@ export const Viewport = () => {
 		const [lamps, setLamps] = useState<T_Lamp[]>([]);
 
 		useEffect(() => {
-			fetch('../../../public/mocks/lamps-example.json')
+			fetch('mocks/lamps-example.json')
 				.then(response => response.json())
 				.then(data => setLamps(data))
 				.catch(error => console.error('Error loading lamps:', error));

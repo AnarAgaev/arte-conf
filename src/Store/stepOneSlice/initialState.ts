@@ -8,21 +8,21 @@ const initialState: T_StepOneState = {
 			id: 0,
 			name: 'rack',
 			description: 'Реечный',
-			img: '/images/reechnyi.webp',
+			img: 'images/reechnyi.webp',
 			selected: false
 		},
 		{
 			id: 1,
 			name: 'straining',
 			description: 'Натяжной',
-			img: '/images/straining.webp',
+			img: 'images/straining.webp',
 			selected: false
 		},
 		{
 			id: 2,
 			name: 'gkl',
 			description: 'ГКЛ',
-			img: '/images/gkl.webp',
+			img: 'images/gkl.webp',
 			selected: false
 		}
 	],
@@ -57,35 +57,35 @@ const initialState: T_StepOneState = {
 			id: 0,
 			name: 'l-shaped',
 			description: 'L-образная',
-			img: '/images/l-shaped.webp',
+			img: 'images/l-shaped.webp',
 			selected: false
 		},
 		{
 			id: 1,
 			name: 'rectangle',
 			description: 'Прямоугольник',
-			img: '/images/rectangle.webp',
+			img: 'images/rectangle.webp',
 			selected: false
 		},
 		{
 			id: 2,
 			name: 'line',
 			description: 'Прямая',
-			img: '/images/line.webp',
+			img: 'images/line.webp',
 			selected: false
 		},
 		{
 			id: 3,
 			name: 'u-shaped',
 			description: 'П-образная',
-			img: '/images/u-shaped.webp',
+			img: 'images/u-shaped.webp',
 			selected: false
 		},
 		{
 			id: 4,
 			name: 'snake',
 			description: 'Змейка',
-			img: '/images/snake.webp',
+			img: 'images/snake.webp',
 			selected: false
 		},
 	],

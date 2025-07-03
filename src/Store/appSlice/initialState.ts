@@ -16,7 +16,7 @@ const initialState: T_AppState = {
 	steps: steps,
 
 	modalResetAll: {
-		visible: 'show'
+		visible: 'hide'
 	}
 }
 

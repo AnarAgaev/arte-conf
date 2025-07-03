@@ -7,7 +7,7 @@ const initialState: T_StepFourState = {
 		{
 			id: 0,
 			article: '033092',
-			img: '/images/033092.webp',
+			img: 'images/033092.webp',
 			price: 4321.03,
 
 			power: '300 W',
@@ -20,7 +20,7 @@ const initialState: T_StepFourState = {
 		{
 			id: 1,
 			article: '517150',
-			img: '/images/517150.webp',
+			img: 'images/517150.webp',
 			price: 5678,
 
 			power: '200 W',
@@ -33,7 +33,7 @@ const initialState: T_StepFourState = {
 		{
 			id: 2,
 			article: '010996',
-			img: '/images/010996.webp',
+			img: 'images/010996.webp',
 			price: 5678.2,
 
 			power: '340 W',
@@ -46,7 +46,7 @@ const initialState: T_StepFourState = {
 		{
 			id: 3,
 			article: '077333',
-			img: '/images/077333.webp',
+			img: 'images/077333.webp',
 			price: 13678,
 
 			power: '420 W',
@@ -59,7 +59,7 @@ const initialState: T_StepFourState = {
 		{
 			id: 4,
 			article: '517150',
-			img: '/images/517150.webp',
+			img: 'images/517150.webp',
 			price: 5678,
 
 			power: '200 W',
@@ -72,7 +72,7 @@ const initialState: T_StepFourState = {
 		{
 			id: 5,
 			article: '010996',
-			img: '/images/010996.webp',
+			img: 'images/010996.webp',
 			price: 5678.2,
 
 			power: '340 W',
@@ -85,7 +85,7 @@ const initialState: T_StepFourState = {
 		{
 			id: 6,
 			article: '033092',
-			img: '/images/033092.webp',
+			img: 'images/033092.webp',
 			price: 4321.03,
 
 			power: '300 W',
@@ -98,7 +98,7 @@ const initialState: T_StepFourState = {
 		{
 			id: 7,
 			article: '077333',
-			img: '/images/077333.webp',
+			img: 'images/077333.webp',
 			price: 13678,
 
 			power: '420 W',
