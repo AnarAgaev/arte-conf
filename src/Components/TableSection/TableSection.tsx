@@ -7,7 +7,7 @@ const {
 
 interface I_Props {
 	children: ReactNode,
-	description: string,
+	description?: string,
 	colCount: number
 }
 

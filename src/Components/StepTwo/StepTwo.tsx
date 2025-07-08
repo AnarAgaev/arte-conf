@@ -221,7 +221,7 @@ export const StepTwo = () => {
 						<article>
 							<TableContainer columns={[ 'Фото', 'Наименование', 'Длина', 'Количество' ]}>
 								<tbody>
-									<TableSection description="Сторона стены 1:" colCount={4}>
+									<TableSection colCount={4}>
 
 
 										{/* Добавить логику --- START */}
@@ -229,75 +229,7 @@ export const StepTwo = () => {
 											(() => {
 												const elms: JSX.Element[] = []
 
-												for (let i = 0; i < 3; i++) {
-													elms.push(
-														<tr key={i}>
-															<td>
-																<i>
-																	<img src="images/table-img-example.webp" alt="" />
-																</i>
-															</td>
-															<td>
-																Магнитный шинопровод встраиваемый под ГКЛ 9мм Arte Lamp LINEA A470233
-																<mark>Арт. A480733</mark>
-															</td>
-															<td>2000</td>
-															<td>3 шт</td>
-														</tr>
-													)
-												}
-
-												return elms
-											})()
-										}
-										{/* Добавить логику --- FINISH */}
-
-
-									</TableSection>
-
-									<TableSection description="Сторона стены 2:" colCount={4}>
-
-
-										{/* Добавить логику --- START */}
-										{
-											(() => {
-												const elms: JSX.Element[] = []
-
-												for (let i = 0; i < 4; i++) {
-													elms.push(
-														<tr key={i}>
-															<td>
-																<i>
-																	<img src="images/table-img-example.webp" alt="" />
-																</i>
-															</td>
-															<td>
-																Магнитный шинопровод встраиваемый под ГКЛ 9мм Arte Lamp LINEA A470233
-																<mark>Арт. A480733</mark>
-															</td>
-															<td>2000</td>
-															<td>3 шт</td>
-														</tr>
-													)
-												}
-
-												return elms
-											})()
-										}
-										{/* Добавить логику --- FINISH */}
-
-
-									</TableSection>
-
-									<TableSection description="Сторона стены 3:" colCount={4}>
-
-
-										{/* Добавить логику --- START */}
-										{
-											(() => {
-												const elms: JSX.Element[] = []
-
-												for (let i = 0; i < 2; i++) {
+												for (let i = 0; i < 10; i++) {
 													elms.push(
 														<tr key={i}>
 															<td>

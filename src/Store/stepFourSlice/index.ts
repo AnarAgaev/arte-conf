@@ -8,26 +8,32 @@ import {} from './Funcs'
 // Import Actions
 import {
 	resetStepFourAction,
-	setPowerSupplyAction
+	setPowerSupplyAction,
+	setCatalogCategoryAction,
 } from './Actions'
 
 
 // Register Actions
 const reducers = {
 	resetStepFour: resetStepFourAction,
-	setPowerSupply: setPowerSupplyAction
+	setPowerSupply: setPowerSupplyAction,
+	setCatalogCategory: setCatalogCategoryAction,
 }
 
 
 // Import Selectors
 import {
 	powerSuppliesSelector,
+	catalogSelector,
+	catalogActiveCategoryListSelector,
 } from './Selectors'
 
 
 // Register Selectors
 const selectors = {
-	selectPowerSupplies: powerSuppliesSelector
+	selectPowerSupplies: powerSuppliesSelector,
+	selectCatalog: catalogSelector,
+	selectCatalogActiveCategoryList: catalogActiveCategoryListSelector,
 }
 
 
@@ -47,11 +53,14 @@ export default stepFourSlice.reducer
 // Export Actions
 export const {
 	resetStepFour,
-	setPowerSupply
+	setPowerSupply,
+	setCatalogCategory,
 } = stepFourSlice.actions
 
 
 // Export Selectors
 export const {
-	selectPowerSupplies
+	selectPowerSupplies,
+	selectCatalog,
+	selectCatalogActiveCategoryList,
 } = stepFourSlice.selectors

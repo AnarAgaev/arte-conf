@@ -1,11 +1,13 @@
 import { useMemo } from "react"
 import { formatRussianNumber } from '@helpers'
 import { useAppSelector, useAppDispatch } from "@hooks"
-import { selectActiveStep } from "@store/appSlice"
-import { selectPowerSupplies, setPowerSupply } from '@store/stepFourSlice'
-import { PictureSelectorList, PictureSelectorListItem, StepFragmentItem } from '@components'
+import { selectActiveStep, goToNextSubstep } from "@store/appSlice"
+import { selectPowerSupplies, setPowerSupply, setCatalogCategory, selectCatalog } from '@store/stepFourSlice'
+import { PictureSelectorList, PictureSelectorListItem,
+	StepFragmentItem, StepFragmentsWrapper, Catalog } from '@components'
 import { T_AppDispatch } from "@store"
 import { T_StepFourState } from "@store/stepFourSlice/types"
+import style from './StepFour.module.sass'
 
 // #region Node list getters
 const getPowerSupplyNodes = (
@@ -40,6 +42,31 @@ const getPowerSupplyNodes = (
 		</PictureSelectorListItem>
 	)
 })
+
+const getCatalogCategoriesNodes = (
+	catalog: T_StepFourState['catalog'],
+	dispatch: T_AppDispatch
+): JSX.Element[] => catalog.map(category => {
+
+	const onItem = () => {
+		dispatch(setCatalogCategory(category.id))
+	}
+
+	return (
+		<PictureSelectorListItem
+			key={category.id}
+			selected={category.selected}
+			clickHandler={onItem}
+		>
+			<div>
+				<img src={category.img} alt={category.description} />
+			</div>
+			<mark style={{wordSpacing: '100px'}}>
+				{category.description}
+			</mark>
+		</PictureSelectorListItem>
+	)
+})
 // #endregion
 
 export const StepFour = () => {
@@ -49,6 +76,7 @@ export const StepFour = () => {
 	const step = useAppSelector(selectActiveStep)
 	const substep = step.substeps.find(substep => substep.status === 'active')
 	const powerSupplies = useAppSelector(selectPowerSupplies)
+	const catalog = useAppSelector(selectCatalog)
 	// #endregion
 
 	// #region Node list getters
@@ -56,20 +84,56 @@ export const StepFour = () => {
 		() => getPowerSupplyNodes(powerSupplies, dispatch),
 		[ powerSupplies, dispatch ]
 	)
+
+	const catalogCategoriesNodes = useMemo(
+		() => getCatalogCategoriesNodes(catalog, dispatch),
+		[catalog, dispatch]
+	)
 	// #endregion
 
 	return (
 		<>
-			<StepFragmentItem>
-				<h3>
-					{ substep?.description }
-				</h3>
-				<article>
-					<PictureSelectorList>
-						{ powerSupplyNodes }
-					</PictureSelectorList>
-				</article>
-			</StepFragmentItem>
+			{/* Подбор блока питания */}
+			{ substep?.name === 'powerSupply' &&
+				<StepFragmentsWrapper>
+					<StepFragmentItem>
+						<h3>
+							{ substep?.description }
+						</h3>
+						<article>
+							<PictureSelectorList>
+								{ powerSupplyNodes }
+							</PictureSelectorList>
+						</article>
+					</StepFragmentItem>
+
+					<StepFragmentItem>
+						<div className={style.StepFour__message}>
+							<p>Если Вам нужно в помещение добавить дополнительное освещение. Например, бра, торшер или как-либо декоративный светильник, то перейдите по кнопке в КАТАЛОГ, что бы добавить в заказ</p>
+							<button type="button" className="btn btn_large btn_dark" onClick={() => dispatch(goToNextSubstep())}>Перейти в каталог</button>
+						</div>
+					</StepFragmentItem>
+				</StepFragmentsWrapper>
+			}
+
+			{/* Дополнительное освещение --- Каталог */}
+			{ substep?.name === 'additionalLighting' &&
+				<StepFragmentsWrapper>
+					<StepFragmentItem>
+						<h3>Выберите категорию</h3>
+						<article>
+							<PictureSelectorList>
+								{ catalogCategoriesNodes }
+							</PictureSelectorList>
+						</article>
+					</StepFragmentItem>
+					<StepFragmentItem>
+						<article>
+							<Catalog />
+						</article>
+					</StepFragmentItem>
+				</StepFragmentsWrapper>
+			}
 		</>
 	)
 }

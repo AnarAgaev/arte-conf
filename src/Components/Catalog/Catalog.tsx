@@ -1,13 +1,13 @@
 import { useMemo, useRef } from "react"
 import { useAppSelector, useAppDispatch } from "@hooks"
 import { T_AppDispatch } from "@store"
-import { T_StepThreeState } from '@store/stepThreeSlice/types'
-import { selectCatalogActiveCategoryList } from "@store/stepThreeSlice"
+import { T_StepFourState } from '@store/stepFourSlice/types'
+import { selectCatalogActiveCategoryList } from "@store/stepFourSlice"
 import { CatalogLink } from "@components"
 import style from './Catalog.module.sass'
 
 const getListNodes = (
-	activeCategoryList: T_StepThreeState['catalog'][0]['list'] | undefined,
+	activeCategoryList: T_StepFourState['catalog'][0]['list'] | undefined,
 	dispatch: T_AppDispatch,
 	listRef: React.RefObject<HTMLUListElement>
 ): JSX.Element[] => {

@@ -5,6 +5,7 @@ import { selectAllProjects, addNewProject, removeProject } from "@store/projects
 import { T_ProjectsState } from "@store/projectsSlice/types"
 import style from './PageProjectList.module.sass'
 import { T_AppDispatch } from "@store"
+import { togglePage } from "@store/appSlice"
 
 const {
 	PageProjectList__elements,
@@ -27,7 +28,12 @@ const getAllProjectsNodes = (
 
 	return (
 		<li key={project.id} className={PageProjectList__item}>
-			<span className={PageProjectList__name}><b>Название проекта:</b> {project.name}</span>
+			<span className={PageProjectList__name}>
+				<b>Название проекта:</b>
+				<i onClick={() => dispatch(togglePage('projectDetail'))} >
+					{project.name}
+				</i>
+			</span>
 			<div className={PageProjectList__controllers}>
 				<button type="button" className="btn btn_small btn_lite">
 					<i className="edit"></i>

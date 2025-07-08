@@ -20,7 +20,7 @@ export const Wallet = () => {
 
 				<div className={Wallet__controller}>
 					<CalcController
-						value={3000}
+						value={1}
 						transparent={true}
 					/>
 				</div>

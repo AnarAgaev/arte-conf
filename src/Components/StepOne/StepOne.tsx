@@ -118,7 +118,7 @@ const getControllerNodes = (
                 <div key={side.id} className={StepOne__sidesController}>
                     <span>{side.name}</span>
                     <CalcController
-                        value={side.length}
+                        value={side.length ?? 0}
                         step={1}
 						onChange={(newLength: number | null) => dispatch(setSideLength({ sideId: side.id, newLength }))}
                         onActive={() => dispatch(setActiveSide(side.id))}
@@ -240,7 +240,7 @@ export const StepOne = () => {
 											{ selectedFormName === 'snake' && <SideSketchSnake />}
 										</div>
 
-										{ totalSidesLengths &&
+										{ totalSidesLengths !== 0 &&
 											<p className={StepOne__sidesTotal}>
 												Общая наружная длина { totalSidesLengths } мм
 											</p>

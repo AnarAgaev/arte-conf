@@ -1,3 +1,6 @@
+export type T_CatalogCategoryNames = 'functionalLighting' | 'lightControl' | 'powerSupplies' | 'lightSources'
+export type T_CatalogCategoryDescriptions = 'Функциональное освещение' | 'Управление светом' | 'Источники питания' | 'Источники света'
+
 export type T_StepFourState = {
 
     // Блоки питания
@@ -16,4 +19,20 @@ export type T_StepFourState = {
 
 		selected: boolean
     }[]
+
+	// Каталог
+	catalog: {
+		id: number
+		name: T_CatalogCategoryNames
+		description: T_CatalogCategoryDescriptions
+		img: string
+		selected: boolean
+		list: {
+			id: number
+			linkText: string
+			linkSrc: string
+			active: boolean
+			list?: T_StepFourState['catalog'][0]['list']
+		}[]
+	}[]
 }

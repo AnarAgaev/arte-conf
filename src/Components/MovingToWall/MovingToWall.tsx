@@ -57,7 +57,7 @@ const getMoveControllers = (
 					<span className={MovingToWall__badge}>накладной</span>
 					<div className={MovingToWall__controller}>
 						<CalcController
-							value={item.length}
+							value={item.length ?? 0}
 							step={1}
 							onChange={(newLength: number | null) => dispatch(setMoveToWallLength({moveItemId: item.id, newLength}))}
 						/>

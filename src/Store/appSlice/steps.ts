@@ -64,12 +64,6 @@ const steps: T_Steps = [
 				name: 'lampsSelection',
 				description: 'подбор светильников в трек',
 				status: 'active'
-			},
-			{
-				id: 1,
-				name: 'additionalLighting',
-				description: 'дополнительное освещение',
-				status: 'next'
 			}
 		]
 	},
@@ -84,6 +78,12 @@ const steps: T_Steps = [
 				name: 'powerSupply',
 				description: 'блок питания',
 				status: 'active'
+			},
+			{
+				id: 1,
+				name: 'additionalLighting',
+				description: 'дополнительное освещение',
+				status: 'next'
 			}
 		]
 	},

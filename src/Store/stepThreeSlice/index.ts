@@ -12,8 +12,6 @@ import {
 	setControlTypeAction,
 	setGlowTemperatureAction,
 	setLampPowerAction,
-	setLampsSideAction,
-	setCatalogCategoryAction
 } from './Actions'
 
 
@@ -24,8 +22,6 @@ const reducers = {
 	setControlType: setControlTypeAction,
 	setGlowTemperature: setGlowTemperatureAction,
 	setLampPower: setLampPowerAction,
-	setLampsSide: setLampsSideAction,
-	setCatalogCategory: setCatalogCategoryAction,
 }
 
 
@@ -35,9 +31,6 @@ import {
 	controlTypesSelector,
 	glowTemperaturesSelector,
 	lampPowersSelector,
-	sidesSelector,
-	catalogSelector,
-	catalogActiveCategoryListSelector,
 } from './Selectors'
 
 
@@ -47,9 +40,6 @@ const selectors = {
 	selectControlTypes: controlTypesSelector,
 	selectGlowTemperatures: glowTemperaturesSelector,
 	selectLampPowers: lampPowersSelector,
-	selectSides: sidesSelector,
-	selectCatalog: catalogSelector,
-	selectCatalogActiveCategoryList: catalogActiveCategoryListSelector,
 }
 
 
@@ -73,8 +63,6 @@ export const {
 	setControlType,
 	setGlowTemperature,
 	setLampPower,
-	setLampsSide,
-	setCatalogCategory
 } = stepThreeSlice.actions
 
 
@@ -84,7 +72,4 @@ export const {
 	selectControlTypes,
 	selectGlowTemperatures,
 	selectLampPowers,
-	selectSides,
-	selectCatalog,
-	selectCatalogActiveCategoryList,
 } = stepThreeSlice.selectors

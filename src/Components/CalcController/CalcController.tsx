@@ -13,41 +13,39 @@ const {
 } = style
 
 interface I_Props {
-    value?: number | null
+    value?: number
     step?: number
-    onChange?: (value: number | null) => void
+    onChange?: (value: number) => void
     onActive?: () => void
-	transparent?: boolean
+    transparent?: boolean
 }
 
 export const CalcController = ({
-    value = null,
+    value = 0,
     step = 1,
     onChange,
     onActive,
-	transparent
+    transparent
 }: I_Props) => {
     const dispatch = useAppDispatch()
     const [isFocused, setIsFocused] = useState<boolean>(false)
-    const [inputValue, setInputValue] = useState<string>(value === null ? '' : value.toString())
+    const [inputValue, setInputValue] = useState<string>(value.toString())
     const inputRef = useRef<HTMLInputElement>(null)
 
     useEffect(() => {
-        setInputValue(value === null ? '' : value.toString())
+        setInputValue(value.toString())
     }, [value])
 
-    const updateValue = useCallback((newValue: number | null) => {
-        onChange?.(newValue)
+    const updateValue = useCallback((newValue: number) => {
+        onChange?.(Math.max(newValue, 0))
     }, [onChange])
 
     const handleIncrement = useCallback(() => {
-        const currentValue = value === null ? 0 : value
-        updateValue(currentValue + step)
+        updateValue(value + step)
     }, [value, step, updateValue])
 
     const handleDecrement = useCallback(() => {
-        const currentValue = value === null ? 2 : value
-        updateValue(Math.max(currentValue - step, 1))
+        updateValue(Math.max(value - step, 0))
     }, [value, step, updateValue])
 
     const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,22 +53,17 @@ export const CalcController = ({
 
         if (value === "" || /^\d*$/.test(value)) {
             setInputValue(value)
-
-			if (value !== "") {
+            if (value !== "") {
                 updateValue(parseInt(value))
-            } else {
-                updateValue(null)
             }
         }
     }, [updateValue])
 
     const handleBlur = useCallback(() => {
-        if (inputValue === "") {
-            updateValue(null)
-        } else {
-            const numValue = parseInt(inputValue)
-            updateValue(isNaN(numValue) ? null : numValue)
-        }
+        // Если поле пустое или содержит нечисловое значение - устанавливаем 0
+        const numValue = inputValue === "" ? 0 : parseInt(inputValue) || 0
+        setInputValue(numValue.toString())
+        updateValue(numValue)
         setIsFocused(false)
     }, [inputValue, updateValue])
 
@@ -91,7 +84,7 @@ export const CalcController = ({
 
     return (
         <div
-            className={`${CalcController__body} ${transparent ? `${CalcController__body_transparent}`: ''}`}
+            className={`${CalcController__body} ${transparent ? CalcController__body_transparent : ''}`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
